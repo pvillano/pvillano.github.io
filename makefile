@@ -4,5 +4,8 @@ build: clean
 clean:
 	rm -rf ./public/*
 
-server: clean
+finalcheck: clean
 	hugo server --disableFastRender
+
+devserver: clean
+	hugo server --buildDrafts --buildFuture --watch
