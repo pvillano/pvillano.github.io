@@ -5,9 +5,4 @@
     <h2><a href="https://github.com/pvillano">Github</a></h2>
     <h2><a href="https://www.thingiverse.com/pvillano">Thingiverse</a></h2>
     <h2><a href="https://www.shadertoy.com/user/91isprime">Shadertoy</a></h2>
-
-    <h1>Blog</h1>
-    {{ range first 10 .Data.Pages }}
-        <h2><a href={{ .Permalink }}>{{ .Title }}</a></h2>
-    {{ end }}
 {{ end }}
