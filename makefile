@@ -1,8 +1,8 @@
-build: clean
-	hugo
+build:
+	hugo --cleanDestinationDir --destination docs && touch ./docs/.nojekyll
 
 clean:
-	rm -rf ./public/*
+	rm -rf ./docs/* && touch ./docs/.nojekyll
 
 finalcheck: clean
 	hugo server --disableFastRender
