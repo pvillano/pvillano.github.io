@@ -10,6 +10,13 @@
     body{
       line-height: 1.5;
     }
+    nav ul{
+      display: flex;
+      justify-content: space-around;
+    }
+    nav li{
+      display: inline;
+    }
     </style>
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
