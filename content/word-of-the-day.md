@@ -1,13 +1,9 @@
 ---
 title: "Word of the Day"
-date: 2021-11-08T17:43:30-05:00
 draft: false
 menu:
     main:
-        title: "Word of The Day"
 ---
-
-# Word of the Day
 
 The word of the day, today and every day, is anisotropic.
 
