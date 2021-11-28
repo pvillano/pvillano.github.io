@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peter Villano&#39;s Personal Site</title>
+    <link>https://pvillano.github.io/</link>
+    <description>Recent content on Peter Villano&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Nov 2021 17:43:30 -0500</lastBuildDate>
+    
+	<atom:link href="https://pvillano.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Word of the Day</title>
+      <link>https://pvillano.github.io/word-of-the-day/</link>
+      <pubDate>Mon, 08 Nov 2021 17:43:30 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/word-of-the-day/</guid>
+      <description>Word of the Day The word of the day, today and every day, is anisotropic.
+Anisotropic means different in different directions.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://pvillano.github.io/about/</link>
+      <pubDate>Mon, 08 Nov 2021 17:43:07 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/about/</guid>
+      <description>Hello there It&amp;rsquo;s me, ya boy</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://pvillano.github.io/post/hello-world/</link>
+      <pubDate>Mon, 08 Nov 2021 17:34:07 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/post/hello-world/</guid>
+      <description>Hello World! this page already has a title</description>
+    </item>
+    
+  </channel>
+</rss>
