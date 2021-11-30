@@ -7,4 +7,10 @@ menu:
         name: "Home"
         weight: 999
 ---
+# [LinkedIn](https://www.linkedin.com/in/pvillan/)
 
+# [Github](https://github.com/pvillano)
+
+# [Thingiverse](https://www.thingiverse.com/pvillano/designs)
+
+# [Shadertoy](https://www.shadertoy.com/user/pvillano)
