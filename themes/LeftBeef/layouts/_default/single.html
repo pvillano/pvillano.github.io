@@ -1,5 +1,4 @@
 {{ define "main" }}
-<section id="main">
   <h1 id="title">{{ .Title }}</h1>
     {{if .Date}}
         <h2>{{ .Date.Format "Monday, January _2 2006" }}</h2>
@@ -9,5 +8,4 @@
            {{ .Content }}
         </article>
   </div>
-</section>
 {{ end }}
