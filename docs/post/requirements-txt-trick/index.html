@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body{
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+      flex-direction: column;
+      max-width: 50rem;
+      line-height: 1.5;
+    }
+    nav ul{
+      display: flex;
+      max-width: 50rem;
+      justify-content: space-around;
+    }
+    nav li{
+      display: inline;
+    }
+    </style>
+    
+    
+    <title>Peter Villano&#39;s Personal Site | requirements.txt Trick</title>
+</head><body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/about/" title="About">About</a></li>
+    
+    <li><a href="/post/" title="Posts">Archive</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">requirements.txt Trick</h1>
+    
+        <h2>Tuesday, December 28 2021</h2>
+    
+  <div>
+        <article id="content">
+           <p>This is my favorite way to manage dependencies in a python project. Create a <code>requirements.txt</code> file with unpinned<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+dependencies. The following script will generate a file <code>requirements-frozen.txt</code> with the specified packages and all
+their dependencies version pinned. Commit both files to version management. Add or remove packages
+from <code>requirements.txt</code> and use <code>requirements-frozen.txt</code> for reproducible development/production builds. To update all
+packages, re-run the script.</p>
+<pre tabindex="0"><code>  #!/bin/sh
+  docker run -v &quot;$(pwd)&quot;:/req -w /req python:3.9.1-slim-buster \
+  sh -c &quot;pip install -r requirements.txt \
+  &amp;&amp; echo \&quot;#$(date)\&quot; &gt; requirements-frozen.txt \
+  &amp;&amp; pip freeze &gt;&gt; requirements-frozen.txt&quot;
+</code></pre><p>The following is a line-by-line explanation of the script:</p>
+<ol start="0">
+<li>A <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a> signifies the script should be run in the <code>sh</code> shell</li>
+<li>Create an ephemeral python container with access to the current directory as its working directory.</li>
+<li>Within this container, start a subshell to execute three commands, the first of which being to install the
+requirements in <code>requirements.txt</code></li>
+<li>Echo the current date into <code>requirements-frozen.txt</code></li>
+<li>Append the output of <code>pip freeze</code> to <code>requirements-frozen.txt</code></li>
+</ol>
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li>The output file is human-readable and can be easily diff-ed, since <code>pip freeze</code> automatically sorts output by name.</li>
+<li>No abstraction or magic to learn and trust</li>
+<li>Updating after a patch is released is as simple as re-running the script.</li>
+</ul>
+<p>If you want features, try <a href="https://pipenv.pypa.io/">pipenv</a> or <a href="https://python-poetry.org/">Poetry</a>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>as pinned as you like: major, minor, greater than etc.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>

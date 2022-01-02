@@ -6,10 +6,25 @@
     <description>Recent content on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Nov 2021 19:15:58 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 27 Nov 2021 19:15:58 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>requirements.txt Trick</title>
+      <link>https://pvillano.github.io/post/requirements-txt-trick/</link>
+      <pubDate>Tue, 28 Dec 2021 02:17:28 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/post/requirements-txt-trick/</guid>
+      <description>This is my favorite way to manage dependencies in a python project. Create a requirements.txt file with unpinned1 dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned. Commit both files to version management. Add or remove packages from requirements.txt and use requirements-frozen.txt for reproducible development/production builds. To update all packages, re-run the script.
+ #!/bin/sh docker run -v &amp;quot;$(pwd)&amp;quot;:/req -w /req python:3.</description>
+    </item>
     
-	<atom:link href="https://pvillano.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Hello World</title>
+      <link>https://pvillano.github.io/post/hello/</link>
+      <pubDate>Tue, 28 Dec 2021 02:17:27 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/post/hello/</guid>
+      <description>Hello World! I&amp;rsquo;ve got a blog now! This site is built with Hugo and love.</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -18,15 +33,6 @@
       
       <guid>https://pvillano.github.io/about/</guid>
       <description>Hi I&amp;rsquo;m Rocky. I enjoy 3D printing, watching animation, and PC gaming. I graduated from the University of Purdue in 2019, majoring in Computer Science, and minoring in Psychology and Mathematics. I am non-binary. My pronouns are they/them.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://pvillano.github.io/post/hello-world/</link>
-      <pubDate>Mon, 08 Nov 2021 17:34:07 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/post/hello-world/</guid>
-      <description>Hello World! this page already has a title</description>
     </item>
     
     <item>
