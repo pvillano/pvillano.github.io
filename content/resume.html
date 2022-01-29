@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Peter Villano's Resume</title>
+  <style type="text/css">
+      div {
+          display: flex;
+      }
+
+      .resume {
+          flex-direction: column;
+          max-width: 720px;
+          margin: auto;
+      }
+
+      .name {
+          flex-direction: row;
+          justify-content: center;
+      }
+
+      .subheading {
+          flex-direction: row;
+          justify-content: space-between;
+      }
+
+      .section {
+          flex-direction: column;
+          border-top: 2px solid;
+      }
+
+      .section-title {
+          text-transform: uppercase;
+      }
+
+      .item {
+          flex-direction: column;
+      }
+
+      .titledate {
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: flex-end;
+      }
+
+      .title {
+          display: block;
+      }
+
+      .date {
+          display: block;
+          text-align: right;
+      }
+
+      ul {
+          margin: 0;
+      }
+
+      @media print {
+          @page {
+              margin: 1in;
+          }
+
+          h1 {
+              margin-top: 0;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="resume">
+  <div class="name">
+    <h1>Peter (Rocky) Villano</h1>
+  </div>
+  <div class="subheading">
+    <div>
+      github.com/pvillano<br/>
+      linkedin.com/in/pvillan
+    </div>
+    <div style="text-align:center">
+      saej.in<br/>
+      peter@saej.in<br/>
+      (574)-855-9777
+    </div>
+    <div style="text-align:right">
+      50630 Hollybrook Drive<br/>
+      Granger, IN 46530
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <b>Education</b>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Purdue University</b>, West Lafayette, IN <br>
+          <i>B.S. in Computer Science Honors; Minors in Mathematics &amp;Psychology</i>
+        </div>
+        <div class="date">
+          May 2019
+        </div>
+      </div>
+      <ul>
+        <li>Overall GPA: 3.2; Major GPA: 3.7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <b>Professsional Experience</b>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Center for Research Computing</b>, University of Notre Dame<br>
+          <i>Assistant Research Programmer</i>
+        </div>
+        <div class="date">
+          July 2019 - April 2021
+        </div>
+      </div>
+      <ul>
+        <li>Designed, implemented, and documented RESTful APIs</li>
+        <li>Deployed web server using Docker-Compose, Nginx, and Bash Scripts</li>
+        <li>Developed custom interactive debugging and administrative tools</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Computer Graphics and Visualization Lab</b>, Purdue University<br>
+          <i>Honors Research Project (for credit)</i>
+        </div>
+        <div class="date">
+          Jan 2019 - May 2019
+        </div>
+      </div>
+      <ul>
+        <li>Created automatic statistics generator with significant results display</li>
+        <li>Consulted on ergonomics for an augmented reality user interface</li>
+        <li>Contributed to an Android app, using camera and networking APIs</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Center for Research Computing</b>, University of Notre Dame<br>
+          <i>Undergraduate Research Assistant (Summer)</i>
+        </div>
+        <div class="date">
+          May 2017 - Aug 2018
+        </div>
+      </div>
+      <ul>
+        <li>Examined Tensorflow for suitability in satellite image classification</li>
+        <li>Developed Android app used for machine learning data acquisition</li>
+        <li>Implemented a server backend using PHP and SQL</li>
+        <li>Programmatically generated insightful visualizations in Python</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Engineering and Science Computing</b>, University of Notre Dame<br>
+          <i>Computer Consultant (Summer)</i>
+        </div>
+        <div class="date">
+          June 2013 - Aug 2016
+        </div>
+      </div>
+      <ul>
+        <li>Collaborated with students, professors, and staff to solve IT problems</li>
+        <li>Presented cost analysis of adopting virtual desktop infrastructure</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <b>Leadership Experience</b>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>BoilerMake Hackathon</b>, West Lafayette IN<br>
+          <i>Software Developer, Event Planner, Social Media Manager</i>
+        </div>
+        <div class="date">
+          Jan 2016 - Dec 2019
+        </div>
+      </div>
+      <ul>
+        <li>Attracted largest ever applicant pool (1600) to Purdue's premier hackathon</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Boy Scouts of America</b>, Troop 572, Granger IN<br>
+          <i>Eagle Scout</i>
+        </div>
+        <div class="date">
+          June 2008 - June 2015
+        </div>
+      </div>
+      <ul>
+        <li>Constructed three telescope platforms at Potawatomi Wildlife Park</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <b>Affiliations</b>
+    </div>
+    <div class="titledate">
+      <div class="title">Association for Computing Machinery</div>
+      <div class="date">Sept 2015 - present</div>
+    </div>
+    <div class="titledate">
+      <div class="title">
+        Special Interest Group on Graphics and Interactive Techniques
+      </div>
+      <div class="date">Sept 2015 - present</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <b>Technical Skills</b>
+    </div>
+    <div class="title">
+      <b>Proficiencies</b>: Python, Django, Docker, Bash, NGINX, C, C++, SQL, JavaScript (Vanilla, React)
+    </div>
+    <div class="title">
+      <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
