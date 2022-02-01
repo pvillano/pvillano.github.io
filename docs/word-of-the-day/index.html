@@ -40,10 +40,21 @@
 <div id="content">
   <h1 id="title">Word of the Day</h1>
     
+        
+            <h2 id="date">Today</h2>
+            <script id="datescript">
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const date_str = new Date().toLocaleDateString('en-US', options);
+                document.getElementById("date").innerHTML = date_str;
+                const me = document.getElementById("datescript");
+                me.parentElement.removeChild(me);
+            </script>
+        
+    
   <div>
         <article id="content">
-           <p>The word of the day, today and every day, is anisotropic.</p>
-<p>Anisotropic means different in different directions.</p>
+           <p>The word of the day is <strong>anisotropic</strong>.</p>
+<p>Anisotropic means <em>not</em> the same in every direction.</p>
 
         </article>
   </div>
