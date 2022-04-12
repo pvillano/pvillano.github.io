@@ -14,7 +14,7 @@
       
       <guid>https://pvillano.github.io/post/requirements-txt-trick/</guid>
       <description>This is my favorite way to manage dependencies in a python project. Create a requirements.txt file with unpinned1 dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned. Commit both files to version management. Add or remove packages from requirements.txt and use requirements-frozen.txt for reproducible development/production builds. To update all packages, re-run the script.
- #!/bin/sh docker run -v &amp;quot;$(pwd)&amp;quot;:/req -w /req python:3.</description>
+ #!/bin/shdocker run -v &amp;quot;$(pwd)&amp;quot;:/req -w /req python:3.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
     <item>
       <title>Word of the Day</title>
       <link>https://pvillano.github.io/word-of-the-day/</link>
-      <pubDate>Wed, 31 Dec 1969 19:00:00 -0500</pubDate>
+      <pubDate>Wed, 31 Dec 1969 18:00:00 -0600</pubDate>
       
       <guid>https://pvillano.github.io/word-of-the-day/</guid>
       <description>The word of the day is anisotropic.
