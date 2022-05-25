@@ -3,5 +3,5 @@ title: "Posts"
 draft: false
 menu:
     main:
-        name: Archive
+        name: Posts
 ---

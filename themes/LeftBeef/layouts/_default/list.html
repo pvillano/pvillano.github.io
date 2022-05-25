@@ -2,7 +2,7 @@
   <h1>{{ .Title }}</h1>
         <div id="content">
             {{ range .Data.Pages }}
-                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <h2><a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02"  }}: {{ .Title }}</a></h2>
             {{ end }}
         </div>
 {{ end }}
