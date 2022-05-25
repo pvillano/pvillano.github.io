@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body{
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+      flex-direction: column;
+      max-width: 50rem;
+      line-height: 1.5;
+    }
+    nav ul{
+      display: flex;
+      max-width: 50rem;
+      justify-content: space-around;
+    }
+    nav li{
+      display: inline;
+    }
+    </style>
+    
+    
+    <title>Peter Villano&#39;s Personal Site | Assert Considered Helpful</title>
+</head><body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/post/" title="Posts">Posts</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">Assert Considered Helpful</h1>
+    
+        
+            <h2>Wednesday, May 25 2022</h2>
+        
+    
+  <div>
+        <article id="article">
+           <p>Last Advent of Code I took to putting assert statements for every invariant in my code. Most of my time was spent debugging, not the first write or running code. Adding so many asserts provided a number of benefits:</p>
+<ul>
+<li>Assert statements are a compact form of documenting invariants, both expected and produced, making code easier to reason about.</li>
+<li>Each assert serves as a concise unit test with exactly the necessary cases.</li>
+<li>Most importantly, asserts catch logic bugs when code doesn&rsquo;t produce the intended results</li>
+</ul>
+<p>Writing about this has me thinking, there should be a tool to transform assert statements into testing. The tool would have another keyword &ldquo;expect&rdquo; in addition to &ldquo;assert&rdquo;, for preconditions. With both preconditions and postconditions, individual functions can be automatically verified with a prover or a fuzzer! The tool could also check that preconditions are met at each call site, without having to write and rewrite unit tests for each call site!</p>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>
