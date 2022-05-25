@@ -29,12 +29,11 @@
     
     <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
     
-    <li><a href="/about/" title="About">About</a></li>
-    
-    <li><a href="/post/" title="Posts">Archive</a></li>
+    <li><a href="/post/" title="Posts">Posts</a></li>
     
     <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
     
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
 </ul>
 </nav>
 <div id="content">
@@ -45,7 +44,7 @@
         
     
   <div>
-        <article id="content">
+        <article id="article">
            <p>This is my favorite way to manage dependencies in a python project. Create a <code>requirements.txt</code> file with unpinned<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
 dependencies. The following script will generate a file <code>requirements-frozen.txt</code> with the specified packages and all
 their dependencies version pinned. Commit both files to version management. Add or remove packages

@@ -8,13 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Nov 2021 19:15:58 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Assert Considered Helpful</title>
+      <link>https://pvillano.github.io/post/assert/</link>
+      <pubDate>Wed, 25 May 2022 13:35:26 -0400</pubDate>
+      
+      <guid>https://pvillano.github.io/post/assert/</guid>
+      <description>Last Advent of Code I took to putting assert statements for every invariant in my code. Most of my time was spent debugging, not the first write or running code. Adding so many asserts provided a number of benefits:
+ Assert statements are a compact form of documenting invariants, both expected and produced, making code easier to reason about. Each assert serves as a concise unit test with exactly the necessary cases.</description>
+    </item>
+    
+    <item>
       <title>requirements.txt Trick</title>
       <link>https://pvillano.github.io/post/requirements-txt-trick/</link>
       <pubDate>Tue, 28 Dec 2021 02:17:28 -0500</pubDate>
       
       <guid>https://pvillano.github.io/post/requirements-txt-trick/</guid>
       <description>This is my favorite way to manage dependencies in a python project. Create a requirements.txt file with unpinned1 dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned. Commit both files to version management. Add or remove packages from requirements.txt and use requirements-frozen.txt for reproducible development/production builds. To update all packages, re-run the script.
- #!/bin/sh docker run -v &amp;quot;$(pwd)&amp;quot;:/req -w /req python:3.</description>
+ #!/bin/shdocker run -v &amp;quot;$(pwd)&amp;quot;:/req -w /req python:3.</description>
     </item>
     
     <item>
@@ -34,15 +44,6 @@
       <guid>https://pvillano.github.io/word-of-the-day/</guid>
       <description>The word of the day is anisotropic.
 Anisotropic means not the same in every direction.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://pvillano.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pvillano.github.io/about/</guid>
-      <description>Hi I&amp;rsquo;m Rocky. I enjoy 3D printing, watching animation, and PC gaming. I graduated from the University of Purdue in 2019. I majored in Computer Science and minored in Psychology and Mathematics. I am non-binary. My pronouns are they/them.</description>
     </item>
     
   </channel>
