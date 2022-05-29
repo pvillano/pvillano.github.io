@@ -14,6 +14,6 @@ Hi, I'm Rocky. I enjoy 3D printing, watching animation, and PC gaming. I graduat
 
 # [Github](https://github.com/pvillano)
 
-# [Thingiverse](https://www.thingiverse.com/pvillano/designs)
+# [3D Printables](https://www.printables.com/social/114452-pvillano/about)
 
 # [Shadertoy](https://www.shadertoy.com/user/pvillano)
