@@ -4,67 +4,68 @@
   <meta charset="utf-8">
   <title>Peter Villano's Resume</title>
   <style type="text/css">
-      div {
-          display: flex;
-      }
+    div {
+      display: flex;
+    }
 
-      .resume {
-          flex-direction: column;
-          max-width: 720px;
-          margin: auto;
-      }
+    .resume {
+      flex-direction: column;
+      max-width: 720px;
+      margin: auto;
+    }
 
-      .name {
-          flex-direction: row;
-          justify-content: center;
-      }
+    .name {
+      flex-direction: row;
+      justify-content: center;
+    }
 
-      .subheading {
-          flex-direction: row;
-          justify-content: space-between;
-      }
+    .subheading {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-      .section {
-          flex-direction: column;
-          border-top: 2px solid;
-      }
+    .section {
+      flex-direction: column;
+      border-top: 2px solid;
+    }
 
-      .section-title {
-          text-transform: uppercase;
-      }
+    .section-title {
+      text-transform: uppercase;
+    }
 
-      .item {
-          flex-direction: column;
-      }
+    .item {
+      flex-direction: column;
+    }
 
-      .titledate {
-          flex-flow: row nowrap;
-          justify-content: space-between;
-          align-items: flex-end;
-      }
+    .titledate {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
 
-      .title {
-          display: block;
-      }
+    .title {
+      display: block;
+    }
 
-      .date {
-          display: block;
-          text-align: right;
-      }
+    .date {
+      display: block;
+      text-align: right;
+    }
 
-      ul {
-          margin: 0;
-      }
+    ul {
+      margin: 0;
+    }
 
-      @media print {
-          @page {
-              margin: 1in;
-          }
+    @media print {
+        @page {
+          margin: 1in;
+        }
 
-          h1 {
-              margin-top: 0;
-          }
-      }
+        h1 {
+          margin-top: 0;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -74,38 +75,22 @@
   </div>
   <div class="subheading">
     <div>
-      github.com/pvillano<br/>
-      linkedin.com/in/pvillan
+      https://saej.in
     </div>
     <div style="text-align:center">
       peter@saej.in<br/>
       (574)-855-9777
     </div>
     <div style="text-align:right">
-      50630 Hollybrook Drive<br/>
-      Granger, IN 46530
+      Relocating to California
     </div>
   </div>
-  <div class="section">
-    <div class="section-title">
-      <b>Education</b>
-    </div>
-    <div class="item">
-      <div class="titledate">
-        <div class="title">
-          <b>Purdue University</b>, West Lafayette, IN <br>
-          <i>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</i>
-        </div>
-        <div class="date">
-          May 2019
-        </div>
-      </div>
-      <ul>
-        <li>Overall GPA: 3.2; Major GPA: 3.7</li>
-      </ul>
-    </div>
+  <div id="missionStatement">
+    Seeking an Associate Software Engineer position at Sony Pictures Imageworks to apply technical skills from both
+    academic and business environments. Leveraging strong Python skills and extensive knowledge of human perception,
+    procedural 3D modeling, and user-centric interface design.
   </div>
-  <div class="section">
+  <div class="section" id="professionalExperience">
     <div class="section-title">
       <b>Professional Experience</b>
     </div>
@@ -113,16 +98,27 @@
       <div class="titledate">
         <div class="title">
           <b>Center for Research Computing</b>, University of Notre Dame<br>
-          <i>Assistant Research Programmer</i>
+          <i>Assistant Research Programmer - Wellbeing at Work</i>
         </div>
         <div class="date">
           July 2019 - April 2021
         </div>
       </div>
       <ul>
-        <li>Designed, implemented, and documented RESTful APIs</li>
-        <li>Deployed web server using Docker-Compose, Nginx, and Bash Scripts</li>
-        <li>Empowered client to resolve issues independently with expressive administrative tools</li>
+        <li>Created dynamic visualizations for cross-platform, React Native App to administer daily mood surveys
+          for multi-year research project
+        </li>
+        <li>Designed, implemented, and documented RESTful APIs using Postman, Python, Django REST, and Oauth
+          Deployed web server using Docker-Compose, Nginx, and Bash Scripts to power the app
+        </li>
+        <li>Developed JSON Schema validation in front of Postgres database to allow for more complex data
+          handling
+        </li>
+        <li>Empowered project client to resolve issues independently with expressive administrative tools
+          seamlessly integrated into the Django admin site
+        </li>
+        <li>Created and hosted a series of lightning talks to facilitate inter-departmental knowledge transfer
+        </li>
       </ul>
     </div>
     <div class="item">
@@ -136,9 +132,12 @@
         </div>
       </div>
       <ul>
-        <li>Created automatic statistics generator with significant results display</li>
-        <li>Consulted on ergonomics for an augmented reality user interface</li>
-        <li>Contributed to an Android app, using camera and networking APIs</li>
+        <li>Created automatic statistics generator with significant results display in Python and Excel
+        </li>
+        <li>Consulted on ergonomics for an augmented reality user interface
+        </li>
+        <li>Contributed to an Android app, using camera and networking APIs in Java
+        </li>
       </ul>
     </div>
     <div class="item">
@@ -152,10 +151,14 @@
         </div>
       </div>
       <ul>
-        <li>Examined Tensorflow for suitability in satellite image classification</li>
-        <li>Developed Android app used for machine learning data acquisition</li>
-        <li>Implemented a server backend using PHP and SQL</li>
-        <li>Programmatically generated insightful visualizations in Python</li>
+        <li>Examined Tensorflow for suitability in satellite image classification in Python
+        </li>
+        <li>Developed Android app used for machine learning data acquisition in Java
+        </li>
+        <li>Implemented an image upload server backend API using PHP and SQL
+        </li>
+        <li>Programmatically generated insightful visualizations in Python
+        </li>
       </ul>
     </div>
     <div class="item">
@@ -174,7 +177,7 @@
       </ul>
     </div>
   </div>
-  <div class="section">
+  <div class="section" id="leadershipExperience">
     <div class="section-title">
       <b>Leadership Experience</b>
     </div>
@@ -182,14 +185,16 @@
       <div class="titledate">
         <div class="title">
           <b>BoilerMake Hackathon</b>, West Lafayette IN<br>
-          <i>Software Developer, Event Planner, Social Media Manager</i>
+          <i>Event Planner, Social Media Manager</i>
         </div>
         <div class="date">
           Jan 2016 - Dec 2019
         </div>
       </div>
       <ul>
-        <li>Attracted largest ever applicant pool (1600) to Purdue's premier hackathon</li>
+        <li>Increased advertising at participating universities resulting in largest applicant pool (1600
+          students) to Purdue's premier hackathon
+        </li>
       </ul>
     </div>
     <div class="item">
@@ -203,16 +208,52 @@
         </div>
       </div>
       <ul>
-        <li>Constructed three telescope platforms at Potawatomi Wildlife Park</li>
+        <li>Planned, budgeted and completed Eagle Project by leading 20 person team of volunteers in the
+          construction of three concrete telescope platforms at Potawatomi Wildlife Park, Bourbon, Indiana
+        </li>
+        <li>Held several leadership positions in the troop including Assistant Senior Patrol Leader, Patrol
+          Leader and Bugler
+        </li>
       </ul>
     </div>
   </div>
-  <div class="section">
+  <div class="section" id="education">
+    <div class="section-title">
+      <b>Education</b>
+    </div>
+    <div class="item">
+      <div class="titledate">
+        <div class="title">
+          <b>Purdue University</b>, West Lafayette, IN <br>
+          <i>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</i>
+        </div>
+        <div class="date">
+          May 2019
+        </div>
+      </div>
+      <ul>
+        <li>Overall GPA: 3.2; Major GPA: 3.7</li>
+        <li>
+          Highlighted coursework
+          <ul>
+            <li>Intro to Computer Animation: Programmed a 3D engine and programmatic animation. Final
+              project: color-blind accessibility software utility using C++ and Windows APIs
+            </li>
+            <li>Industrial and Organizational Psychology - topics included management, leadership,
+              inclusivity, training and positive work environments
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="section" id="technicalSkills">
     <div class="section-title">
       <b>Technical Skills</b>
     </div>
     <div class="title">
-      <b>Proficiencies</b>: Bash, C, C++, C#, Django, Docker, NGINX, JavaScript (vanilla, React), Python, SQL
+      <b>Proficiencies</b>: Bash, Blender, C, C++, C#, Django, Docker, GIMP, NGINX, Java, JavaScript, Linux,
+      macOS, Podman, Postgres, Python, React, React Native, SQL, Unix, Windows
     </div>
     <div class="title">
       <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
