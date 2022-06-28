@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Nov 2021 19:15:58 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>&lt;details&gt; Added to Hugo Theme</title>
+      <link>https://pvillano.github.io/post/details/</link>
+      <pubDate>Mon, 27 Jun 2022 23:26:21 -0400</pubDate>
+      
+      <guid>https://pvillano.github.io/post/details/</guid>
+      <description>I added a &amp;lt;details/&amp;gt; tag(I haven&#39;t added any styles yet) tag to my hugo theme</description>
+    </item>
+    
+    <item>
       <title>Assert Considered Helpful</title>
       <link>https://pvillano.github.io/post/assert/</link>
       <pubDate>Wed, 25 May 2022 13:35:26 -0400</pubDate>
@@ -15,6 +24,17 @@
       <guid>https://pvillano.github.io/post/assert/</guid>
       <description>Last Advent of Code I took to putting assert statements for every invariant in my code. Most of my time was spent debugging, not the first write or running code. Adding so many asserts provided a number of benefits:
  Assert statements are a compact form of documenting invariants, both expected and produced, making code easier to reason about. Each assert serves as a concise unit test with exactly the necessary cases.</description>
+    </item>
+    
+    <item>
+      <title>How to Log In to Airport Wifi</title>
+      <link>https://pvillano.github.io/post/how-to-log-in-to-airport-wifi/</link>
+      <pubDate>Tue, 12 Apr 2022 10:32:51 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/post/how-to-log-in-to-airport-wifi/</guid>
+      <description>Have you ever tried to connect to a public Wi-Fi network, but can&amp;rsquo;t get the Terms of Service page to show up?
+Here&amp;rsquo;s how to fix that!
+ Connect to the Wi-Fi network. open http://neverssl.com. Your browser will redirect you to a captive portal. Accept terms of service and continue to the internet.  Why this works At home, when you try to load a web page, your device sends a request over Wi-Fi to your router which routes the request to another router and so on, until it gets to the server which hosts the webpage.</description>
     </item>
     
     <item>
