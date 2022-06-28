@@ -18,21 +18,33 @@ The only computer cooling algorithm I've *ever* encountered is "spin the fans fa
 This is wierd for a number of reasons.
 It is only capable of the following:
 
-* It keeps the CPU from overheating
-* It is smarter than running the fans at 100% all the time
 
-The simple cooling algorithm cannot do the following:
+The simple cooling algorithm does not meet the following possible design goals:
 
-* It does not run the fan as slowly as possible
+* It does not run the fan as quietly as possible
 * It does not keep the fan speed from frequently changing
+* It does not run the cpu at a constant temperature
 
+What design goals does the simple cooling algorithm meet?
+
+* It keeps the CPU from overheating
+* It puts equal wear on the CPU and ... fans.
 
 Side note, one of the reasons we use such a wierd algorithm is because temperature is not the best indicator of fast fans should spin.
-Temperature really only says if the fans are spinning too fast.
+Temperature really only says if the fans are spinning too slow or too fast.
 If we just knew the power the CPU was consuming, we could keep the CPU at a constant temperature.
 It would literally just be rpm=cpu power.
 
-This leads well into a basic theory of heat removal.
+Why? This leads well into a basic theory of heat removal.
+
+#A basic theory of heat removal
+
+When power flows from the wall outlet into your computer, where does it go?
+It is all turned into heat.
+Technically, even the power used by the fans and rgb lights eventually turns into heat, but we'll ignore that for now.
+
+#derivative algorithm: a misstep
+if the fan spun faster if the cpu was too hot and slower if the cpu was too cold, we'd have problems
 
 #My algorithm
 Here is my basic algorithm.
