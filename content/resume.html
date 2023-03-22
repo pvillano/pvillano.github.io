@@ -25,13 +25,31 @@
       flex: 1;
     }
 
-    .subheading:first-child > span {
+    .subheading:first-child > * {
       margin-right: auto;
     }
 
-    .subheading:last-child  > span {
+    .subheading:last-child  > * {
       margin-left: auto;
       text-align:right
+    }
+
+    .nameContainer {
+      display:flex;
+      flex-direction: row;
+    }
+
+    .name {
+      justify-content: center;
+      flex: 1;
+    }
+
+    .name:first-child > * {
+      margin-left: auto;
+    }
+
+    .name:last-child  > * {
+      margin-right: auto;
     }
 
     .section {
@@ -94,8 +112,10 @@
 </head>
 <body>
 <div class=section id="heading">
-    <div class="name">
-        <h1>Peter (Rocky) Villano</h1>
+    <div class="nameContainer">
+        <div class="name"><h1>Peter</h1></div>
+        <div class="name" style="flex:0"><h1>&nbsp;(Rocky)&nbsp;</h1></div>
+        <div class="name"><h1>Villano</h1></div>
     </div>
     <div class="subheadingContainer">
         <div class="subheading">
@@ -112,7 +132,7 @@
         </div>
         <div class="subheading">
             <span>
-            625 W. Madison St.<br/>
+            625 W. Madison St., Apt. 1004<br/>
             Chicago, IL 60661-2720
             </span>
         </div>
