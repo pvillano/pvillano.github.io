@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <title>Peter Villano's Resume</title>
-  <style type="text/css">
+    <meta charset="utf-8">
+    <title>Peter Villano's Resume</title>
+    <style type="text/css">
     div {
       display: flex;
     }
@@ -13,9 +13,25 @@
       justify-content: center;
     }
 
-    .subheading {
+    h1 { margin:0; padding:0 }
+
+    .subheadingContainer {
+      display:flex;
       flex-direction: row;
-      justify-content: space-between;
+    }
+
+    .subheading {
+      justify-content: center;
+      flex: 1;
+    }
+
+    .subheading:first-child > span {
+      margin-right: auto;
+    }
+
+    .subheading:last-child  > span {
+      margin-left: auto;
+      text-align:right
     }
 
     .section {
@@ -63,206 +79,199 @@
         h1 {
           margin-top: 0;
         }
+
         .section {
           break-inside: avoid;
+        }
+
+        a {
+            color:#fff;
         }
     }
 
 
-  </style>
+    </style>
 </head>
 <body>
 <div class=section id="heading">
-  <div class="name">
-    <h1>Peter (Rocky) Villano</h1>
-  </div>
-  <div class="subheading">
-    <div>
-      https://saej.in
+    <div class="name">
+        <h1>Peter (Rocky) Villano</h1>
     </div>
-    <div style="text-align:center">
-      peter@saej.in<br/>
-      (574)-855-9777
+    <div class="subheadingContainer">
+        <div class="subheading">
+            <span>
+            <a href="https://saej.in">saej.in</a><br/>
+            <a href="https://www.linkedin.com/in/pvillan/">linkedin.com/in/pvillan/</a>
+            </span>
+        </div>
+        <div class="subheading">
+            <span>
+            peter@saej.in<br/>
+            (574)-855-9777
+            </span>
+        </div>
+        <div class="subheading">
+            <span>
+            625 W. Madison St.<br/>
+            Chicago, IL 60661-2720
+            </span>
+        </div>
     </div>
-    <div style="text-align:right">
-      Relocating to California
-    </div>
-  </div>
-  <div id="missionStatement">
-    Seeking an Associate Software Engineer position at an animation studio to apply technical skills from both
-    academic and business environments. Leveraging strong Python skills and extensive knowledge of human perception,
-    procedural 3D modeling, and user-centric interface design.
-  </div>
 </div>
 
 <div class="section" id="professionalExperience">
-  <div class="section-title">
-    <b>Professional Experience</b>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Center for Research Computing</b>, University of Notre Dame<br>
-        <i>Assistant Research Programmer - Wellbeing at Work</i>
-      </div>
-      <div class="date">
-        July 2019 - April 2021
-      </div>
+    <div class="section-title">
+        <b>Professional Experience</b>
     </div>
-    <ul>
-      <li>Created dynamic visualizations for cross-platform, React Native App to administer daily mood surveys
-        for multi-year research project
-      </li>
-      <li>Designed, implemented, and documented RESTful APIs using Postman, Python, Django REST, and Oauth
-        Deployed web server using Docker-Compose, Nginx, and Bash Scripts to power the app
-      </li>
-      <li>Developed JSON Schema validation in front of Postgres database to allow for more complex data
-        handling
-      </li>
-      <li>Empowered project client to resolve issues independently with expressive administrative tools
-        seamlessly integrated into the Django admin site
-      </li>
-      <li>Created and hosted a series of lightning talks to facilitate inter-departmental knowledge transfer
-      </li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Computer Graphics and Visualization Lab</b>, Purdue University<br>
-        <i>Honors Research Project (for credit)</i>
-      </div>
-      <div class="date">
-        Jan 2019 - May 2019
-      </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Center for Research Computing</b>, University of Notre Dame<br>
+                <i>Assistant Research Programmer - Wellbeing at Work</i>
+            </div>
+            <div class="date">
+                July 2019 - April 2021
+            </div>
+        </div>
+        <ul>
+            <li>
+                Organized a series of lightning talks to facilitate interdepartmental knowledge transfer
+            </li>
+            <li>
+                Empowered client to resolve issues independently with expressive administrative tools
+            </li>
+            <li>
+                Designed dynamic visualizations for instant feedback in a React Native app
+            </li>
+            <li>
+                Implemented a RESTful API with integrated JSON Schema validation
+            </li>
+            <li>
+                Deployed web service using Docker-Compose, Nginx, and Bash Scripts
+            </li>
+        </ul>
     </div>
-    <ul>
-      <li>Created automatic statistics generator with significant results display in Python and Excel
-      </li>
-      <li>Consulted on ergonomics for an augmented reality user interface
-      </li>
-      <li>Contributed to an Android app, using camera and networking APIs in Java
-      </li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Center for Research Computing</b>, University of Notre Dame<br>
-        <i>Undergraduate Research Assistant (Summer)</i>
-      </div>
-      <div class="date">
-        May 2017 - Aug 2018
-      </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Computer Graphics and Visualization Lab</b>, Purdue University<br>
+                <i>Honors Research Project (for credit)</i>
+            </div>
+            <div class="date">
+                Jan 2019 - May 2019
+            </div>
+        </div>
+        <ul>
+            <li>Created automatic statistics generator that integrated Python and Excel
+            </li>
+            <li>Contributed to an Android app, using camera and networking APIs in Java
+            </li>
+        </ul>
     </div>
-    <ul>
-      <li>Examined Tensorflow for suitability in satellite image classification in Python
-      </li>
-      <li>Developed Android app used for machine learning data acquisition in Java
-      </li>
-      <li>Implemented an image upload server backend API using PHP and SQL
-      </li>
-      <li>Programmatically generated insightful visualizations in Python
-      </li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Engineering and Science Computing</b>, University of Notre Dame<br>
-        <i>Computer Consultant (Summer)</i>
-      </div>
-      <div class="date">
-        June 2013 - Aug 2016
-      </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Center for Research Computing</b>, University of Notre Dame<br>
+                <i>Undergraduate Research Assistant (Summer)</i>
+            </div>
+            <div class="date">
+                May 2017 - Aug 2018
+            </div>
+        </div>
+        <ul>
+            <li>Developed Android app used for machine learning data acquisition in Java
+            </li>
+            <li>Implemented an image upload server backend API using PHP and SQL
+            </li>
+            <li>Programmatically generated insightful visualizations in Python
+            </li>
+        </ul>
     </div>
-    <ul>
-      <li>Collaborated with students, professors, and staff to solve IT problems</li>
-      <li>Presented cost analysis of adopting virtual desktop infrastructure</li>
-    </ul>
-  </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Engineering and Science Computing</b>, University of Notre Dame<br>
+                <i>Computer Consultant (Summer)</i>
+            </div>
+            <div class="date">
+                June 2013 - Aug 2016
+            </div>
+        </div>
+        <ul>
+            <li>Collaborated with students, professors, and staff to solve IT problems</li>
+        </ul>
+    </div>
 </div>
 <div class="section" id="leadershipExperience">
-  <div class="section-title">
-    <b>Leadership Experience</b>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>BoilerMake Hackathon</b>, West Lafayette IN<br>
-        <i>Event Planner, Social Media Manager</i>
-      </div>
-      <div class="date">
-        Jan 2016 - Dec 2019
-      </div>
+    <div class="section-title">
+        <b>Leadership Experience</b>
     </div>
-    <ul>
-      <li>Increased advertising at participating universities resulting in largest applicant pool (1600
-        students) to Purdue's premier hackathon
-      </li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Boy Scouts of America</b>, Troop 572, Granger IN<br>
-        <i>Eagle Scout</i>
-      </div>
-      <div class="date">
-        June 2008 - June 2015
-      </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>BoilerMake Hackathon</b>, West Lafayette IN<br>
+                <i>Event Planner, Social Media Manager</i>
+            </div>
+            <div class="date">
+                Jan 2016 - Dec 2019
+            </div>
+        </div>
+        <ul>
+            <li>Directed advertising that attracted 1600 applicants to Purdue's premier hackathon
+            </li>
+        </ul>
     </div>
-    <ul>
-      <li>Planned, budgeted and completed Eagle Project by leading 20 person team of volunteers in the
-        construction of three concrete telescope platforms at Potawatomi Wildlife Park, Bourbon, Indiana
-      </li>
-      <li>Held several leadership positions in the troop including Assistant Senior Patrol Leader, Patrol
-        Leader and Bugler
-      </li>
-    </ul>
-  </div>
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Boy Scouts of America</b>, Troop 572, Granger IN<br>
+                <i>Eagle Scout</i>
+            </div>
+            <div class="date">
+                June 2008 - June 2015
+            </div>
+        </div>
+        <ul>
+            <li>Lead a team of 20 volunteers in the construction of telescope platforms at Potawatomi Wildlife Park, IN
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="section" id="education">
-  <div class="section-title">
-    <b>Education</b>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Purdue University</b>, West Lafayette, IN <br>
-        <i>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</i>
-      </div>
-      <div class="date">
-        May 2019
-      </div>
+    <div class="section-title">
+        <b>Education</b>
     </div>
-    <ul>
-      <li>Overall GPA: 3.2; Major GPA: 3.7</li>
-      <li>
-        Highlighted coursework
+    <div class="item">
+        <div class="titledate">
+            <div class="title">
+                <b>Purdue University</b>, West Lafayette, IN <br>
+                <i>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</i>
+            </div>
+            <div class="date">
+                May 2019
+            </div>
+        </div>
         <ul>
-          <li>Intro to Computer Animation: Programmed a 3D engine and programmatic animation. Final
-            project: color-blind accessibility software utility using C++ and Windows APIs
-          </li>
-          <li>Industrial and Organizational Psychology - topics included management, leadership,
-            inclusivity, training and positive work environments
-          </li>
+            <li>Overall GPA: 3.2; Major GPA: 3.7</li>
+            <li>Intro. Computer Animation: Invented color-blind accessibility software utility using C++ and Windows
+                APIs
+            </li>
+            <li>I/O (workplace) Psychology: leadership, inclusivity, and positive work environments
+            </li>
         </ul>
-      </li>
-    </ul>
-  </div>
+    </div>
 </div>
 <div class="section" id="technicalSkills">
-  <div class="section-title">
-    <b>Technical Skills</b>
-  </div>
-  <div class="title">
-    <b>Proficiencies</b>: Bash, Blender, C, C++, C#, Django, Docker, GIMP, NGINX, Java, JavaScript, Linux,
-    macOS, Podman, Postgres, Python, React, React Native, SQL, Unix, Windows
-  </div>
-  <div class="title">
-    <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
-  </div>
+    <div class="section-title">
+        <b>Technical Skills</b>
+    </div>
+    <div class="title">
+        <b>Proficiencies</b>: Bash, Blender, C, C++, C#, Django, Docker, GIMP, NGINX, Java, JavaScript, Linux,
+        macOS, Postgres, Python, React, React Native, SQL, Unix, Windows
+    </div>
+    <div class="title">
+        <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
+    </div>
 </div>
 </body>
 </html>
