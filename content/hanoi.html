@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hanoi</title>
+  <script>
+    "use strict";
+    const t0 = Date.now();
+    function pole(ring, time){
+      var x =  (time + (1 << ring) >> (ring + 1)) % 3;
+      if(ring % 2 == 1){
+        x = 3 - x;
+      }
+      return (x + 3) % 3;
+    }
+    function draw(){
+      const n = 31;
+
+      const canvas = document.getElementById("canvas")
+      const div = document.getElementById("div")
+      const ctx = canvas.getContext("2d");
+
+<!--      canvas.width = div.clientWidth;-->
+<!--      canvas.height = div.clientHeight;-->
+
+      const { width, height } = canvas.getBoundingClientRect();
+
+      const time = Date.now() - t0;
+      const seconds = Math.floor(time / 1000);
+      const millis = time % 1000;
+
+
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = `rgb(${millis*.255}, 0, 0)`;
+      for(let i = 0; i < n; i++){
+        const p = pole(i, seconds);
+        const x = p * width / 3;
+        const y = i * height / n;
+        ctx.fillRect(x,y,width/3,height/n);
+      }
+      window.requestAnimationFrame(draw);
+    }
+
+    window.requestAnimationFrame(draw);
+  </script>
+</head>
+<body>
+<div id="div">
+  <canvas id="canvas" width="500" height="500"></canvas>
+</div>
+
+</body>
+</html>
