@@ -45,8 +45,14 @@
     
   <div>
         <article id="article">
-           <!-- raw HTML omitted -->
-<pre tabindex="0"><code>0000 0000
+           
+<details>
+    <summary>
+        table of values
+    </summary>
+        
+```
+0000 0000
 0001 0002
 0010 0012
 0011 0011
@@ -65,55 +71,104 @@
 1101 1102
 1110 1112
 1111 1111
-</code></pre><!-- raw HTML omitted -->
+```
+
+</details>
+
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tower</span>(ring, time):
     <span style="color:#66d9ef">return</span> ((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">**</span> ring <span style="color:#f92672">*</span> time <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> ring) <span style="color:#f92672">&gt;&gt;</span> (ring <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
 </code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span>  ((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">**</span> <span style="color:#a6e22e">ring</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">ring</span>) <span style="color:#f92672">&gt;&gt;</span> (<span style="color:#a6e22e">ring</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
     <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
 </code></pre></div><script>
-    "use strict";
-    const t0 = Date.now();
+    "use strict"
+    const t0 = Date.now()
 
     function pole(ring, time) {
-        let x = (time + (1 << ring) >> (ring + 1)) % 3;
+        let x = (time + (1 << ring) >> (ring + 1)) % 3
         if (ring % 2 === 1) {
-            x = 3 - x;
+            x = 3 - x
         }
-        return (x + 3) % 3;
+        return (x + 3) % 3
+    }
+
+    function accelDecel(t){
+      if(t<.5){
+          return t**2 * 2
+      } else {
+          
+          t = (t-.5)*2
+          t = 1 - t
+          t = t ** 2
+          t = 1 - t
+          return .5 + t/2
+      }
+    }
+
+    function lerp(a,b,t){
+        return a + t*(b-a)
     }
 
     function draw() {
-        const n = 31;
+        const n = 31
+
 
         const canvas = document.getElementById("canvas")
         
-        const ctx = canvas.getContext("2d");
+        const ctx = canvas.getContext("2d")
 
         
         
 
-        const {width, height} = canvas.getBoundingClientRect();
+        const {width, height} = canvas.getBoundingClientRect()
 
-        const time = Date.now() - t0;
-        const seconds = Math.floor(time / 1000);
-        const millis = time % 1000;
+        const time = Date.now()/4
+        const seconds = Math.floor(time / 1000)
+        const millis = time % 1000
 
+        const dy = height / (n + 1)
+        const dx = width / (n + 1 + n) / 3
 
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = `rgb(${millis * .255}, 0, 0)`;
-        for (let i = 0; i < n; i++) {
-            const p = pole(i, seconds);
-            const x = p * width / 3;
-            const y = i * height / n;
-            ctx.fillRect(x, y, width / 3, height / n);
+        ctx.clearRect(0, 0, width, height)
+        
+        ctx.fillStyle = "rgb(0,0,0)"
+        ctx.fillRect(0, n * dy, width, dy)
+
+        const discCount = [0, 0, 0]
+        let discInMotion = -1
+        for (let i = n - 1; i >= 0; i--) {
+            const p = pole(i, seconds)
+            if (p !== pole(i, seconds + 1)) {
+                console.log(i)
+                discInMotion = i
+                continue
+            }
+            const centerX = (p + 0.5) * width / 3
+            const discWidth = (2 * i + 3) * dx
+            const x = centerX - discWidth / 2
+            const y = (n - 1 - discCount[p]) * dy
+            discCount[p]++
+            ctx.fillRect(x, y, discWidth, dy * .9)
         }
-        window.requestAnimationFrame(draw);
+        const rest = 300;
+        let xFract = millis < rest ? 0 : (millis-rest) / (1000-rest)
+        xFract = accelDecel(xFract)
+        const startPole = pole(discInMotion, seconds)
+        const endPole = pole(discInMotion, seconds + 1)
+        const apex = Math.max(...discCount) + 1
+        const y = (n - 1 - lerp(discCount[startPole],discCount[endPole],xFract)) * dy
+        const p = lerp(startPole, endPole, xFract)
+        const centerX = (p + 0.5) * width / 3
+        const discWidth = (2 * discInMotion + 3) * dx
+        const x = centerX - discWidth / 2
+        ctx.fillRect(x, y, discWidth, dy * .9)
+
+        window.requestAnimationFrame(draw)
     }
 
-    window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(draw)
 </script>
 <div id="div">
-  <canvas height="500" id="canvas" width="500"></canvas>
+  <canvas height="500" id="canvas" width="1000"></canvas>
 </div>
 
         </article>

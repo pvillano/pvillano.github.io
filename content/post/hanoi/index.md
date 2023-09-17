@@ -6,7 +6,7 @@ Description: ""
 Tags: []
 Categories: []
 ---
-{{% details "table of values" %}}
+{{< details "table of values" >}}
 ```
 0000 0000
 0001 0002
@@ -28,7 +28,7 @@ Categories: []
 1110 1112
 1111 1111
 ```
-{{% /details%}}
+{{< /details >}}
 
 ```python
 def tower(ring, time):
