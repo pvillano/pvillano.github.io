@@ -32,11 +32,11 @@
 
 
         const canvas = document.getElementById("canvas")
-        // const div = document.getElementById("div")
+        const div = document.getElementById("div")
         const ctx = canvas.getContext("2d")
 
-        // canvas.width = div.clientWidth
-        // canvas.height = div.clientHeight
+        canvas.width = div.clientWidth
+        canvas.height = canvas.width * 9/16
 
         const {width, height} = canvas.getBoundingClientRect()
 
@@ -101,6 +101,6 @@
 
     window.requestAnimationFrame(draw)
 </script>
-<div id="div">
-  <canvas height="500" id="canvas" width="1000"></canvas>
+<div id="div" style="width:100%">
+  <canvas height="500" id="canvas" style="width:100%" width="1000"></canvas>
 </div>

@@ -14,4 +14,4 @@ is 2*{{< sup >}}n{{< /sup >}}* − 1,
 where _n_ is the number of disks.
 This puzzle has 32 disks, and performs one move per second.
 It was started on January 1, 1970
-and will complete on January 19, 2038.
+and will complete 68 years later, on January 19, 2038.
