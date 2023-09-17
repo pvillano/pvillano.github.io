@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jun 2022 23:26:21 -0400</lastBuildDate><atom:link href="https://pvillano.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2023 20:00:46 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hanoi</title>
+      <link>https://pvillano.github.io/post/hanoi/</link>
+      <pubDate>Fri, 15 Sep 2023 20:00:46 -0500</pubDate>
+      
+      <guid>https://pvillano.github.io/post/hanoi/</guid>
+      <description>&#34;use strict&#34;const t0 = Date.now()function pole(ring, time) {let x = (time + (1  (ring + 1)) % 3if (ring % 2 === 1) {x = 3 - x}return (x + 3) % 3}function accelDecel(t) {if (t = 0; i--) {const p = pole(i, seconds)if (p !== pole(i, seconds + 1)) {console.log(i)discInMotion = icontinue}const centerX = (p + 0.</description>
+    </item>
+    
     <item>
       <title>&lt;details&gt; Added to Hugo Theme</title>
       <link>https://pvillano.github.io/post/details/</link>

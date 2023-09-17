@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body{
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+      flex-direction: column;
+      max-width: 50rem;
+      line-height: 1.5;
+    }
+    nav ul{
+      display: flex;
+      max-width: 50rem;
+      justify-content: space-around;
+    }
+    nav li{
+      display: inline;
+    }
+    </style>
+    
+    
+    <title>Peter Villano&#39;s Personal Site | Hanoi</title>
+</head><body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/post/" title="Posts">Posts</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">Hanoi</h1>
+    
+        
+            <h2>Friday, September 15 2023</h2>
+        
+    
+  <div>
+        <article id="article">
+           <script>
+    "use strict"
+    const t0 = Date.now()
+
+    function pole(ring, time) {
+        let x = (time + (1 << ring) >> (ring + 1)) % 3
+        if (ring % 2 === 1) {
+            x = 3 - x
+        }
+        return (x + 3) % 3
+    }
+
+    function accelDecel(t) {
+        if (t < .5) {
+            return t ** 2 * 2
+        } else {
+            
+            t = (t - .5) * 2
+            t = 1 - t
+            t = t ** 2
+            t = 1 - t
+            return .5 + t / 2
+        }
+    }
+
+    function lerp(a, b, t) {
+        return a + t * (b - a)
+    }
+
+    function draw() {
+        const n = 32
+
+
+        const canvas = document.getElementById("canvas")
+        const div = document.getElementById("div")
+        const ctx = canvas.getContext("2d")
+
+        canvas.width = div.clientWidth
+        canvas.height = canvas.width * 9/16
+
+        const {width, height} = canvas.getBoundingClientRect()
+
+        const time = Date.now()
+        const seconds = Math.floor(time / 1000)
+        const millis = time % 1000
+
+        const dy = height / (n + 1)
+        const dx = width / (n + 1 + n) / 3
+
+        ctx.clearRect(0, 0, width, height)
+        
+        ctx.fillStyle = "rgb(0,0,0)"
+        ctx.fillRect(0, n * dy, width, dy)
+
+        const discCount = [0, 0, 0]
+        let discInMotion = -1
+        for (let i = n - 1; i >= 0; i--) {
+            const p = pole(i, seconds)
+            if (p !== pole(i, seconds + 1)) {
+                console.log(i)
+                discInMotion = i
+                continue
+            }
+            const centerX = (p + 0.5) * width / 3
+            const discWidth = (2 * i + 3) * dx
+            const x = centerX - discWidth / 2
+            const y = (n - 1 - discCount[p]) * dy
+            discCount[p]++
+            ctx.fillRect(x, y, discWidth, dy * .9)
+        }
+        const rest = 0; 
+        const percentDone = millis < rest ? 0 : (millis - rest) / (1000 - rest)
+        const xFract = accelDecel(percentDone)
+        const startPole = pole(discInMotion, seconds)
+        const endPole = pole(discInMotion, seconds + 1)
+        const p = lerp(startPole, endPole, xFract)
+        const centerX = (p + 0.5) * width / 3
+        const discWidth = (2 * discInMotion + 3) * dx
+        const x = centerX - discWidth / 2
+
+        let apex
+        if (startPole !== 1 && endPole !== 1) {
+            apex = Math.max(...discCount)
+        } else {
+            apex = Math.max(discCount[0], discCount[2])
+        }
+        apex = Math.min(apex + 4, n)
+        let yIdx
+        const derp = .6
+        if (percentDone < derp) {
+            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
+        } else {
+            const pd2 = ((percentDone - derp) / (1 - derp)) ** 2
+            yIdx = lerp(apex, discCount[endPole], pd2)
+        }
+        const y = (n - 1 - yIdx) * dy
+        ctx.fillRect(x, y, discWidth, dy * .9)
+
+        window.requestAnimationFrame(draw)
+    }
+
+    window.requestAnimationFrame(draw)
+</script>
+<div id="div" style="width:100%">
+  <canvas height="500" id="canvas" style="width:100%" width="1000"></canvas>
+</div>
+<p>The minimal number of moves required to solve a <a href="https://wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi puzzle</a>
+is 2<em><sup>
+  n
+</sup></em> − 1,
+where <em>n</em> is the number of disks.
+This puzzle has 32 disks, and performs one move per second.
+It was started on January 1, 1970
+and will complete 68 years later, on January 19, 2038.</p>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>
