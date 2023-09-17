@@ -2,41 +2,16 @@
 title: "Hanoi"
 date: 2023-09-15T20:00:46-05:00
 draft: false
-Description: ""
-Tags: []
+Description: "A clock"
+Tags: ["clock", "animation", "canvas", "javascript"]
 Categories: []
 ---
-{{< details "table of values" >}}
-```
-0000 0000
-0001 0002
-0010 0012
-0011 0011
-
-0100 0211
-0101 0210
-0110 0220
-0111 0222
-
-1000 1222
-1001 1221
-1010 1201
-1011 1200
-
-1100 1100
-1101 1102
-1110 1112
-1111 1111
-```
-{{< /details >}}
-
-```python
-def tower(ring, time):
-    return ((-1) ** ring * time + (1 << ring) >> (ring + 1)) % 3
-```
-```javascript
-    x =  ((-1) ** ring * time + (1 << ring) >> (ring + 1)) % 3
-    return (x + 3) % 3
-```
 
 {{< hanoi >}}
+
+The minimal number of moves required to solve a [Tower of Hanoi puzzle](https://wikipedia.org/wiki/Tower_of_Hanoi)
+is 2*{{< sup >}}n{{< /sup >}}* − 1,
+where _n_ is the number of disks.
+This puzzle has 32 disks, and performs one move per second.
+It was started on January 1, 1970
+and will complete on January 19, 2038.

@@ -45,41 +45,7 @@
     
   <div>
         <article id="article">
-           
-<details>
-    <summary>
-        table of values
-    </summary>
-        
-```
-0000 0000
-0001 0002
-0010 0012
-0011 0011
-
-0100 0211
-0101 0210
-0110 0220
-0111 0222
-
-1000 1222
-1001 1221
-1010 1201
-1011 1200
-
-1100 1100
-1101 1102
-1110 1112
-1111 1111
-```
-
-</details>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tower</span>(ring, time):
-    <span style="color:#66d9ef">return</span> ((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">**</span> ring <span style="color:#f92672">*</span> time <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> ring) <span style="color:#f92672">&gt;&gt;</span> (ring <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span>  ((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">**</span> <span style="color:#a6e22e">ring</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">ring</span>) <span style="color:#f92672">&gt;&gt;</span> (<span style="color:#a6e22e">ring</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
-    <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
-</code></pre></div><script>
+           <script>
     "use strict"
     const t0 = Date.now()
 
@@ -91,25 +57,25 @@
         return (x + 3) % 3
     }
 
-    function accelDecel(t){
-      if(t<.5){
-          return t**2 * 2
-      } else {
-          
-          t = (t-.5)*2
-          t = 1 - t
-          t = t ** 2
-          t = 1 - t
-          return .5 + t/2
-      }
+    function accelDecel(t) {
+        if (t < .5) {
+            return t ** 2 * 2
+        } else {
+            
+            t = (t - .5) * 2
+            t = 1 - t
+            t = t ** 2
+            t = 1 - t
+            return .5 + t / 2
+        }
     }
 
-    function lerp(a,b,t){
-        return a + t*(b-a)
+    function lerp(a, b, t) {
+        return a + t * (b - a)
     }
 
     function draw() {
-        const n = 31
+        const n = 32
 
 
         const canvas = document.getElementById("canvas")
@@ -121,7 +87,7 @@
 
         const {width, height} = canvas.getBoundingClientRect()
 
-        const time = Date.now()/4
+        const time = Date.now()
         const seconds = Math.floor(time / 1000)
         const millis = time % 1000
 
@@ -149,17 +115,32 @@
             discCount[p]++
             ctx.fillRect(x, y, discWidth, dy * .9)
         }
-        const rest = 300;
-        let xFract = millis < rest ? 0 : (millis-rest) / (1000-rest)
-        xFract = accelDecel(xFract)
+        const rest = 0; 
+        const percentDone = millis < rest ? 0 : (millis - rest) / (1000 - rest)
+        const xFract = accelDecel(percentDone)
         const startPole = pole(discInMotion, seconds)
         const endPole = pole(discInMotion, seconds + 1)
-        const apex = Math.max(...discCount) + 1
-        const y = (n - 1 - lerp(discCount[startPole],discCount[endPole],xFract)) * dy
         const p = lerp(startPole, endPole, xFract)
         const centerX = (p + 0.5) * width / 3
         const discWidth = (2 * discInMotion + 3) * dx
         const x = centerX - discWidth / 2
+
+        let apex
+        if (startPole !== 1 && endPole !== 1) {
+            apex = Math.max(...discCount)
+        } else {
+            apex = Math.max(discCount[0], discCount[2])
+        }
+        apex = Math.min(apex + 4, n)
+        let yIdx
+        const derp = .6
+        if (percentDone < derp) {
+            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
+        } else {
+            const pd2 = ((percentDone - derp) / (1 - derp)) ** 2
+            yIdx = lerp(apex, discCount[endPole], pd2)
+        }
+        const y = (n - 1 - yIdx) * dy
         ctx.fillRect(x, y, discWidth, dy * .9)
 
         window.requestAnimationFrame(draw)
@@ -170,6 +151,14 @@
 <div id="div">
   <canvas height="500" id="canvas" width="1000"></canvas>
 </div>
+<p>The minimal number of moves required to solve a <a href="https://wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi puzzle</a>
+is 2<em><sup>
+  n
+</sup></em> − 1,
+where <em>n</em> is the number of disks.
+This puzzle has 32 disks, and performs one move per second.
+It was started on January 1, 1970
+and will complete on January 19, 2038.</p>
 
         </article>
   </div>
