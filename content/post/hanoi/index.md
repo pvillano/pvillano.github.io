@@ -11,17 +11,23 @@ Categories: []
 {{< hanoi >}}
 ## <q>"When the final tower is completed, time will overflow." </q>
 
-The above animation displays the current [**Unix time**]({{< relref "#unix-time">}}) as progress in solving the **Towers of Hanoi**.
+The above [animation]({{< relref "#animation">}}) counts down to the [Epochalypse]({{< relref "#epochalypse">}})
+by displaying the current [Unix time]({{< relref "#unix-time">}})
+as progress in solving the [Tower of Hanoi]({{< relref "#hanoi">}}).
 
 ### Unix Time? {#unix-time}
 The Unix Time is the number of seconds which have passed since the start of the '70s[^definition]
 The current Unix time is {{< unixtime >}}.
 Because of its simplicity, Unix Time is widely used in computing.
 
+### Epochalypse? {#epochalypse}
 Many pieces of software store Unix timestamps in 32-bit signed integers.
 This data type has a limited range, so at some point the current Unix time will exceed the allocated space and cause problems.
 
 ### Tower of Hanoi? {#hanoi}
+
+{{< hanoi n=3 >}}
+
 The [Tower of Hanoi](https://wikipedia.org/wiki/Tower_of_Hanoi) is a mathematical puzzle consisting of three stacks of discs.
 The objective of the puzzle is to move every disc to the last stack.
 The player can repeatedly move the topmost disc from one stack to another stack,
@@ -32,11 +38,10 @@ where *n* is the number of disks.
 
 ### Animation? {#animation}
 
-Fans of 
+If you've ever programmed a solution to the Tower of Hanoi, you might be confused as to how 
 
 * The k-th move can be computed directly from the binary representation of k
 * A quick enough mathematician could tell what time is displayed
-* Unix time will run out after 2^31 seconds
 
 ### Secret Stone?
 TODO: the animation could be smoother when it only goes up or only goes down.

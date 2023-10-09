@@ -1,4 +1,4 @@
-<script>
+<script type="module">
     "use strict"
     const t0 = Date.now()
 
@@ -28,11 +28,11 @@
     }
 
     function draw() {
-        const n = 32
+        const n = {{ if .Get "n" }}{{ .Get "n" }}{{ else }}32{{ end }}
 
 
-        const canvas = document.getElementById("canvas")
-        const div = document.getElementById("hanoiDiv")
+        const canvas = document.getElementById("canvas{{ .Ordinal }}")
+        const div = document.getElementById("hanoiDiv{{ .Ordinal }}")
         const ctx = canvas.getContext("2d")
 
         canvas.style.width = `${div.clientWidth}px`
@@ -47,10 +47,11 @@
         const seconds = Math.floor(time / 1000)
         const millis = time % 1000
 
-        const dy = height / (n + 1)
+        const dy = height / (n + 2)
         const dx = width / (n + 1 + n) / 3
 
         ctx.clearRect(0, 0, width, height)
+        ctx.translate(0,dy)
         //draw poles
         ctx.fillStyle = "rgb(0,0,0)"
         ctx.fillRect(0, n * dy, width, dy)
@@ -60,7 +61,6 @@
         for (let i = n - 1; i >= 0; i--) {
             const p = pole(i, seconds)
             if (p !== pole(i, seconds + 1)) {
-                console.log(i)
                 discInMotion = i
                 continue
             }
@@ -70,6 +70,10 @@
             const y = (n - 1 - discCount[p]) * dy
             discCount[p]++
             ctx.fillRect(x, y, discWidth, dy * .9)
+        }
+        if(discInMotion === -1){
+          window.requestAnimationFrame(draw)
+          return
         }
         const rest = 0; //[0.1000]
         const percentDone = millis < rest ? 0 : (millis - rest) / (1000 - rest)
@@ -104,6 +108,6 @@
 
     window.requestAnimationFrame(draw)
 </script>
-<div id="hanoiDiv" style="width:100%">
-  <canvas height="500" id="canvas" style="width:100%" width="1000"></canvas>
+<div id="hanoiDiv{{ .Ordinal }}" style="width:100%">
+  <canvas height="500" id="canvas{{ .Ordinal }}" style="width:100%" width="1000"></canvas>
 </div>
