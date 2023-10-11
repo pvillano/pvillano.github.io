@@ -87,7 +87,14 @@
         let apex = Math.max(discCount[startPole], discCount[endPole], discCount[1])
         apex = Math.min(apex + 1, n)
         let yIdx
-        const derp = .6
+
+        const riseDistance = apex - discCount[startPole]
+        const riseTime = 2 * Math.sqrt(riseDistance) //.5y = .5 a (.5t)**2 ; y = (.5t)**2; t = 2sqrt(y)
+
+        const fallDistance = apex - discCount[endPole]
+        const fallTime = Math.sqrt(2 * fallDistance)  // y = .5 a*t**2
+
+        const derp = riseTime / (riseTime + fallTime)
         if (percentDone < derp) {
             yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
         } else {

@@ -44,6 +44,5 @@ If you've ever programmed a solution to the Tower of Hanoi, you might be confuse
 * A quick enough mathematician could tell what time is displayed
 
 ### Secret Stone?
-TODO: the animation could be smoother when it only goes up or only goes down.
 
 [^definition]: It is defined precisely as the number of non-leap seconds which have passed since 00:00:00 UTC on 1 January 1970.
