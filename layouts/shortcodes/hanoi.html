@@ -85,13 +85,8 @@
         const discWidth = (2 * discInMotion + 3) * dx
         const x = centerX - discWidth / 2
 
-        let apex
-        if (startPole !== 1 && endPole !== 1) {
-            apex = Math.max(...discCount)
-        } else {
-            apex = Math.max(discCount[0], discCount[2])
-        }
-        apex = Math.min(apex + 4, n)
+        let apex = Math.max(discCount[startPole], discCount[endPole], discCount[1])
+        apex = Math.min(apex + 1, n)
         let yIdx
         const derp = .6
         if (percentDone < derp) {
