@@ -27,7 +27,7 @@
         return a + t * (b - a)
     }
 
-    const n = {{ if .Get "n" }}{{ .Get "n" }}{{ else }}32{{ end }}
+    const n = {{ if .Get "n" }}{{ .Get "n" }}{{ else }}31{{ end }}
 
     const canvas = document.getElementById("canvas{{ .Ordinal }}")
     const div = document.getElementById("hanoiDiv{{ .Ordinal }}")
@@ -35,7 +35,7 @@
     function draw() {
 
         canvas.style.width = `${div.clientWidth}px`
-        canvas.style.height = `${div.clientWidth * 9 / 16}px`
+        canvas.style.height = `${div.clientWidth * .4}px`
         canvas.width = Math.floor(div.clientWidth * window.devicePixelRatio)
         canvas.height = Math.floor(div.clientWidth * window.devicePixelRatio * 9 / 16)
 
@@ -91,11 +91,11 @@
         const fallTime = Math.sqrt(2 * fallDistance)  // y = .5 a*t**2
 
         let yIdx
-        const derp = riseTime / (riseTime + fallTime)
-        if (percentDone < derp) {
-            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
+        const apexTime = riseTime / (riseTime + fallTime)
+        if (percentDone < apexTime) {
+            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / apexTime))
         } else {
-            const pd2 = ((percentDone - derp) / (1 - derp)) ** 2
+            const pd2 = ((percentDone - apexTime) / (1 - apexTime)) ** 2
             yIdx = lerp(apex, discCount[endPole], pd2)
         }
         const y = (n - 1 - yIdx) * dy
