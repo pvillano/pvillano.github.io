@@ -9,40 +9,37 @@ Categories: []
 
 
 {{< hanoi >}}
-## <q>"When the final tower is completed, time will overflow." </q>
+## {{<q>}}When the final tower is completed, time will overflow.{{</q>}}
 
 The above [animation]({{< relref "#animation">}}) counts down to the [Epochalypse]({{< relref "#epochalypse">}})
 by displaying the current [Unix time]({{< relref "#unix-time">}})
-as progress in solving the [Tower of Hanoi]({{< relref "#hanoi">}}).
+as progress in solving a 32 level [Tower of Hanoi]({{< relref "#hanoi">}}).
 
-### Unix Time? {#unix-time}
-The Unix Time is the number of seconds which have passed since the start of the '70s[^definition]
+### Unix Time {#unix-time}
+The Unix time is the number of seconds which have passed since midnight, January 1, 1970, UTC.
+Computers use Unix time internally to store dates and times as a single number.
 The current Unix time is {{< unixtime >}}.
-Because of its simplicity, Unix Time is widely used in computing.
 
-### Epochalypse? {#epochalypse}
+### Epochalypse {#epochalypse}
 Many pieces of software store Unix timestamps in 32-bit signed integers.
-This data type has a limited range, so at some point the current Unix time will exceed the allocated space and cause problems.
+This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
 
-### Tower of Hanoi? {#hanoi}
+### Tower of Hanoi {#hanoi}
+The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
+Its difficulty comes from three restrictions.
+Firstly, the player may only move one disc at a time.
+Secondly, the player may never place a larger disc onto a smaller disc.
+Lastly, the discs must be placed in one of only three stacks, including the starting and ending positions.
 
-{{< hanoi n=3 >}}
+As the number of discs increases, the number of moves it takes to solve the puzzle grows exponentially.
+For three discs, the puzzle can be solved in seven moves, but for 32 discs, the solution requires over two billion moves.
 
-The [Tower of Hanoi](https://wikipedia.org/wiki/Tower_of_Hanoi) is a mathematical puzzle consisting of three stacks of discs.
-The objective of the puzzle is to move every disc to the last stack.
-The player can repeatedly move the topmost disc from one stack to another stack,
-as long as they never place a larger disc onto a smaller disc.
+### Animation {#animation}
 
-The minimal number of moves required to solve a Tower of Hanoi puzzle is 2*{{< sup >}}n{{< /sup >}}* − 1,
-where *n* is the number of disks.
+There's some neat things going on.
 
-### Animation? {#animation}
-
-If you've ever programmed a solution to the Tower of Hanoi, you might be confused as to how 
-
-* The k-th move can be computed directly from the binary representation of k
-* A quick enough mathematician could tell what time is displayed
-
-### Secret Stone?
-
-[^definition]: It is defined precisely as the number of non-leap seconds which have passed since 00:00:00 UTC on 1 January 1970.
+* Most algorithms for solving the Tower of Hanoi compute each step in order. This one computes the *k*-th state directly.
+* The position of the moving piece is also computed directly from the milliseconds place.
+* It is possible to recover the exact time from the animation!
+* The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.
+* This is my first time animating with JavaScript and the `canvas` API
