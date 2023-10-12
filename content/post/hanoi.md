@@ -1,6 +1,6 @@
 ---
 title: "The Two Billion Towers of Time"
-date: 2023-10-08T20:00:46-05:00
+date: 2023-10-11T21:02:14-05:00
 draft: false
 Description: "A clock"
 Tags: ["clock", "animation", "canvas", "javascript"]
