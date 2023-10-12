@@ -27,12 +27,12 @@
         return a + t * (b - a)
     }
 
-    function draw() {
-        const n = {{ if .Get "n" }}{{ .Get "n" }}{{ else }}32{{ end }}
+    const n = {{ if .Get "n" }}{{ .Get "n" }}{{ else }}32{{ end }}
 
-        const canvas = document.getElementById("canvas{{ .Ordinal }}")
-        const div = document.getElementById("hanoiDiv{{ .Ordinal }}")
-        const ctx = canvas.getContext("2d")
+    const canvas = document.getElementById("canvas{{ .Ordinal }}")
+    const div = document.getElementById("hanoiDiv{{ .Ordinal }}")
+    const ctx = canvas.getContext("2d")
+    function draw() {
 
         canvas.style.width = `${div.clientWidth}px`
         canvas.style.height = `${div.clientWidth * 9 / 16}px`
@@ -42,18 +42,18 @@
         const width = canvas.width
         const height = canvas.height
 
-        const time = Date.now()
-        const seconds = Math.floor(time / 1000)
-        const millis = time % 1000
-
         const dy = height / (n + 2)
         const dx = width / (n + 1 + n) / 3
 
         ctx.clearRect(0, 0, width, height)
         ctx.translate(0, dy)
-        //draw poles
+        //draw base
         ctx.fillStyle = "rgb(0,0,0)"
         ctx.fillRect(0, n * dy, width, dy)
+
+        const time = Date.now()
+        const seconds = Math.floor(time / 1000)
+        const millis = time % 1000
 
         const discCount = [0, 0, 0]
         let discInMotion = -1
@@ -74,26 +74,23 @@
             window.requestAnimationFrame(draw)
             return
         }
-        const rest = 0; //[0.1000]
-        const percentDone = millis < rest ? 0 : (millis - rest) / (1000 - rest)
+        const percentDone = millis / 1000
         const xFract = accelDecel(percentDone)
         const startPole = pole(discInMotion, seconds)
         const endPole = pole(discInMotion, seconds + 1)
-        const p = lerp(startPole, endPole, xFract)
-        const centerX = (p + 0.5) * width / 3
+        const xIdx = lerp(startPole, endPole, xFract)
+        const centerX = (xIdx + 0.5) * width / 3
         const discWidth = (2 * discInMotion + 3) * dx
         const x = centerX - discWidth / 2
 
         let apex = Math.max(discCount[startPole], discCount[endPole], discCount[1])
         apex = Math.min(apex + 1, n)
-        let yIdx
-
         const riseDistance = apex - discCount[startPole]
         const riseTime = 2 * Math.sqrt(riseDistance) //.5y = .5 a (.5t)**2 ; y = (.5t)**2; t = 2sqrt(y)
-
         const fallDistance = apex - discCount[endPole]
         const fallTime = Math.sqrt(2 * fallDistance)  // y = .5 a*t**2
 
+        let yIdx
         const derp = riseTime / (riseTime + fallTime)
         if (percentDone < derp) {
             yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
@@ -101,8 +98,8 @@
             const pd2 = ((percentDone - derp) / (1 - derp)) ** 2
             yIdx = lerp(apex, discCount[endPole], pd2)
         }
-
         const y = (n - 1 - yIdx) * dy
+
         ctx.fillRect(x, y, discWidth, dy * .9)
 
         window.requestAnimationFrame(draw)
