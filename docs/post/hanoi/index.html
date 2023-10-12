@@ -23,7 +23,7 @@
     </style>
     
     
-    <title>Peter Villano&#39;s Personal Site | Hanoi</title>
+    <title>Peter Villano&#39;s Personal Site | The Two Billion Towers of Time</title>
 </head><body><nav>
 <ul>
     
@@ -37,15 +37,15 @@
 </ul>
 </nav>
 <div id="content">
-  <h1 id="title">Hanoi</h1>
+  <h1 id="title">The Two Billion Towers of Time</h1>
     
         
-            <h2>Friday, September 15 2023</h2>
+            <h2>Wednesday, October 11 2023</h2>
         
     
   <div>
         <article id="article">
-           <script>
+           <script type="module">
     "use strict"
     const t0 = Date.now()
 
@@ -74,37 +74,39 @@
         return a + t * (b - a)
     }
 
+    const n = 31
+
+    const canvas = document.getElementById("canvas0")
+    const div = document.getElementById("hanoiDiv0")
+    const ctx = canvas.getContext("2d")
     function draw() {
-        const n = 32
 
+        canvas.style.width = `${div.clientWidth}px`
+        canvas.style.height = `${div.clientWidth * .4}px`
+        canvas.width = Math.floor(div.clientWidth * window.devicePixelRatio)
+        canvas.height = Math.floor(div.clientWidth * window.devicePixelRatio * 9 / 16)
 
-        const canvas = document.getElementById("canvas")
-        const div = document.getElementById("div")
-        const ctx = canvas.getContext("2d")
+        const width = canvas.width
+        const height = canvas.height
 
-        canvas.width = div.clientWidth
-        canvas.height = canvas.width * 9/16
+        const dy = height / (n + 2)
+        const dx = width / (n + 1 + n) / 3
 
-        const {width, height} = canvas.getBoundingClientRect()
+        ctx.clearRect(0, 0, width, height)
+        ctx.translate(0, dy)
+        
+        ctx.fillStyle = "rgb(0,0,0)"
+        ctx.fillRect(0, n * dy, width, dy)
 
         const time = Date.now()
         const seconds = Math.floor(time / 1000)
         const millis = time % 1000
-
-        const dy = height / (n + 1)
-        const dx = width / (n + 1 + n) / 3
-
-        ctx.clearRect(0, 0, width, height)
-        
-        ctx.fillStyle = "rgb(0,0,0)"
-        ctx.fillRect(0, n * dy, width, dy)
 
         const discCount = [0, 0, 0]
         let discInMotion = -1
         for (let i = n - 1; i >= 0; i--) {
             const p = pole(i, seconds)
             if (p !== pole(i, seconds + 1)) {
-                console.log(i)
                 discInMotion = i
                 continue
             }
@@ -115,32 +117,36 @@
             discCount[p]++
             ctx.fillRect(x, y, discWidth, dy * .9)
         }
-        const rest = 0; 
-        const percentDone = millis < rest ? 0 : (millis - rest) / (1000 - rest)
+        if (discInMotion === -1) {
+            window.requestAnimationFrame(draw)
+            return
+        }
+        const percentDone = millis / 1000
         const xFract = accelDecel(percentDone)
         const startPole = pole(discInMotion, seconds)
         const endPole = pole(discInMotion, seconds + 1)
-        const p = lerp(startPole, endPole, xFract)
-        const centerX = (p + 0.5) * width / 3
+        const xIdx = lerp(startPole, endPole, xFract)
+        const centerX = (xIdx + 0.5) * width / 3
         const discWidth = (2 * discInMotion + 3) * dx
         const x = centerX - discWidth / 2
 
-        let apex
-        if (startPole !== 1 && endPole !== 1) {
-            apex = Math.max(...discCount)
-        } else {
-            apex = Math.max(discCount[0], discCount[2])
-        }
-        apex = Math.min(apex + 4, n)
+        let apex = Math.max(discCount[startPole], discCount[endPole], discCount[1])
+        apex = Math.min(apex + 1, n)
+        const riseDistance = apex - discCount[startPole]
+        const riseTime = 2 * Math.sqrt(riseDistance) 
+        const fallDistance = apex - discCount[endPole]
+        const fallTime = Math.sqrt(2 * fallDistance)  
+
         let yIdx
-        const derp = .6
-        if (percentDone < derp) {
-            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / derp))
+        const apexTime = riseTime / (riseTime + fallTime)
+        if (percentDone < apexTime) {
+            yIdx = lerp(discCount[startPole], apex, accelDecel(percentDone / apexTime))
         } else {
-            const pd2 = ((percentDone - derp) / (1 - derp)) ** 2
+            const pd2 = ((percentDone - apexTime) / (1 - apexTime)) ** 2
             yIdx = lerp(apex, discCount[endPole], pd2)
         }
         const y = (n - 1 - yIdx) * dy
+
         ctx.fillRect(x, y, discWidth, dy * .9)
 
         window.requestAnimationFrame(draw)
@@ -148,17 +154,51 @@
 
     window.requestAnimationFrame(draw)
 </script>
-<div id="div" style="width:100%">
-  <canvas height="500" id="canvas" style="width:100%" width="1000"></canvas>
+<div id="hanoiDiv0" style="width:100%">
+    <canvas height="500" id="canvas0" style="width:100%" width="1000"></canvas>
 </div>
-<p>The minimal number of moves required to solve a <a href="https://wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi puzzle</a>
-is 2<em><sup>
-  n
-</sup></em> − 1,
-where <em>n</em> is the number of disks.
-This puzzle has 32 disks, and performs one move per second.
-It was started on January 1, 1970
-and will complete 68 years later, on January 19, 2038.</p>
+<h2 id="hahahugoshortcode-s1-hbhb"><q>
+  When the final tower is completed, time will overflow.
+</q></h2>
+<p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
+by displaying the current <a href="#unix-time">Unix time</a>
+as progress in solving a 31 level <a href="#hanoi">Tower of Hanoi</a>.</p>
+<h3 id="unix-time">Unix Time</h3>
+<p>Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch.
+Computers use Unix time internally to store when an event occurred as a single number.
+This number can then be converted into the user&rsquo;s calendar, timezone, and language.
+The current Unix time is 
+<script>
+    function drawUnixTime(){
+        document.getElementById("unixTime").textContent = Math.floor(Date.now()/1000)
+        window.requestAnimationFrame(drawUnixTime)
+    }
+    window.requestAnimationFrame(drawUnixTime)
+</script>
+<code id="unixTime">[the current unix time]</code>.</p>
+<h3 id="epochalypse">Epochalypse</h3>
+<p>Many pieces of software store Unix time in 32-bit signed integers.
+This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
+This will occur 2<sup>
+  31
+</sup> seconds after the Unix epoch, at 3:14:08 January 19, 2038.</p>
+<h3 id="hanoi">Tower of Hanoi</h3>
+<p>The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
+Its difficulty comes from three restrictions.
+First, the player may only move one disc at a time.
+Second, the player may never place a larger disc onto a smaller disc.
+Last, the discs must be placed in one of only three stacks, including the starting and ending positions.</p>
+<p>As the number of discs increases, the number of moves it takes to solve the puzzle grows exponentially.
+For three discs, the puzzle can be solved in seven moves, but for 31 discs, the solution requires over two billion moves.</p>
+<h3 id="animation">Animation</h3>
+<p>There are a few neat things going on here.</p>
+<ul>
+<li>Most algorithms for solving the Tower of Hanoi compute each step in order. This one computes the <em>k</em>-th state directly.</li>
+<li>The position of the moving piece is also computed directly from the milliseconds place.</li>
+<li>It is possible to recover the exact date and time from the animation!</li>
+<li>The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.</li>
+<li>This is my first time animating with JavaScript and the canvas API</li>
+</ul>
 
         </article>
   </div>
