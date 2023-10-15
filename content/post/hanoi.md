@@ -41,7 +41,6 @@ For three discs, the puzzle can be solved in seven moves, but for 31 discs, the 
 There are a few neat things going on here.
 
 * Most algorithms for solving the Tower of Hanoi compute each step in order. This one computes the *k*-th state directly.
-* The position of the moving piece is also computed directly from the milliseconds place.
 * It is possible to recover the exact date and time from the animation!
 * The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.
-* This is my first time animating with JavaScript and the canvas API
+* This is my first time animating with JavaScript and the canvas API.
