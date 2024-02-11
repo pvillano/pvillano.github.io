@@ -2,19 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>canvas on Peter Villano&#39;s Personal Site</title>
-    <link>https://pvillano.github.io/tags/canvas/</link>
+    <link>https://saej.in/tags/canvas/</link>
     <description>Recent content in canvas on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate>
+    <atom:link href="https://saej.in/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Two Billion Towers of Time</title>
-      <link>https://pvillano.github.io/post/hanoi/</link>
+      <link>https://saej.in/post/hanoi/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/post/hanoi/</guid>
-      <description>&#34;use strict&#34;const t0 = Date.now()function pole(ring, time) {let x = (time + (1  (ring + 1)) % 3if (ring % 2 === 1) {x = 3 - x}return (x + 3) % 3}function accelDecel(t) {if (t = 0; i--) {const p = pole(i, seconds)if (p !== pole(i, seconds + 1)) {discInMotion = icontinue}const centerX = (p + 0.</description>
+      <guid>https://saej.in/post/hanoi/</guid>
+      <description>When the final tower is completed, time will overflow.&#xD;This animation counts down to the Epochalypse by displaying the current Unix time as progress in solving a 31 level Tower of Hanoi.&#xA;Unix Time Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch. Computers use Unix time internally to store when an event occurred as a single number. Unlike regular1 timestamps, Unix timestamps are never repeated or skipped.</description>
     </item>
-    
   </channel>
 </rss>

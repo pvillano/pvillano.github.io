@@ -2,46 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Peter Villano&#39;s Personal Site</title>
-    <link>https://pvillano.github.io/tags/</link>
+    <link>https://saej.in/tags/</link>
     <description>Recent content in Tags on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate><atom:link href="https://pvillano.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate>
+    <atom:link href="https://saej.in/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>animation</title>
-      <link>https://pvillano.github.io/tags/animation/</link>
+      <link>https://saej.in/tags/animation/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/tags/animation/</guid>
+      <guid>https://saej.in/tags/animation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>canvas</title>
-      <link>https://pvillano.github.io/tags/canvas/</link>
+      <link>https://saej.in/tags/canvas/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/tags/canvas/</guid>
+      <guid>https://saej.in/tags/canvas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>clock</title>
-      <link>https://pvillano.github.io/tags/clock/</link>
+      <link>https://saej.in/tags/clock/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/tags/clock/</guid>
+      <guid>https://saej.in/tags/clock/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>javascript</title>
-      <link>https://pvillano.github.io/tags/javascript/</link>
+      <link>https://saej.in/tags/javascript/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
-      
-      <guid>https://pvillano.github.io/tags/javascript/</guid>
+      <guid>https://saej.in/tags/javascript/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

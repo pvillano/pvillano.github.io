@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Peter Villano&#39;s Personal Site</title>
-    <link>https://pvillano.github.io/categories/</link>
+    <link>https://saej.in/categories/</link>
     <description>Recent content in Categories on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://pvillano.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://saej.in/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

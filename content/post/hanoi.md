@@ -18,13 +18,14 @@ as progress in solving a 31 level [Tower of Hanoi]({{< relref "#hanoi">}}).
 ### Unix Time {#unix-time}
 Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch.
 Computers use Unix time internally to store when an event occurred as a single number.
+Unlike regular[^regular] timestamps, Unix timestamps are never repeated or skipped.
 This number can then be converted into the user's calendar, timezone, and language.
 The current Unix time is {{< unixtime >}}.
 
 ### Epochalypse {#epochalypse}
 Many pieces of software store Unix time in 32-bit signed integers.
 This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
-This will occur 2{{<sup>}}31{{</sup>}} seconds after the Unix epoch, at 3:14:08 January 19, 2038.
+This will occur 2{{<sup>}}31{{</sup>}} seconds after the Unix epoch, at 3:14:08 UTC January 19, 2038.
 
 ### Tower of Hanoi {#hanoi}
 The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
@@ -40,7 +41,10 @@ For three discs, the puzzle can be solved in seven moves, but for 31 discs, the 
 
 There are a few neat things going on here.
 
-* Most algorithms for solving the Tower of Hanoi compute each step in order. This one computes the *k*-th state directly.
+* Most algorithms for solving the Tower of Hanoi compute each step in order[^kahn]. This one computes the *k*-th state directly.
 * It is possible to recover the exact date and time from the animation!
 * The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.
 * This is my first time animating with JavaScript and the canvas API.
+
+[^regular]: Such as Sunday, November 5, 2023, 1:30am, which occurred twice in time zones that observed Daylight Savings Time.
+[^kahn]: For example, [this lesson](https://www.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/a/towers-of-hanoi) on Kahn Academy
