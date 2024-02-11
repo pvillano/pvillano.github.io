@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en"><head itemscope itemtype="https://schema.org/WebPage">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
-    body{
-      display: flex;
-      justify-content: center;
-      margin: 2rem;
-      flex-direction: column;
-      max-width: 50rem;
-      line-height: 1.5;
-    }
-    nav ul{
-      display: flex;
-      max-width: 50rem;
-      justify-content: space-around;
-    }
-    nav li{
-      display: inline;
-    }
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+            flex-direction: column;
+            max-width: 50rem;
+            line-height: 1.5;
+        }
+
+        nav ul {
+            display: flex;
+            max-width: 50rem;
+            justify-content: space-around;
+        }
+
+        nav li {
+            display: inline;
+        }
     </style>
     
     
@@ -29,7 +31,7 @@
     
     <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
     
-    <li><a href="/post/" title="Posts">Posts</a></li>
+    <li><a href="/about/" title="About">About</a></li>
     
     <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
     
@@ -157,7 +159,7 @@
 <div id="hanoiDiv0" style="width:100%">
     <canvas height="500" id="canvas0" style="width:100%" width="1000"></canvas>
 </div>
-<h2 id="hahahugoshortcode-s1-hbhb"><q>
+<h2 id="hahahugoshortcode7s1hbhb"><q>
   When the final tower is completed, time will overflow.
 </q></h2>
 <p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
@@ -166,6 +168,7 @@ as progress in solving a 31 level <a href="#hanoi">Tower of Hanoi</a>.</p>
 <h3 id="unix-time">Unix Time</h3>
 <p>Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch.
 Computers use Unix time internally to store when an event occurred as a single number.
+Unlike regular<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> timestamps, Unix timestamps are never repeated or skipped.
 This number can then be converted into the user&rsquo;s calendar, timezone, and language.
 The current Unix time is 
 <script>
@@ -181,7 +184,7 @@ The current Unix time is
 This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
 This will occur 2<sup>
   31
-</sup> seconds after the Unix epoch, at 3:14:08 January 19, 2038.</p>
+</sup> seconds after the Unix epoch, at 3:14:08 UTC January 19, 2038.</p>
 <h3 id="hanoi">Tower of Hanoi</h3>
 <p>The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
 Its difficulty comes from three restrictions.
@@ -193,11 +196,22 @@ For three discs, the puzzle can be solved in seven moves, but for 31 discs, the 
 <h3 id="animation">Animation</h3>
 <p>There are a few neat things going on here.</p>
 <ul>
-<li>Most algorithms for solving the Tower of Hanoi compute each step in order. This one computes the <em>k</em>-th state directly.</li>
+<li>Most algorithms for solving the Tower of Hanoi compute each step in order<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. This one computes the <em>k</em>-th state directly.</li>
 <li>It is possible to recover the exact date and time from the animation!</li>
 <li>The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.</li>
 <li>This is my first time animating with JavaScript and the canvas API.</li>
 </ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Such as Sunday, November 5, 2023, 1:30am, which occurred twice in time zones that observed Daylight Savings Time.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>For example, <a href="https://www.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/a/towers-of-hanoi">this lesson</a> on Kahn Academy&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
         </article>
   </div>
