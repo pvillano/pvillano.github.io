@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://saej.in/post/advent-of-code-reflections/</loc>
+    <lastmod>2024-01-11T13:35:40-04:00</lastmod>
+  </url><url>
+    <loc>https://saej.in/post/</loc>
+    <lastmod>2024-01-11T13:35:40-04:00</lastmod>
+  </url><url>
     <loc>https://saej.in/tags/animation/</loc>
     <lastmod>2023-10-11T21:02:14-05:00</lastmod>
   </url><url>
@@ -12,9 +18,6 @@
     <lastmod>2023-10-11T21:02:14-05:00</lastmod>
   </url><url>
     <loc>https://saej.in/tags/javascript/</loc>
-    <lastmod>2023-10-11T21:02:14-05:00</lastmod>
-  </url><url>
-    <loc>https://saej.in/post/</loc>
     <lastmod>2023-10-11T21:02:14-05:00</lastmod>
   </url><url>
     <loc>https://saej.in/tags/</loc>

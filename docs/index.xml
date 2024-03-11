@@ -6,8 +6,15 @@
     <description>Recent content on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2024 13:35:40 -0400</lastBuildDate>
     <atom:link href="https://saej.in/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code Reflections</title>
+      <link>https://saej.in/post/advent-of-code-reflections/</link>
+      <pubDate>Thu, 11 Jan 2024 13:35:40 -0400</pubDate>
+      <guid>https://saej.in/post/advent-of-code-reflections/</guid>
+      <description>Introduction This year&amp;rsquo;s Advent of Code was a good year for me. I scored in the top 100 twice, on days 11 and 12.&#xA;I never used my auto-submitter, but I did use my input fetcher and testing methods. Every year I start having forgotten what these functions do, and by the end I&amp;rsquo;ve made them more complex than they were the previous year.&#xA;extract_ints() proved to be very useful this year.</description>
+    </item>
     <item>
       <title>The Two Billion Towers of Time</title>
       <link>https://saej.in/post/hanoi/</link>
@@ -69,7 +76,7 @@
       <link>https://saej.in/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://saej.in/about/</guid>
-      <description>Hi, I&amp;rsquo;m Rocky. I enjoy 3D printing, watching animation, and PC gaming. I graduated from the Purdue University in 2019. I majored in Computer Science and minored in Psychology and Mathematics. I am non-binary. My pronouns are they/them.&#xA;LinkedIn Github 3D Printables Shadertoy Resume (pdf) </description>
+      <description>Hi, I&amp;rsquo;m Rocky. I enjoy 3D printing, watching animation, and PC gaming. I graduated from the Purdue University in 2019. I majored in Computer Science and minored in Psychology and Mathematics. I am non-binary. My pronouns are they/them.&#xA;Posts LinkedIn Github 3D Printables Shadertoy Resume (pdf) </description>
     </item>
   </channel>
 </rss>
