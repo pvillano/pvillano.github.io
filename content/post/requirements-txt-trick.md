@@ -6,16 +6,20 @@ Description: ""
 Tags: []
 Categories: []
 ---
+Sometimes you find yourself in a legacy project with a single requirements.txt file containing pinned dependencies.
+A CVE is released, and you update the relevant package to the latest version, 
+but now there are incompatibilities.
 
-This is my favorite way to manage dependencies in a python project. Create a `requirements.txt` file with unpinned[^1]
-dependencies. The following script will generate a file `requirements-frozen.txt` with the specified packages and all
-their dependencies version pinned. Commit both files to version management. Add or remove packages
-from `requirements.txt` and use `requirements-frozen.txt` for reproducible development/production builds. To update all
-packages, re-run the script.
+This is a way to manage dependencies in such a python project.
+Create a `requirements.txt` file with the packages you need but not their dependencies.
+The following script will generate a file `requirements-frozen.txt` with the specified packages and all their dependencies version pinned.
+Commit both files to version management.
+Add or remove packages from `requirements.txt` and use `requirements-frozen.txt` for reproducible builds.
+To update all packages, re-run the script.
 
 ```
   #!/bin/sh
-  docker run -v "$(pwd)":/req -w /req python:3.9.1-slim-buster \
+  docker run -v "$(pwd)":/req -w /req python:3.???.???-slim-buster \
   sh -c "pip install -r requirements.txt \
   && echo \"#$(date)\" > requirements-frozen.txt \
   && pip freeze >> requirements-frozen.txt"
@@ -37,5 +41,3 @@ The following is a line-by-line explanation of the script:
 * Updating after a patch is released is as simple as re-running the script.
 
 If you want features, try [pipenv](https://pipenv.pypa.io/) or [Poetry](https://python-poetry.org/).
-
-  [^1]: as pinned as you like: major, minor, greater than etc.

@@ -47,13 +47,17 @@
     
   <div>
         <article id="article">
-           <p>This is my favorite way to manage dependencies in a python project. Create a <code>requirements.txt</code> file with unpinned<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-dependencies. The following script will generate a file <code>requirements-frozen.txt</code> with the specified packages and all
-their dependencies version pinned. Commit both files to version management. Add or remove packages
-from <code>requirements.txt</code> and use <code>requirements-frozen.txt</code> for reproducible development/production builds. To update all
-packages, re-run the script.</p>
+           <p>Sometimes you find yourself in a legacy project with a single requirements.txt file containing pinned dependencies.
+A CVE is released, and you update the relevant package to the latest version,
+but now there are incompatibilities.</p>
+<p>This is a way to manage dependencies in such a python project.
+Create a <code>requirements.txt</code> file with the packages you need but not their dependencies.
+The following script will generate a file <code>requirements-frozen.txt</code> with the specified packages and all their dependencies version pinned.
+Commit both files to version management.
+Add or remove packages from <code>requirements.txt</code> and use <code>requirements-frozen.txt</code> for reproducible builds.
+To update all packages, re-run the script.</p>
 <pre tabindex="0"><code>  #!/bin/sh
-  docker run -v &#34;$(pwd)&#34;:/req -w /req python:3.9.1-slim-buster \
+  docker run -v &#34;$(pwd)&#34;:/req -w /req python:3.???.???-slim-buster \
   sh -c &#34;pip install -r requirements.txt \
   &amp;&amp; echo \&#34;#$(date)\&#34; &gt; requirements-frozen.txt \
   &amp;&amp; pip freeze &gt;&gt; requirements-frozen.txt&#34;
@@ -73,14 +77,6 @@ requirements in <code>requirements.txt</code></li>
 <li>Updating after a patch is released is as simple as re-running the script.</li>
 </ul>
 <p>If you want features, try <a href="https://pipenv.pypa.io/">pipenv</a> or <a href="https://python-poetry.org/">Poetry</a>.</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>as pinned as you like: major, minor, greater than etc.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
 
         </article>
   </div>
