@@ -58,3 +58,6 @@ It justifies me writing them as functions instead of a series of statements in t
 
 ## Day 20: Looking for Answers
 I had to visualize the graph to realize there were independent loops of different lengths that had to align, similar to the ghosts problem.
+
+## Conclusion
+I haven't finished all the problems yet, so no conclusion.
