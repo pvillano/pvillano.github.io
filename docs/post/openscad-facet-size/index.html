@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head itemscope itemtype="https://schema.org/WebPage">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+            flex-direction: column;
+            max-width: 50rem;
+            line-height: 1.5;
+        }
+
+        nav ul {
+            display: flex;
+            max-width: 50rem;
+            justify-content: space-around;
+        }
+
+        nav li {
+            display: inline;
+        }
+    </style>
+    
+    
+    <title>Peter Villano&#39;s Personal Site | Openscad Facet Size</title>
+</head><body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/about/" title="About">About</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">Openscad Facet Size</h1>
+    
+        
+            <h2>Monday, September 26 2022</h2>
+        
+    
+  <div>
+        <article id="article">
+           <p>I recommend starting with the following settings as a baseline, and increasing <code>$fs</code> if the GUI becomes slow.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-openscad" data-lang="openscad"><span style="display:flex;"><span>$fn<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">01</span>;
+</span></span><span style="display:flex;"><span>$fs<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">3</span>;
+</span></span></code></pre></div><h1 id="background">Background</h1>
+<p>Three variables determine the faceted-ness of your model.</p>
+<ul>
+<li><strong>$fa</strong> is the minimum angle for a fragment.
+It creates a size-independent upper bound for <em>number of facets</em> in a circle.
+This bound is exactly <code>ceil(360/$fa)</code></li>
+<li><strong>$fs</strong> sets the minimum facet size in millimeters.</li>
+<li><strong>$fn</strong> is a complete override on the number of facts.
+This can be used when an exact number of facets is desired.
+<ul>
+<li><strong>$fn</strong> is useful for creating regular n-gons</li>
+</ul>
+</li>
+</ul>
+<h1 id="old-method">Old Method</h1>
+<p>I used to use different quality levels for preview and render with the code snippet.</p>
+<pre tabindex="0"><code>$fa=.01;
+$fs=$preview ? 5 : .1;
+</code></pre><p>This allowed me to edit at interactive rates but render at the highest resolution visible on my printer.
+I no longer recommend this, because it can lead to unexpectedly long render times.
+Depending on the model, halving the minimum facet size can increase the rendering time 16-fold!</p>
+<h1 id="better-method">Better Method</h1>
+<p>I now prefer to set a single facet size of .3mm or 1mm.
+If the <code>$preview</code> variable is not used to modify facet size,
+then preview calculation time more accurately approximates the render calculation time.</p>
+<p>More info on facets can be found at <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">the OpenScad Wikibook</a></p>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>

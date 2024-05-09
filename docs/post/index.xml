@@ -6,14 +6,28 @@
     <description>Recent content in Posts on Peter Villano&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Oct 2023 21:02:14 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2024 13:35:40 -0400</lastBuildDate>
     <atom:link href="https://saej.in/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code Reflections</title>
+      <link>https://saej.in/post/advent-of-code-reflections/</link>
+      <pubDate>Thu, 11 Jan 2024 13:35:40 -0400</pubDate>
+      <guid>https://saej.in/post/advent-of-code-reflections/</guid>
+      <description>Introduction This year&amp;rsquo;s Advent of Code was a good year for me. I scored in the top 100 twice, on days 11 and 12.&#xA;I never used my auto-submitter, but I did use my input fetcher and testing methods. Every year I start having forgotten what these functions do, and by the end I&amp;rsquo;ve made them more complex than they were the previous year.&#xA;extract_ints() proved to be very useful this year.</description>
+    </item>
     <item>
       <title>The Two Billion Towers of Time</title>
       <link>https://saej.in/post/hanoi/</link>
       <pubDate>Wed, 11 Oct 2023 21:02:14 -0500</pubDate>
       <guid>https://saej.in/post/hanoi/</guid>
       <description>When the final tower is completed, time will overflow.&#xD;This animation counts down to the Epochalypse by displaying the current Unix time as progress in solving a 31 level Tower of Hanoi.&#xA;Unix Time Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch. Computers use Unix time internally to store when an event occurred as a single number. Unlike regular1 timestamps, Unix timestamps are never repeated or skipped.</description>
+    </item>
+    <item>
+      <title>Openscad Facet Size</title>
+      <link>https://saej.in/post/openscad-facet-size/</link>
+      <pubDate>Mon, 26 Sep 2022 19:47:49 -0400</pubDate>
+      <guid>https://saej.in/post/openscad-facet-size/</guid>
+      <description>I recommend starting with the following settings as a baseline, and increasing $fs if the GUI becomes slow.&#xA;$fn=.01; $fs=.3; Background Three variables determine the faceted-ness of your model.&#xA;$fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts.</description>
     </item>
     <item>
       <title>&lt;details&gt; Added to Hugo Theme</title>
@@ -41,7 +55,7 @@
       <link>https://saej.in/post/requirements-txt-trick/</link>
       <pubDate>Tue, 28 Dec 2021 02:17:28 -0500</pubDate>
       <guid>https://saej.in/post/requirements-txt-trick/</guid>
-      <description>This is my favorite way to manage dependencies in a python project. Create a requirements.txt file with unpinned1 dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned. Commit both files to version management. Add or remove packages from requirements.txt and use requirements-frozen.txt for reproducible development/production builds. To update all packages, re-run the script.&#xA;#!/bin/sh&#xD;docker run -v &amp;#34;$(pwd)&amp;#34;:/req -w /req python:3.</description>
+      <description>Sometimes you find yourself in a legacy project with a single requirements.txt file containing pinned dependencies. A CVE is released, and you update the relevant package to the latest version, but now there are incompatibilities.&#xA;This is a way to manage dependencies in such a python project. Create a requirements.txt file with the packages you need but not their dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned.</description>
     </item>
     <item>
       <title>Hello World</title>
