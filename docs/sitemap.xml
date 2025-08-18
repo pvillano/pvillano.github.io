@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://saej.in/post/queens/</loc>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
+  </url><url>
+    <loc>https://saej.in/tags/linkedin/</loc>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
+  </url><url>
     <loc>https://saej.in/post/</loc>
-    <lastmod>2025-08-02T09:58:21-07:00</lastmod>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
+  </url><url>
+    <loc>https://saej.in/tags/puzzles/</loc>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
+  </url><url>
+    <loc>https://saej.in/tags/queens/</loc>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
+  </url><url>
+    <loc>https://saej.in/tags/</loc>
+    <lastmod>2025-08-01T13:51:02-07:00</lastmod>
   </url><url>
     <loc>https://saej.in/post/advent-of-code-reflections/</loc>
     <lastmod>2024-01-11T13:35:40-04:00</lastmod>
@@ -18,9 +33,6 @@
     <lastmod>2023-10-11T21:02:14-05:00</lastmod>
   </url><url>
     <loc>https://saej.in/tags/javascript/</loc>
-    <lastmod>2023-10-11T21:02:14-05:00</lastmod>
-  </url><url>
-    <loc>https://saej.in/tags/</loc>
     <lastmod>2023-10-11T21:02:14-05:00</lastmod>
   </url><url>
     <loc>https://saej.in/post/hanoi/</loc>
@@ -48,7 +60,7 @@
     <lastmod>2021-11-27T19:15:58-05:00</lastmod>
   </url><url>
     <loc>https://saej.in/word-of-the-day/</loc>
-    <lastmod>1969-12-31T17:00:00-07:00</lastmod>
+    <lastmod>1969-12-31T16:00:00-08:00</lastmod>
   </url><url>
     <loc>https://saej.in/about/</loc>
   </url><url>
