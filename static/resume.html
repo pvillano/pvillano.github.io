@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Peter Villano's Resume</title>
+  <style>
+    div {
+      display: flex;
+    }
+
+    .name {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0
+    }
+
+    .subheadingContainer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .subheading {
+      justify-content: center;
+      flex: 1;
+      text-align: center
+    }
+
+    .subheading:first-child > * {
+      margin-right: auto;
+      text-align: left
+    }
+
+    .subheading:last-child > * {
+      margin-left: auto;
+      text-align: right
+    }
+
+    .nameContainer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .name {
+      justify-content: center;
+      flex: 1;
+    }
+
+    .name:first-child > * {
+      margin-left: auto;
+    }
+
+    .name:last-child > * {
+      margin-right: auto;
+    }
+
+    .section {
+      flex-direction: column;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .section + .section {
+      border-top: 2px solid;
+    }
+
+    .section-title {
+      text-transform: uppercase;
+    }
+
+    .item {
+      flex-direction: column;
+    }
+
+    .titledate {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .title {
+      display: block;
+    }
+
+    .date {
+      display: block;
+      text-align: right;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    @media print {
+      @page {
+        margin: 0.75in;
+      }
+
+      .section {
+        break-inside: avoid;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+<div class=section id="heading">
+  <div class="nameContainer">
+    <div class="name"><h1>Peter</h1></div>
+    <div class="name" style="flex:0"><h1>&nbsp;(Rocky)&nbsp;</h1></div>
+    <div class="name"><h1>Villano</h1></div>
+  </div>
+  <div class="subheadingContainer">
+    <div class="subheading">
+            <span>
+            <a href="https://saej.in">saej.in</a><br/>
+            <a href="https://www.linkedin.com/in/pvillan/">linkedin.com/in/pvillan/</a>
+            </span>
+    </div>
+    <div class="subheading">
+            <span>
+            rvillano.ideacenter@saej.in<br/>
+            (574)-855-9777
+            </span>
+    </div>
+    <div class="subheading">
+            <span>
+            <br/>
+            Granger, IN 46530
+            </span>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="professionalExperience">
+  <div class="section-title">
+    <b>Professional Experience</b>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Power Law Systems</b>, Fort Wayne, Indiana<br>
+        <i>Independent Software Consultant</i>
+      </div>
+      <div class="date">
+        March 2024 - Present
+      </div>
+    </div>
+    <ul>
+      <li>
+        Developed a bespoke performance management app to fit existing workflows
+      </li>
+      <li>
+        Architected a user-friendly, deeply integrated live site content editor
+      </li>
+      <li>
+        Set up automatic formatting, code quality checks, and deployment
+      </li>
+      <li>
+        Parametrically generated individualized name placards for multi-material 3D printing
+      </li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Center for Research Computing</b>, University of Notre Dame<br>
+        <i>Assistant Research Programmer - Wellbeing at Work</i>
+      </div>
+      <div class="date">
+        July 2019 - April 2021
+      </div>
+    </div>
+    <ul>
+      <li>
+        Empowered client to resolve issues independently with expressive administrative tools
+      </li>
+      <li>
+        Designed dynamic visualizations for instant feedback in a React Native app
+      </li>
+      <li>
+        Implemented a RESTful API with integrated JSON Schema validation
+      </li>
+      <li>
+        Organized a series of lightning talks to facilitate interdepartmental knowledge transfer
+      </li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Computer Graphics and Visualization Lab</b>, Purdue University<br>
+        <i>Honors Research Project (for credit)</i>
+      </div>
+      <div class="date">
+        Jan 2019 - May 2019
+      </div>
+    </div>
+    <ul>
+      <li>Created automatic statistics generator that integrated Python and Excel
+      </li>
+      <li>Contributed to an Android app, using camera and networking APIs in Java
+      </li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Center for Research Computing</b>, University of Notre Dame<br>
+        <i>Undergraduate Research Assistant (Summer)</i>
+      </div>
+      <div class="date">
+        May 2017 - Aug 2018
+      </div>
+    </div>
+    <ul>
+      <li>Developed Android app used for machine learning data acquisition in Java
+      </li>
+      <li>Implemented an image upload server backend API using PHP and SQL
+      </li>
+      <li>Programmatically generated insightful visualizations in Python
+      </li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Engineering and Science Computing</b>, University of Notre Dame<br>
+        <i>Computer Consultant (Summer)</i>
+      </div>
+      <div class="date">
+        June 2013 - Aug 2016
+      </div>
+    </div>
+    <ul>
+      <li>Collaborated with students, professors, and staff to solve IT problems</li>
+    </ul>
+  </div>
+</div>
+<div class="section" id="leadershipExperience">
+  <div class="section-title">
+    <b>Leadership Experience</b>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>BoilerMake Hackathon</b>, West Lafayette IN<br>
+        <i>Event Planner, Social Media Manager</i>
+      </div>
+      <div class="date">
+        Jan 2016 - Dec 2019
+      </div>
+    </div>
+    <ul>
+      <li>Directed advertising that attracted 1600 applicants to Purdue's premier hackathon
+      </li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Boy Scouts of America</b>, Troop 572, Granger IN<br>
+        <i>Eagle Scout</i>
+      </div>
+      <div class="date">
+        June 2008 - June 2015
+      </div>
+    </div>
+    <ul>
+      <li>Lead a team of twenty in the construction of concrete telescope platforms
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="section" id="education">
+  <div class="section-title">
+    <b>Education</b>
+  </div>
+  <div class="item">
+    <div class="titledate">
+      <div class="title">
+        <b>Purdue University</b>, West Lafayette, IN <br>
+        <i>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</i>
+      </div>
+      <div class="date">
+        May 2019
+      </div>
+    </div>
+    <ul>
+      <li>Overall GPA: 3.2; Major GPA: 3.7</li>
+      <li>Intro. Computer Animation: Created color-blind gaming accessibility utility
+      </li>
+      <li>I/O (workplace) Psychology: leadership, inclusivity, and positive work environments
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="section" id="technicalSkills">
+  <div class="section-title">
+    <b>Technical Skills</b>
+  </div>
+  <div class="title">
+    <b>Proficiencies</b>: Bash, C, C++, C#, Django, Docker, Git, Grafbase, Java, JavaScript, Linux, Next.js, NGINX,
+    Node.js
+    OpenSCAD, Postgres, Python, React, SQL, Supabase, Typescript
+  </div>
+  <div class="title">
+    <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
+  </div>
+</div>
+</body>
+</html>

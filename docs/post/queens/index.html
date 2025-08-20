@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+      flex-direction: column;
+      max-width: 50rem;
+      line-height: 1.5;
+    }
+
+    nav ul {
+      display: flex;
+      max-width: 50rem;
+      justify-content: space-around;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+  </style>
+  
+  
+  <title>Peter Villano&#39;s Personal Site | How to solve the Queens Game</title>
+</head>
+<body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/about/" title="About">About</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">How to solve the Queens Game</h1>
+    
+        
+            <h2>Friday, August  1 2025</h2>
+        
+    
+  <div>
+        <article id="article">
+           <p>Here are all the strategies you need to beat <a href="https://www.playqueensgame.com/">that one queens puzzle</a> on LinkedIn.</p>
+<ol>
+<li>If a region, row, or column has one available square, there&rsquo;s a queen there.</li>
+<li>If a region has only a few squares,
+it&rsquo;s likely some squares around it cannot contain queens
+without blocking the entire region.</li>
+<li>Equivalently, if a region has only a few squares,
+the superposition of every placement of a queen within that region will block some squares.</li>
+<li>Some shapes, like L, Z, S, U, J, 1x2, 1x3 have spots around them where no queen can be.</li>
+<li>If there&rsquo;s only one region in a row or column,
+then that region cannot have queens outside that row or column.</li>
+<li>If n regions are contained entirely within n rows or n columns,
+there cannot be any queens in regions that partially overlap these columns.</li>
+<li>If n rows or n columns are covered entirely by n regions,
+those regions cannot have queens outside those rows or columns.</li>
+<li>When all else fails, place a queen randomly and keep solving,
+keeping count of how many queens you&rsquo;ve placed.
+If you run into a contradiction, backtrack and place an X.
+If you don&rsquo;t run into a contradiction, backtrack
+and try another random placement.</li>
+<li>When placing a queen randomly, go for regions, rows, or columns with 2 or 3 available spaces.
+That way, a contradiction will result in placing a queen.</li>
+<li>When placing a queen randomly, go for spots that seem like they eventually won&rsquo;t work,
+so that you can backtrack and pace an x.
+The goal isn&rsquo;t to dodge invalid solutions,
+the goal is to eliminate every invalid solution until only the actual solution remains.</li>
+<li>Puzzles may have multiple solutions :/</li>
+</ol>
+<p>In part two, I&rsquo;ll show how you can develop a similar set of rules for any logic puzzle.</p>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>

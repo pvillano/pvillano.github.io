@@ -7,4 +7,4 @@ menu:
         name: "Home"
         weight: 1
 ---
-Here you can find my [resume](resume.html) ([pdf](peter-villano-resume.pdf)) and various musings.
+Here you can find my [resume](/resume.html) ([pdf](peter-villano-resume.pdf)) and various musings.

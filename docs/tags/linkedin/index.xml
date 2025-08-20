@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linkedin on Peter Villano&#39;s Personal Site</title>
+    <link>https://saej.in/tags/linkedin/</link>
+    <description>Recent content in Linkedin on Peter Villano&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Aug 2025 13:51:02 -0700</lastBuildDate>
+    <atom:link href="https://saej.in/tags/linkedin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to solve the Queens Game</title>
+      <link>https://saej.in/post/queens/</link>
+      <pubDate>Fri, 01 Aug 2025 13:51:02 -0700</pubDate>
+      <guid>https://saej.in/post/queens/</guid>
+      <description>&lt;p&gt;Here are all the strategies you need to beat &lt;a href=&#34;https://www.playqueensgame.com/&#34;&gt;that one queens puzzle&lt;/a&gt; on LinkedIn.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;If a region, row, or column has one available square, there&amp;rsquo;s a queen there.&lt;/li&gt;&#xA;&lt;li&gt;If a region has only a few squares,&#xA;it&amp;rsquo;s likely some squares around it cannot contain queens&#xA;without blocking the entire region.&lt;/li&gt;&#xA;&lt;li&gt;Equivalently, if a region has only a few squares,&#xA;the superposition of every placement of a queen within that region will block some squares.&lt;/li&gt;&#xA;&lt;li&gt;Some shapes, like L, Z, S, U, J, 1x2, 1x3 have spots around them where no queen can be.&lt;/li&gt;&#xA;&lt;li&gt;If there&amp;rsquo;s only one region in a row or column,&#xA;then that region cannot have queens outside that row or column.&lt;/li&gt;&#xA;&lt;li&gt;If n regions are contained entirely within n rows or n columns,&#xA;there cannot be any queens in regions that partially overlap these columns.&lt;/li&gt;&#xA;&lt;li&gt;If n rows or n columns are covered entirely by n regions,&#xA;those regions cannot have queens outside those rows or columns.&lt;/li&gt;&#xA;&lt;li&gt;When all else fails, place a queen randomly and keep solving,&#xA;keeping count of how many queens you&amp;rsquo;ve placed.&#xA;If you run into a contradiction, backtrack and place an X.&#xA;If you don&amp;rsquo;t run into a contradiction, backtrack&#xA;and try another random placement.&lt;/li&gt;&#xA;&lt;li&gt;When placing a queen randomly, go for regions, rows, or columns with 2 or 3 available spaces.&#xA;That way, a contradiction will result in placing a queen.&lt;/li&gt;&#xA;&lt;li&gt;When placing a queen randomly, go for spots that seem like they eventually won&amp;rsquo;t work,&#xA;so that you can backtrack and pace an x.&#xA;The goal isn&amp;rsquo;t to dodge invalid solutions,&#xA;the goal is to eliminate every invalid solution until only the actual solution remains.&lt;/li&gt;&#xA;&lt;li&gt;Puzzles may have multiple solutions :/&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In part two, I&amp;rsquo;ll show how you can develop a similar set of rules for any logic puzzle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
