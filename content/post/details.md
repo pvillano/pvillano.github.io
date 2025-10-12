@@ -7,4 +7,4 @@ Tags: []
 Categories: []
 ---
 
-I added a {{< details "<details/> tag" >}} (I haven't added any styles yet) {{< /details>}} tag to my hugo theme
+I added a {{< details summary="\<details\/\>" >}} (I haven't added any styles yet) {{< /details>}} tag to my hugo theme
