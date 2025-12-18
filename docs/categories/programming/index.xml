@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Peter Villano&#39;s Personal Site</title>
+    <link>https://saej.in/categories/programming/</link>
+    <description>Recent content in Programming on Peter Villano&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Dec 2025 16:32:44 -0800</lastBuildDate>
+    <atom:link href="https://saej.in/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Words</title>
+      <link>https://saej.in/post/words/</link>
+      <pubDate>Wed, 17 Dec 2025 16:32:44 -0800</pubDate>
+      <guid>https://saej.in/post/words/</guid>
+      <description>&lt;p&gt;Introducing &lt;a href=&#34;https://words.saej.in&#34;&gt;words.saej.in&lt;/a&gt;,&#xA;a site for filtering lists of words.&#xA;It&amp;rsquo;s useful for solving crosswords and other puzzles.&#xA;The algorithms are very interesting.&#xA;I&amp;rsquo;ll make them public and linked once there is sufficient interest.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
