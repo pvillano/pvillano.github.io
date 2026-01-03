@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin: 2rem;
+      flex-direction: column;
+      max-width: 50rem;
+      line-height: 1.5;
+    }
+
+    nav ul {
+      display: flex;
+      max-width: 50rem;
+      justify-content: space-around;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+  </style>
+  
+  
+  <title>Peter Villano&#39;s Personal Site | The Future of Compilers</title>
+</head>
+<body><nav>
+<ul>
+    
+    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    
+    <li><a href="/about/" title="About">About</a></li>
+    
+    <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
+    
+    <li><a href="/post/index.xml" title="RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="content">
+  <h1 id="title">The Future of Compilers</h1>
+    
+        
+            <h2>Friday, January  2 2026</h2>
+        
+    
+  <div>
+        <article id="article">
+           <p>I think there will soon come a day when computers have superhuman proof-writing ability.
+In other words, for a given theorem,
+a computer could write a formalized proof in less time than a human.
+Capable automated theorem provers would drastically change the way software is written.</p>
+<p>In this future, the enforcement of correctness is not limited to running checks at runtime
+or restricting allowed memory access patterns.
+Instead, source code is divided into conditions and executable code.
+The compiler includes a <em>verifier</em> which checks,
+at compile time,
+that the execution of the program transforms the preconditions into the postconditions.
+Any code that a human could prove correct is proven automatically.</p>
+<p>In this future, most software is developed solely through the specification of preconditions and postconditions,
+and a large language model (LLM) generates the executable code.
+The LLM and the <em>verifier</em> form a feedback loop that produces code
+that correctly transform the preconditions into the postconditions.
+This LLM is considered part of the compiler, and the code it generates is stored with the other compiler artifacts.</p>
+<p>People still write code for performance critical regions, but this is as rare as people writing assembly is in the present.</p>
+<p>The <em>verifier</em> itself is part LLM.
+The LLM is used as a heuristic to prune the impossibly large search space of all possible proofs of correctness/incorrectness.
+Only a &ldquo;small&rdquo; number candidate proofs are checked by a deterministic theorem prover until a valid formalized proof is found.
+I predict that the DeepMind team will be the first to get this to work.</p>
+<p>The process of proof generation runs on cheap GPU instances in the cloud.
+Occasionally someone asks on Reddit why their program never passes or fails,
+and it&rsquo;s because they put an unsolved problem in their post-conditions.</p>
+<p>Speaking of unsolved problems: in this future, multiple millennium problems are &ldquo;solved&rdquo; by researchers at cloud service providers.
+In this context, &ldquo;solved&rdquo; means a formalized proof was found through a LLM-pruned search.
+Academic responses are mixed, since none of these proofs are remotely human readable.
+However, these unreadable proofs do inspire new proof techniques, like AlphaGo did for go.</p>
+<p>I really think all of these things will happen.
+There are only a few things that need to happen first.
+We need a new language, extension of an existing language, or revival of a dead language with first-class specification support.
+We need a way to translate the conditions and operations of that language into Rocq or Lean.
+We need the DeepMind team to release AlphaProof, the proof-search algorithm.
+We need to put both the verifier and agent in the compiler. That&rsquo;s about it.</p>
+
+        </article>
+  </div>
+
+        </div></body>
+</html>
