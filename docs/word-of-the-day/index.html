@@ -31,9 +31,9 @@
 <body><nav>
 <ul>
     
-    <li><a href="/" title="Peter Villano&#39;s Personal Site">Home</a></li>
+    <li><a href="/" title="Peter Villano">Home</a></li>
     
-    <li><a href="/about/" title="About">About</a></li>
+    <li><a href="/resume.html" title="">Resume</a> (<a href="/peter-villano-resume.pdf">pdf</a>)</li>
     
     <li><a href="/word-of-the-day/" title="Word of the Day">Word of the Day</a></li>
     
@@ -46,9 +46,8 @@
         
             <h2 id="date">Today</h2>
             <script id="datescript">
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                const date_str = new Date().toLocaleDateString('en-US', options);
-                document.getElementById("date").innerHTML = date_str;
+                document.getElementById("date").innerHTML
+                  = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
                 const me = document.getElementById("datescript");
                 me.parentElement.removeChild(me);
             </script>
