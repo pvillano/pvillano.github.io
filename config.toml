@@ -11,3 +11,10 @@ timeZone = "America/Indiana/Indianapolis"
 [markup]
     [markup.highlight]
         codeFences = false
+
+[menus]
+    [[menus.main]]
+        name = 'Resume'
+        url = '/resume.html'
+        post = ' (<a href="/peter-villano-resume.pdf">pdf</a>)'
+        weight = 10
