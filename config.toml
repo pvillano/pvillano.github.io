@@ -7,3 +7,7 @@ cleanDestinationDir = true
 enableEmoji = true
 #enableRobotsTXT = true
 timeZone = "America/Indiana/Indianapolis"
+
+[markup]
+    [markup.highlight]
+        codeFences = false
