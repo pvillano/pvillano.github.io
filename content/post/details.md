@@ -8,3 +8,5 @@ Categories: []
 ---
 
 I added a {{< details summary="\<details\/\>" >}} (I haven't added any styles yet) {{< /details>}} tag to my hugo theme
+
+Edit: and in December 2025, Hugo added a native details shortcode.
