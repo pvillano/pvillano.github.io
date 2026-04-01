@@ -1,6 +1,6 @@
 baseURL = "https://saej.in"
 languageCode = "en-us"
-title = "Peter Villano's Personal Site"
+title = "Peter Villano"
 theme = "LeftBeef"
 publishDir = "docs"
 cleanDestinationDir = true
