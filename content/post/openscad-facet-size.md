@@ -8,7 +8,7 @@ Categories: []
 ---
 I recommend starting with the following settings as a baseline, and increasing `$fs` if the GUI becomes slow.
 ```openscad
-$fn=.01;
+$fa=.01;
 $fs=.3;
 ```
 # Background
