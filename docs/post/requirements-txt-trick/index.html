@@ -58,12 +58,13 @@ The following script will generate a file <code>requirements-frozen.txt</code> w
 Commit both files to version management.
 Add or remove packages from <code>requirements.txt</code> and use <code>requirements-frozen.txt</code> for reproducible builds.
 To update all packages, re-run the script.</p>
-<pre tabindex="0"><code>  #!/bin/sh
-  docker run -v &#34;$(pwd)&#34;:/req -w /req python:3.???.???-slim-buster \
-  sh -c &#34;pip install -r requirements.txt \
-  &amp;&amp; echo \&#34;#$(date)\&#34; &gt; requirements-frozen.txt \
-  &amp;&amp; pip freeze &gt;&gt; requirements-frozen.txt&#34;
-</code></pre><p>The following is a line-by-line explanation of the script:</p>
+<pre><code>  #!/bin/sh
+  docker run -v &quot;$(pwd)&quot;:/req -w /req python:3.???.???-slim-buster \
+  sh -c &quot;pip install -r requirements.txt \
+  &amp;&amp; echo \&quot;#$(date)\&quot; &gt; requirements-frozen.txt \
+  &amp;&amp; pip freeze &gt;&gt; requirements-frozen.txt&quot;
+</code></pre>
+<p>The following is a line-by-line explanation of the script:</p>
 <ol start="0">
 <li>A <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a> signifies the script should be run in the <code>sh</code> shell</li>
 <li>Create an ephemeral python container with access to the current directory as its working directory.</li>
