@@ -5,6 +5,7 @@
     </article>
 
     {{ range .Site.Sections }}
+        {{ if not (eq .Title "Shitposts") }}
         <h2>{{ .Title }}</h2>
         <ul>
             {{ range .Pages }}
@@ -12,5 +13,6 @@
 
             {{ end }}
         </ul>
+        {{ end }}
     {{ end }}
 {{ end }}
