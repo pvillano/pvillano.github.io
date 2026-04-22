@@ -1,7 +1,7 @@
 ---
 title: "How we calculated 6-7 digits of pi with AI in one week"
 date: 2026-02-24T15:08:53-08:00
-draft: true
+draft: false
 Description: ""
 Tags: []
 Categories: []
