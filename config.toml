@@ -8,7 +8,8 @@ enableEmoji = true
 #enableRobotsTXT = true
 timeZone = "America/Indiana/Indianapolis"
 disableKinds = ['sitemap']
-
+[outputs]
+    home = ['html']
 [markup]
     [markup.highlight]
         codeFences = false
