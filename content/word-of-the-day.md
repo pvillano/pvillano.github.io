@@ -1,7 +1,7 @@
 ---
 title: "Word of the Day"
 date: 0
-draft: false
+draft: true
 menu:
     main:
 ---

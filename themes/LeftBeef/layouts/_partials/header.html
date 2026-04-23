@@ -3,6 +3,6 @@
     {{ range .Site.Menus.main }}
     <li>{{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>{{ .Post }}</li>
     {{ end }}
-    <li><a href="/posts/index.xml" title="RSS">RSS</a></li>
+    {{ if false }}<li><a href="/posts/index.xml" title="RSS">RSS</a></li>{{ end }}
 </ul>
 </nav>
