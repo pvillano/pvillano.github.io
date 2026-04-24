@@ -4,6 +4,7 @@ draft: false
 menu:
   main:
     weight: 3
+description: A gallery of sites I have created to demonstrate my skills and interests.
 ---
 
 # [sdf2stl.saej.in](https://sdf2stl.saej.in/)
