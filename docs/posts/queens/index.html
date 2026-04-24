@@ -3,7 +3,20 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+  <meta property="og:url" content="https://saej.in/posts/queens/">
+  <meta property="og:site_name" content="Peter Villano">
+  <meta property="og:title" content="How to solve the Queens Game">
+  <meta property="og:description" content="Here are all the strategies you need to beat that one queens puzzle on LinkedIn.
+If a region, row, or column has one available square, there’s a queen there. If a region has only a few squares, it’s likely some squares around it cannot contain queens without blocking the entire region. Equivalently, if a region has only a few squares, the superposition of every placement of a queen within that region will block some squares. Some shapes, like L, Z, S, U, J, 1x2, 1x3 have spots around them where no queen can be. If there’s only one region in a row or column, then that region cannot have queens outside that row or column. If n regions are contained entirely within n rows or n columns, there cannot be any queens in regions that partially overlap these columns. If n rows or n columns are covered entirely by n regions, those regions cannot have queens outside those rows or columns. When all else fails, place a queen randomly and keep solving, keeping count of how many queens you’ve placed. If you run into a contradiction, backtrack and place an X. If you don’t run into a contradiction, backtrack and try another random placement. When placing a queen randomly, go for regions, rows, or columns with 2 or 3 available spaces. That way, a contradiction will result in placing a queen. When placing a queen randomly, go for spots that seem like they eventually won’t work, so that you can backtrack and pace an x. The goal isn’t to dodge invalid solutions, the goal is to eliminate every invalid solution until only the actual solution remains. Puzzles may have multiple solutions :/ In part two, I’ll show how you can develop a similar set of rules for any logic puzzle.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-01T13:51:02-07:00">
+    <meta property="article:modified_time" content="2025-08-01T13:51:02-07:00">
+    <meta property="article:tag" content="Puzzles">
+    <meta property="article:tag" content="Queens">
+    <meta property="article:tag" content="Linkedin">
+<style>
     body {
       display: flex;
       justify-content: center;
