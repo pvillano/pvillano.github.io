@@ -32,7 +32,7 @@ But, consider the images generated with the following prompt:
 
 | Bing                                                      | Canva                                            |
 |-----------------------------------------------------------|--------------------------------------------------|
-| ![Stack of four of the five requested blocks](./bing.jpg) | ![Four images of three blocks each](./canva.png) |
+| ![Stack of four of the five requested blocks](bing.jpg) | ![Four images of three blocks each](canva.png) |
 
 
 
