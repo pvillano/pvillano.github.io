@@ -7,7 +7,7 @@ menu:
 description: A gallery of sites I have created to demonstrate my skills and interests.
 ---
 
-# [sdf2stl.saej.in](https://sdf2stl.saej.in/)
+# SDF2STL
 
 An editor for designing and 3d printing mathematically defined objects.
 
@@ -15,7 +15,9 @@ An editor for designing and 3d printing mathematically defined objects.
 
 ![Screenshot of sdf2stl.saej.in](sdf2stl.png)
 
-# [followsfollows.saej.in](https://followsfollows.saej.in)
+Try it out here: [sdf2stl.saej.in](https://sdf2stl.saej.in/)
+
+# Follows' Follows
 
 Find who your followed Bluesky accounts follow.
 
@@ -23,13 +25,17 @@ Performance tuning, memory optimization, streaming algorithms.
 
 ![Screenshot of followsfollows.saej.in](followsfollows.png)
 
-# [words.saej.in](https://words.saej.in/)
+[followsfollows.saej.in](https://followsfollows.saej.in)
+
+# Words
 
 A collection of word-related tools.
 Useful for solving crosswords, finding anagrams, and making word puzzles of your own.
 Parallel processing, information theory, string algorithms, and library design.
 
 ![Screenshot of words.saej.in](words.png)
+
+Try it out here: [words.saej.in](https://words.saej.in/)
 
 # Other Works
 
