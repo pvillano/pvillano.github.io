@@ -1,5 +1,7 @@
-<img src="{{ .Destination | safeURL }}" style="max-width: 100%; max-height: 100%"
-     {{- with .PlainText }} alt="{{ . }}"{{ end -}}
-     {{- with .Title }} title="{{ . }}"{{ end -}}
->
+<a href="{{ .Destination | safeURL }}">
+  <img src="{{ .Destination | safeURL }}" style="max-width: 100%; max-height: 100%"
+       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+       {{- with .Title }} title="{{ . }}"{{ end -}}
+  >
+</a>
 {{- /* chomp trailing newline */ -}}
