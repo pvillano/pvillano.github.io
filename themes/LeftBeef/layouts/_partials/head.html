@@ -5,8 +5,58 @@
   {{ end }}
   {{- partial "opengraph.html" . -}}
   <style>
+
+    /*
+      Josh's Custom CSS Reset
+      https://www.joshwcomeau.com/css/custom-css-reset/
+    */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    *:not(dialog) {
+      margin: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        interpolate-size: allow-keywords;
+      }
+    }
+
+    body {
+      line-height: 1.5;
+    }
+
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input, button, textarea, select {
+      font: inherit;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+    }
+
+    /* thanks Josh */
     
-    * {
+    html {
+      font-family: serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       font-family: sans-serif;
     }
     
@@ -24,7 +74,11 @@
       margin: 2rem;
       flex-direction: column;
       max-width: 50rem;
-      line-height: 1.5;
+      gap: 2rem;
+    }
+
+    p {
+      margin: 1rem 0;
     }
 
     nav ul {
