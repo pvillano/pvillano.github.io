@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://saej.in/posts/requirements-txt-trick/">
-  <meta property="og:site_name" content="Peter Villano">
+  <meta property="og:site_name" content="Peter Villano&#39;s Website">
   <meta property="og:title" content="requirements.txt Trick">
   <meta property="og:description" content="Sometimes you find yourself in a legacy project with a single requirements.txt file containing pinned dependencies. A CVE is released, and you update the relevant package to the latest version, but now there are incompatibilities.
 This is a way to manage dependencies in such a python project. Create a requirements.txt file with the packages you need but not their dependencies. The following script will generate a file requirements-frozen.txt with the specified packages and all their dependencies version pinned. Commit both files to version management. Add or remove packages from requirements.txt and use requirements-frozen.txt for reproducible builds. To update all packages, re-run the script.">
@@ -13,30 +13,10 @@ This is a way to manage dependencies in such a python project. Create a requirem
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2021-12-28T02:17:28-05:00">
     <meta property="article:modified_time" content="2021-12-28T02:17:28-05:00">
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      margin: 2rem;
-      flex-direction: column;
-      max-width: 50rem;
-      line-height: 1.5;
-    }
-
-    nav ul {
-      display: flex;
-      max-width: 50rem;
-      justify-content: space-around;
-      padding: 0;
-    }
-
-    nav li {
-      display: inline;
-    }
-  </style>
+<link rel="stylesheet" href="/css/style.css" />
   
   
-  <title>Peter Villano | requirements.txt Trick</title>
+  <title>requirements.txt Trick | Peter Villano&#39;s Website</title>
 </head>
 <body><nav>
 <ul>
@@ -54,7 +34,7 @@ This is a way to manage dependencies in such a python project. Create a requirem
   <h1 id="title">requirements.txt Trick</h1>
     
         
-            <h2>December 28, 2021</h2>
+            <time datetime="2021-12-28">December 28, 2021</time>
         
     
   <div>
@@ -83,7 +63,11 @@ requirements in <code>requirements.txt</code></li>
 <li>Echo the current date into <code>requirements-frozen.txt</code></li>
 <li>Append the output of <code>pip freeze</code> to <code>requirements-frozen.txt</code></li>
 </ol>
-<h3 id="benefits">Benefits</h3>
+<h4 id="benefits">
+<a class="heading-anchor" href="#benefits">
+  Benefits
+</a>
+</h3>
 <ul>
 <li>The output file is human-readable and can be easily diff-ed, since <code>pip freeze</code> automatically sorts output by name.</li>
 <li>No abstraction or magic to learn and trust</li>

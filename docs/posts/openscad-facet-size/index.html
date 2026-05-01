@@ -4,40 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://saej.in/posts/openscad-facet-size/">
-  <meta property="og:site_name" content="Peter Villano">
+  <meta property="og:site_name" content="Peter Villano&#39;s Website">
   <meta property="og:title" content="Openscad Facet Size">
   <meta property="og:description" content="I recommend starting with the following settings as a baseline, and increasing $fs if the GUI becomes slow.
-$fa=.01;$fs=.3;Background Three variables determine the faceted-ness of your model.
-$fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts. This can be used when an exact number of facets is desired. $fn is useful for creating regular n-gons Old Method I used to use different quality levels for preview and render with the code snippet.">
+$fa=.01;$fs=.3;BackgroundThree variables determine the faceted-ness of your model.
+$fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts. This can be used when an exact number of facets is desired. $fn is useful for creating regular n-gons Old MethodI used to use different quality levels for preview and render with the code snippet.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2022-09-26T19:47:49-04:00">
     <meta property="article:modified_time" content="2022-09-26T19:47:49-04:00">
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      margin: 2rem;
-      flex-direction: column;
-      max-width: 50rem;
-      line-height: 1.5;
-    }
-
-    nav ul {
-      display: flex;
-      max-width: 50rem;
-      justify-content: space-around;
-      padding: 0;
-    }
-
-    nav li {
-      display: inline;
-    }
-  </style>
+<link rel="stylesheet" href="/css/style.css" />
   
   
-  <title>Peter Villano | Openscad Facet Size</title>
+  <title>Openscad Facet Size | Peter Villano&#39;s Website</title>
 </head>
 <body><nav>
 <ul>
@@ -55,7 +35,7 @@ $fa is the minimum angle for a fragment. It creates a size-independent upper bou
   <h1 id="title">Openscad Facet Size</h1>
     
         
-            <h2>September 26, 2022</h2>
+            <time datetime="2022-09-26">September 26, 2022</time>
         
     
   <div>
@@ -64,7 +44,11 @@ $fa is the minimum angle for a fragment. It creates a size-independent upper bou
 <pre><code class="language-openscad">$fa=.01;
 $fs=.3;
 </code></pre>
-<h1 id="background">Background</h1>
+<h2 id="background">
+<a class="heading-anchor" href="#background">
+  Background
+</a>
+</h1>
 <p>Three variables determine the faceted-ness of your model.</p>
 <ul>
 <li><strong>$fa</strong> is the minimum angle for a fragment.
@@ -78,7 +62,11 @@ This can be used when an exact number of facets is desired.
 </ul>
 </li>
 </ul>
-<h1 id="old-method">Old Method</h1>
+<h2 id="old-method">
+<a class="heading-anchor" href="#old-method">
+  Old Method
+</a>
+</h1>
 <p>I used to use different quality levels for preview and render with the code snippet.</p>
 <pre><code>$fa=.01;
 $fs=$preview ? 5 : .1;
@@ -86,7 +74,11 @@ $fs=$preview ? 5 : .1;
 <p>This allowed me to edit at interactive rates but render at the highest resolution visible on my printer.
 I no longer recommend this, because it can lead to unexpectedly long render times.
 Depending on the model, halving the minimum facet size can increase the rendering time 16-fold!</p>
-<h1 id="better-method">Better Method</h1>
+<h2 id="better-method">
+<a class="heading-anchor" href="#better-method">
+  Better Method
+</a>
+</h1>
 <p>I now prefer to set a single facet size of .3mm or 1mm.
 If the <code>$preview</code> variable is not used to modify facet size,
 then preview calculation time more accurately approximates the render calculation time.</p>

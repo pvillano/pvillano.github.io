@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://saej.in/posts/hanoi/">
-  <meta property="og:site_name" content="Peter Villano">
+  <meta property="og:site_name" content="Peter Villano&#39;s Website">
   <meta property="og:title" content="The Two Billion Towers of Time">
   <meta property="og:description" content="A clock">
   <meta property="og:locale" content="en_us">
@@ -16,30 +16,10 @@
     <meta property="article:tag" content="Animation">
     <meta property="article:tag" content="Canvas">
     <meta property="article:tag" content="Javascript">
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      margin: 2rem;
-      flex-direction: column;
-      max-width: 50rem;
-      line-height: 1.5;
-    }
-
-    nav ul {
-      display: flex;
-      max-width: 50rem;
-      justify-content: space-around;
-      padding: 0;
-    }
-
-    nav li {
-      display: inline;
-    }
-  </style>
+<link rel="stylesheet" href="/css/style.css" />
   
   
-  <title>Peter Villano | The Two Billion Towers of Time</title>
+  <title>The Two Billion Towers of Time | Peter Villano&#39;s Website</title>
 </head>
 <body><nav>
 <ul>
@@ -57,7 +37,7 @@
   <h1 id="title">The Two Billion Towers of Time</h1>
     
         
-            <h2>October 11, 2023</h2>
+            <time datetime="2023-10-11">October 11, 2023</time>
         
     
   <div>
@@ -174,13 +154,21 @@
 <div id="hanoiDiv0" style="width:100%">
     <canvas height="500" id="canvas0" style="width:100%" width="1000"></canvas>
 </div>
-<h2 id="hahahugoshortcode22s1hbhb"><q>
+<h3 id="hahahugoshortcode20s1hbhb">
+<a class="heading-anchor" href="#hahahugoshortcode20s1hbhb">
+  <q>
   When the final tower is completed, time will overflow.
-</q></h2>
+</q>
+</a>
+</h2>
 <p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
 by displaying the current <a href="#unix-time">Unix time</a>
 as progress in solving a 31 level <a href="#hanoi">Tower of Hanoi</a>.</p>
-<h3 id="unix-time">Unix Time</h3>
+<h4 id="unix-time">
+<a class="heading-anchor" href="#unix-time">
+  Unix Time
+</a>
+</h3>
 <p>Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch.
 Computers use Unix time internally to store when an event occurred as a single number.
 Unlike regular<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> timestamps, Unix timestamps are never repeated or skipped.
@@ -194,13 +182,21 @@ The current Unix time is
     window.requestAnimationFrame(drawUnixTime)
 </script>
 <code id="unixTime">[the current unix time]</code>.</p>
-<h3 id="epochalypse">Epochalypse</h3>
+<h4 id="epochalypse">
+<a class="heading-anchor" href="#epochalypse">
+  Epochalypse
+</a>
+</h3>
 <p>Many pieces of software store Unix time in 32-bit signed integers.
 This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
 This will occur 2<sup>
   31
 </sup> seconds after the Unix epoch, at 3:14:08 UTC January 19, 2038.</p>
-<h3 id="hanoi">Tower of Hanoi</h3>
+<h4 id="hanoi">
+<a class="heading-anchor" href="#hanoi">
+  Tower of Hanoi
+</a>
+</h3>
 <p>The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
 Its difficulty comes from three restrictions.
 First, the player may only move one disc at a time.
@@ -208,7 +204,11 @@ Second, the player may never place a larger disc onto a smaller disc.
 Last, the discs must be placed in one of only three stacks, including the starting and ending positions.</p>
 <p>As the number of discs increases, the number of moves it takes to solve the puzzle grows exponentially.
 For three discs, the puzzle can be solved in seven moves, but for 31 discs, the solution requires over two billion moves.</p>
-<h3 id="animation">Animation</h3>
+<h4 id="animation">
+<a class="heading-anchor" href="#animation">
+  Animation
+</a>
+</h3>
 <p>There are a few neat things going on here.</p>
 <ul>
 <li>Most algorithms for solving the Tower of Hanoi compute each step in order<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. This one computes the <em>k</em>-th state directly.</li>

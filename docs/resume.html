@@ -4,18 +4,32 @@
   <meta charset="utf-8">
   <title>Peter Villano's Resume</title>
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      text-wrap: pretty;
+    }
+
+    body {
+      line-height: 1.3;
+      max-width: 720px;
+      margin: auto;
+    }
+
     div {
       display: flex;
     }
 
-    .name {
-      flex-direction: row;
-      justify-content: center;
+    h1, h2 {
+      font-family: sans-serif;
     }
 
     h1 {
-      margin: 0;
-      padding: 0
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.2em;
     }
 
     .subheadingContainer {
@@ -26,6 +40,7 @@
     .subheading {
       justify-content: center;
       flex: 1;
+      flex-direction: column;
       text-align: center
     }
 
@@ -34,48 +49,23 @@
       text-align: left
     }
 
-    .subheading:last-child > * {
+    .subheading:last-child {
       margin-left: auto;
       text-align: right
     }
 
-    .nameContainer {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .name {
-      justify-content: center;
-      flex: 1;
-    }
-
-    .name:first-child > * {
-      margin-left: auto;
-    }
-
-    .name:last-child > * {
-      margin-right: auto;
-    }
-
-    .section {
+    section {
       flex-direction: column;
-      max-width: 720px;
-      margin: auto;
-    }
-
-    .section + .section {
-      border-top: 2px solid;
-    }
-
-    .section-title {
-      text-transform: uppercase;
+      margin: 5px auto;
+      gap: 5px;
+      border-top: 1px solid;
     }
 
     .item {
       flex-direction: column;
     }
 
-    .titledate {
+    .titleDate {
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: flex-end;
@@ -83,6 +73,7 @@
 
     .title {
       display: block;
+      /*font-family: sans-serif;*/
     }
 
     .date {
@@ -111,43 +102,31 @@
 
   </style>
 </head>
-<body>
-<div class=section id="heading">
-  <div class="nameContainer">
-    <div class="name"><h1>Peter</h1></div>
-    <div class="name" style="flex:0"><h1>&nbsp;(Rocky)&nbsp;</h1></div>
-    <div class="name"><h1>Villano</h1></div>
-  </div>
+<body itemscope itemtype="https://schema.org/Person">
+<header>
+  <h1 itemprop="name">
+    Peter Villano
+  </h1>
   <div class="subheadingContainer">
     <div class="subheading">
-            <span>
-            <a href="https://saej.in">saej.in</a><br/>
-            <a href="https://www.linkedin.com/in/pvillan/">linkedin.com/in/pvillan/</a>
-            </span>
+      <span><a href="https://saej.in" itemprop="url">saej.in</a></span>
+      <span><a href="https://www.linkedin.com/in/pvillan/">linkedin.com/in/pvillan/</a></span>
     </div>
     <div class="subheading">
-            <span>
-            jobs@saej.in<br/>
-            (574)-855-9777
-            </span>
+      <span>peter@saej.in</span>
+      <span>(574)-855-9777</span>
     </div>
-    <div class="subheading">
-            <span>
-            <br/>
-            Las Vegas NV, 89104
-            </span>
+    <div class="subheading" itemprop="address">
+      <span>Chicago, IL</span>
     </div>
   </div>
-</div>
-
-<div class="section" id="professionalExperience">
-  <div class="section-title">
-    <b>Professional Experience</b>
-  </div>
+</header>
+<section id="professionalExperience">
+  <h2>Professional Experience</h2>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
-        <b>Professional Development</b>
+        <b>Portfolio Work</b>
       </div>
       <div class="date">
         October 2025 - Present
@@ -155,18 +134,22 @@
     </div>
     <ul>
       <li>
-        Developed <a href="https://words.saej.in/">words.saej.in</a>, a collection of tools for word games, <br/>
-        to apply my deep understanding of data structures and algorithms.
+        Created <a href="https://sdf2stl.saej.in/">sdf2stl.saej.in</a>, a tool for designing and 3D printing signed
+        distance functions
       </li>
       <li>
-        Currently working on SDF2STL, a tool for designing and 3D printing implicit models
+        Applied data structures and algorithms to word games to create <a
+          href="https://words.saej.in/">words.saej.in</a>
+      </li>
+      <li>
+        Answered "Who are my followed accounts following?" with <a href="https://followsfollows.saej.in/">followsfollows.saej.in</a>
       </li>
     </ul>
   </div>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
-        <b>Full-Stack Engineer</b>
+        <b>Full-Stack Engineer</b><br/>
         Agrippa Technology &#8211; Las Vegas, Nevada<br>
       </div>
       <div class="date">
@@ -175,7 +158,7 @@
     </div>
     <ul>
       <li>
-        Orchestrated a live migration to a serverless architecture, reducing hosting costs with zero downtime
+        Orchestrated a migration to a serverless architecture, reducing hosting costs
       </li>
       <li>
         Wrote backend row-level security policies that enabled fearless fast-paced frontend development
@@ -183,7 +166,7 @@
     </ul>
   </div>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
         <b>Independent Software Consultant</b><br/>
         Power Law Systems &#8211; Fort Wayne, Indiana
@@ -194,21 +177,18 @@
     </div>
     <ul>
       <li>
-        Developed a bespoke performance management app to fit existing workflows
-      </li>
-      <li>
-        Architected a user-friendly, deeply integrated live site content editor
-      </li>
-      <li>
-        Set up automatic formatting, code quality checks, and deployment
-      </li>
-      <li>
         Parametrically generated individualized name placards for multi-material 3D printing
+      </li>
+      <li>
+        Architected a user-friendly, deeply integrated live website content editor
+      </li>
+      <li>
+        Automated source code formatting, quality checks, and deployment
       </li>
     </ul>
   </div>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
         <b>Assistant Research Programmer</b><br>
         Center for Research Computing &#8211; University of Notre Dame
@@ -218,22 +198,13 @@
       </div>
     </div>
     <ul>
-      <li>
-        Empowered client to resolve issues independently with expressive administrative tools
-      </li>
-      <li>
-        Designed dynamic visualizations for instant feedback in a React Native app
-      </li>
-      <li>
-        Implemented a RESTful API with integrated JSON Schema validation
-      </li>
-      <li>
-        Organized a series of lightning talks to facilitate interdepartmental knowledge transfer
-      </li>
+      <li>Empowered client to resolve issues independently with expressive administrative tools</li>
+      <li>Designed dynamic visualizations for instant feedback in a React Native app</li>
+      <li>Organized a series of lightning talks to facilitate interdepartmental knowledge transfer</li>
     </ul>
   </div>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
         <b>Honors Research Project</b><br>
         Computer Graphics and Visualization Lab &#8211; Purdue University
@@ -243,14 +214,12 @@
       </div>
     </div>
     <ul>
-      <li>Created automatic statistics generator that integrated Python and Excel
-      </li>
-      <li>Contributed to an Android app, using camera and networking APIs in Java
-      </li>
+      <li>Created automatic statistics generator that integrated Python and Excel</li>
+      <li>Contributed to an Android app, using camera and networking APIs in Java</li>
     </ul>
   </div>
   <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
         <b>Undergraduate Research Assistant</b><br>
         Center for Research Computing &#8211; University of Notre Dame
@@ -266,48 +235,44 @@
       </li>
     </ul>
   </div>
-</div>
-<div class="section" id="leadershipExperience">
-  <div class="section-title">
-    <b>Leadership Experience</b>
-  </div>
+</section>
+<!--<section id="leadershipExperience">-->
+<!--  <h2>Leadership Experience</h2>-->
+<!--  <div class="item">-->
+<!--    <div class="titleDate">-->
+<!--      <div class="title">-->
+<!--        <b>Event Planner, Social Media Manager</b><br>-->
+<!--        BoilerMake Hackathon &#8211; West Lafayette IN-->
+<!--      </div>-->
+<!--      <div class="date">-->
+<!--        Jan 2016 - Dec 2019-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <ul>-->
+<!--      <li>Directed advertising that attracted 1600 applicants to Purdue's premier hackathon-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--  <div class="item">-->
+<!--    <div class="titleDate">-->
+<!--      <div class="title">-->
+<!--        <b>Eagle Scout</b><br>-->
+<!--        Scouts BSA Troop 572 &#8211; Granger IN-->
+<!--      </div>-->
+<!--      <div class="date">-->
+<!--        June 2008 - June 2015-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <ul>-->
+<!--      <li>Lead a team of twenty in the construction of concrete telescope platforms-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</section>-->
+<section id="education" itemprop="alumniOf">
+  <h2>Education</h2>
   <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Event Planner, Social Media Manager</b><br>
-        BoilerMake Hackathon &#8211; West Lafayette IN
-      </div>
-      <div class="date">
-        Jan 2016 - Dec 2019
-      </div>
-    </div>
-    <ul>
-      <li>Directed advertising that attracted 1600 applicants to Purdue's premier hackathon
-      </li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="titledate">
-      <div class="title">
-        <b>Eagle Scout</b><br>
-        Scouts BSA Troop 572 &#8211; Granger IN
-      </div>
-      <div class="date">
-        June 2008 - June 2015
-      </div>
-    </div>
-    <ul>
-      <li>Lead a team of twenty in the construction of concrete telescope platforms
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="section" id="education">
-  <div class="section-title">
-    <b>Education</b>
-  </div>
-  <div class="item">
-    <div class="titledate">
+    <div class="titleDate">
       <div class="title">
         <b>B.S. in Computer Science Honors; Minors in Mathematics &amp; Psychology</b> <br>
         Purdue University &#8211; West Lafayette, IN
@@ -318,24 +283,20 @@
     </div>
     <ul>
       <li>Overall GPA: 3.2; Major GPA: 3.7</li>
-      <li>Intro. Computer Animation: Created color-blind gaming accessibility utility
-      </li>
-      <li>I/O (workplace) Psychology: leadership, inclusivity, and positive work environments
-      </li>
+      <li>Intro. Computer Animation: Created color-blind gaming accessibility utility</li>
+      <li>I/O (workplace) Psychology: leadership, inclusivity, and positive work environments</li>
     </ul>
   </div>
-</div>
-<div class="section" id="technicalSkills">
-  <div class="section-title">
-    <b>Technical Skills</b>
-  </div>
+</section>
+<section id="technicalSkills">
+  <h2>Technical Skills</h2>
   <div class="title">
-    <b>Proficiencies</b>: Autodesk Fusion, Bash, C, C++, C#, Django, Docker, Git, Java, JavaScript, Linux,
-    NGINX, Node.js, OpenSCAD, Postgres, Python, React, SQL, Supabase, Typescript, Unity
+    <b>Proficiencies</b>: Autodesk Fusion, Bash, C, C++, C#, Django, Docker, Git, Java, JavaScript, JSON, JSON Schema,
+    Linux, NGINX, Node.js, OpenSCAD, Postgres, Python, React, RESTful, SQL, Supabase, TypeScript, Unity
   </div>
   <div class="title">
     <b>Misc. Skills</b>: 3D Printing, Safe Cracking, Wilderness Survival, Poetry
   </div>
-</div>
+</section>
 </body>
 </html>
