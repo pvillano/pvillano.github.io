@@ -2,15 +2,15 @@
   <h1 id="title">{{ .Title }}</h1>
     {{ if isset .Params "date"}}
         {{if (eq .Date.Unix 0)}}
-            <h2 id="date">Today</h2>
-            <script id="datescript">
-                document.getElementById("date").innerHTML
-                  = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-                const me = document.getElementById("datescript");
-                me.parentElement.removeChild(me);
-            </script>
+            <div id="date">Today</div>
+<!--            <script id="datescript">-->
+<!--                document.getElementById("date").innerHTML-->
+<!--                  = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });-->
+<!--                const me = document.getElementById("datescript");-->
+<!--                me.parentElement.removeChild(me);-->
+<!--            </script>-->
         {{ else }}
-            <h2>{{ .Date.Format "January _2, 2006" }}</h2>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January _2, 2006" }}</time>
         {{end}}
     {{end}}
   <div>
