@@ -99,3 +99,18 @@ nav li {
 .heading-anchor:hover::after {
   opacity: 1;
 }
+
+blockquote {
+  width: fit-content;
+  max-width: 95%;
+  margin: 20px auto;
+}
+
+blockquote::before {
+  content: "“"
+}
+
+blockquote::after {
+  content: "”"
+}
+
