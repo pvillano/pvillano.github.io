@@ -25,7 +25,7 @@ Performance tuning, memory optimization, streaming algorithms.
 
 ![Screenshot of followsfollows.saej.in](followsfollows.png)
 
-[followsfollows.saej.in](https://followsfollows.saej.in)
+Try it out here: [followsfollows.saej.in](https://followsfollows.saej.in)
 
 # Words
 

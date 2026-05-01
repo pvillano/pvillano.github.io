@@ -9,7 +9,7 @@ Categories: []
 
 
 {{< hanoi >}}
-## {{<q>}}When the final tower is completed, time will overflow.{{</q>}}
+{{<blockquote>}}When the final tower is completed, time will overflow.{{</blockquote>}}
 
 This [animation]({{< relref "#animation">}}) counts down to the [Epochalypse]({{< relref "#epochalypse">}})
 by displaying the current [Unix time]({{< relref "#unix-time">}})
