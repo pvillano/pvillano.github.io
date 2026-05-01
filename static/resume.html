@@ -99,7 +99,7 @@
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 <header>
-  <h1 itemprop="name">
+  <h1 itemprop="name" title="I also go by Rocky">
     Peter Villano
   </h1>
   <div class="subheadingContainer">
@@ -128,7 +128,9 @@
       </div>
     </div>
     <ul>
-      <li>
+      <li title="I bought a resin 3D printer and needed handles for the lid. Obviously, I had to 3D print them using the using my new printer. I also wanted a handle that only a resin printer could make, both to demonstrate the capabilities of the printer, and to justify my purchase. Resin 3D printers are capable of producing complex and finely detailed objects. Lattice structures are strong and lightweight, used in aerospace and motorsport, and only possible with 3d printing. They are exactly what I needed for lid handles. Unfortunately, most software for generating lattice structures is priced for aerospace corporations and not consumers.
+
+I created this tool specifically to create lattice structures, and found that it could also be used for 3D printing a variety of mathematical functions.">
         Created <a href="https://sdf2stl.saej.in/">sdf2stl.saej.in</a>, a tool for designing and 3D printing signed
         distance functions
       </li>
@@ -155,7 +157,11 @@
       <li>
         Orchestrated a migration to a serverless architecture, reducing hosting costs
       </li>
-      <li>
+      <li title="A technical Explanation
+
+Normally, when an app wants to retrieve information for a user, it talks to a backend server, which serves as a gatekeeper between the app and the database. The backend server checks that the user has valid credentials, and runs a pre-defined query to get the data the app needs. This is an effective method of access security, but it creates a development bottleneck. If a front-end app developer wants to change what data is queried, they have to wait for a back-end developer write new code for the backend server.
+
+I implemented a system where the app could query the database directly, and the database would only return the data that user was allowed to see. This method, called row-level security, is uncommon, difficult to conceptualize, and tricky to implement correctly. However, it enables front-end developers to move as fast as they want, without ever waiting on a backend change, and as move as sloppily as they wish, without ever worrying about introducing security vulnerabilities.">
         Wrote backend row-level security policies that enabled fearless fast-paced frontend development
       </li>
     </ul>
