@@ -11,7 +11,7 @@ description: A gallery of sites I have created to demonstrate my skills and inte
 
 An editor for designing and 3d printing mathematically defined objects.
 
-3D computer graphics.
+3D WebGL graphics, signed distance functions, documentation.
 
 ![Screenshot of sdf2stl.saej.in](sdf2stl.png)
 
@@ -29,8 +29,8 @@ Try it out here: [followsfollows.saej.in](https://followsfollows.saej.in)
 
 # Words
 
-A collection of word-related tools.
-Useful for solving crosswords, finding anagrams, and making word puzzles of your own.
+A collection of word-related tools. Useful for solving crosswords, finding anagrams, and making word puzzles of your own.
+
 Parallel processing, information theory, string algorithms, and library design.
 
 ![Screenshot of words.saej.in](words.png)
