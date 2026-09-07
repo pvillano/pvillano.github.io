@@ -7,7 +7,8 @@ menu:
         weight: 1
 ---
 
-Hi, my name is Peter Villano, but I usually go by Rocky. I enjoy 3D printing, watching animation, and PC gaming.
+Hi, my name is Peter Villano, but I usually go by Rocky.
+I enjoy CNC machining, 3D printing, watching animation, and PC gaming.
 My professional background is primarily in full-stack web development,
-but I’m interested in transitioning into work or research involving computer graphics.
+but I’m pursuing research in computer graphics.
 My pronouns are they/them.
