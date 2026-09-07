@@ -1,0 +1,64 @@
+<div class="controls">
+  <div>
+    <label><input type="radio" name="theme" value="auto"> Auto</label>
+    <label><input type="radio" name="theme" value="dark"> Dark</label>
+    <label><input type="radio" name="theme" value="light"> Light</label>
+  </div>
+  <div>
+    <label><input type="checkbox" id="modeToggle"> Poetry&#9166;</label>
+  </div>
+</div>
+
+<script>
+  const root = document.documentElement;
+  const radioButtons = document.querySelectorAll('input[name="theme"]');
+  const modeToggle = document.getElementById('modeToggle');
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function applyTheme(preference) {
+    if(preference === 'auto') {
+      preference = mediaQuery.matches ? "dark" : "light"
+    }
+    if (preference === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }
+
+  function applyMode(isPoetry) {
+    if (isPoetry) {
+      root.classList.add('poetry');
+    } else {
+      root.classList.remove('poetry');
+    }
+  }
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      localStorage.setItem('theme', e.target.value);
+      applyTheme(e.target.value);
+    });
+  });
+
+  mediaQuery.addEventListener('change', () => {
+    const currentPreference = localStorage.getItem('theme') || 'auto';
+    if (currentPreference === 'auto') applyTheme('auto');
+  });
+
+  modeToggle.addEventListener('change', (e) => {
+    localStorage.setItem('poetryMode', e.target.checked);
+    applyMode(e.target.checked);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'auto';
+    const activeRadio = document.querySelector(`input[name="theme"][value="${savedTheme}"]`);
+    if (activeRadio) activeRadio.checked = true;
+    applyTheme(savedTheme);
+
+    const savedMode = localStorage.getItem('poetryMode') === 'true';
+    modeToggle.checked = savedMode;
+    applyMode(savedMode);
+  });
+</script>
