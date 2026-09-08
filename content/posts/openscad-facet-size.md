@@ -27,9 +27,11 @@ I used to use different quality levels for preview and render with the code snip
 $fa=.01;
 $fs=$preview ? 5 : .1;
 ```
-This allowed me to edit at interactive rates but render at the highest resolution visible on my printer.
+This allowed me to edit at interactive rates
+but render at the highest resolution visible on my printer.
 I no longer recommend this, because it can lead to unexpectedly long render times.
-Depending on the model, halving the minimum facet size can increase the rendering time 16-fold!
+Depending on the model,
+halving the minimum facet size can increase the rendering time 16-fold!
 
 
 # Better Method

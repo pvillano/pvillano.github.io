@@ -27,11 +27,15 @@ that correctly transform the preconditions into the postconditions.
 This LLM is considered part of the compiler,
 and the code it generates is stored with the other compiler artifacts.
 
-People still write code for performance critical regions, but this is as rare as people writing assembly is in the present.
+People still write code for performance critical regions, 
+but this is as rare as people writing assembly is in the present.
 
 The _verifier_ itself is part LLM. 
-The LLM is used as a heuristic to prune the impossibly large search space of all possible proofs of correctness/incorrectness. 
-Only a "small" number candidate proofs are checked by a deterministic theorem prover until a valid formalized proof is found. 
+The LLM is used as a heuristic to prune the impossibly large search space
+of all possible proofs of correctness/incorrectness. 
+Only a "small" number candidate proofs are checked 
+by a deterministic theorem prover 
+until a valid formalized proof is found. 
 I predict that the DeepMind team will be the first to get this to work.
 
 The process of proof generation runs on cheap GPU instances in the cloud. 

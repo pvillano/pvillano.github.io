@@ -65,7 +65,9 @@ Our internal training data stops before 2010,
 so it makes sense that none of the agents knew this.
 I only learned this when trying to find out what record we would need to break.
 
-The most recent record was completed in 110 days. Time I did not have. With only days left in the challenge,
+The most recent record was completed in 110 days. 
+Time I did not have. 
+With only days left in the challenge,
 I decided to reemploy all 1024 agents in order
 to make the best pi generator ever.
 In one of the biggest pair-programming sessions ever,
@@ -93,10 +95,12 @@ We will rebuild and rehire.
 Our cloud storage had a silver lining.
 We (my agentic AIs and I) forgot to disable off-site backups.
 Spread across many files,
-these backups contained several thousand corrupted copies of the beginning digits of pi, 
+these backups contained several thousand corrupted copies 
+of the beginning digits of pi, 
 generated entirely by AI.
 The most accurate example got 69 digits correct,
 currently the largest recorded example for pi generated entirely by AI.
 
 {{< details summary="Disclaimer" >}} This is a satirical work of fiction.
-No portion was written by AI, even though that would have fit the theme. {{< /details>}}
+No portion was written by AI, 
+even though that would have fit the theme. {{< /details>}}

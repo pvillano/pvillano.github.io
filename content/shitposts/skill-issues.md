@@ -88,19 +88,29 @@ for 0 vs .5
 
 # A measure of skillfullness
 
-The skillfulness of a game is the average value of the top triangle minus the average value of the bottom triangle.
+The skillfulness of a game is the average value of the top triangle 
+minus the average value of the bottom triangle.
 (equivalently, the average of the top triangle times two minus one)
 A luck based game has a skillfulness of 0,
-and a perfectly skillful games has a skillfulness of 1 (a game where practicing makes you worse has a skillfulness of -1)
+and a perfectly skillful games has a skillfulness of 1 
+(a game where practicing makes you worse has a skillfulness of -1)
 It is possible to evaluate the skillfulness of a subgroup of players.
 For example, one could determine the skillfulness of only bronze ranked players.
 
-One measure of skill floor/ceiling could be measuring how win rate changes against ALL players as a function of skill.
-Note that this data is absent for most ranked games, since matches are only made between players of similar skill.
+One measure of skill floor/ceiling 
+could be measuring how win rate changes 
+against ALL players as a function of skill.
+Note that this data is absent for most ranked games, 
+since matches are only made between players of similar skill.
 
-Looking at the skillfulness in a sliding window of rank is another way of determining skill floor/ceiling
+Looking at the skillfulness in a sliding window of rank 
+is another way of determining skill floor/ceiling
 Skillfulness should go up and then down.
-The size of the window is of importance, but the most appropriate size of the window is the actual matches that get made,
+The size of the window is of importance, 
+but the most appropriate size of the window 
+is the actual matches that get made,
 so simply using the available data is the most accurate way.
 
-The skillfulness at an elo is the percentage of favorite wins minus underdog wins *for matchups overlapping this elo*
+The skillfulness at an elo 
+is the percentage of favorite wins 
+minus underdog wins *for matchups overlapping this elo*

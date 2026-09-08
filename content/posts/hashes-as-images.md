@@ -10,7 +10,8 @@ Similarity attacks can be mitigated in the following ways:
 
 1. Create as much perceptible variation as possible - TV static and minor color changes are not.
 2. Make representations humans can remember - faces or images over abstract objects/shape color combinations
-3. Make generating each representation expensive, so that searching for a visually similar fingerprint is expensive.
+3. Make generating each representation expensive, 
+   so that searching for a visually similar fingerprint is expensive.
 
 IMO most hash visualizers fail at all 3.
 
