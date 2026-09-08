@@ -24,7 +24,8 @@ The current Unix time is {{< unixtime >}}.
 
 ### Epochalypse {#epochalypse}
 Many pieces of software store Unix time in 32-bit signed integers.
-This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
+This data type has a limited range,
+so at some point in the future the current Unix time will exceed the allocated space and cause problems.
 This will occur 2{{<sup>}}31{{</sup>}} seconds after the Unix epoch, at 3:14:08 UTC January 19, 2038.
 
 ### Tower of Hanoi {#hanoi}

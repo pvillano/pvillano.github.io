@@ -38,7 +38,9 @@ because I have lost all ability to be creative.
 I would have liked to brainstorm with my colleagues,
 but they were all laid off.
 
-Instead, we (my agentic AIs and I) combined my former colleagues' Slack messages, Zoom recordings, commit messages, and emails into "souls" for agents who could brainstorm for me.
+Instead, we (my agentic AIs and I) combined my former colleagues'
+Slack messages, Zoom recordings, commit messages, and emails
+into "souls" for agents who could brainstorm for me.
 A crossover algorithm was then used to bring the population of agents up to 1024.
 
 Each agent was instructed to come up with a unique idea 

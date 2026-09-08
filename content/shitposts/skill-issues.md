@@ -90,7 +90,8 @@ for 0 vs .5
 
 The skillfulness of a game is the average value of the top triangle minus the average value of the bottom triangle.
 (equivalently, the average of the top triangle times two minus one)
-A luck based game has a skillfulness of 0, and a perfectly skillful games has a skillfulness of 1 (a game where practicing makes you worse has a skillfulness of -1)
+A luck based game has a skillfulness of 0,
+and a perfectly skillful games has a skillfulness of 1 (a game where practicing makes you worse has a skillfulness of -1)
 It is possible to evaluate the skillfulness of a subgroup of players.
 For example, one could determine the skillfulness of only bronze ranked players.
 

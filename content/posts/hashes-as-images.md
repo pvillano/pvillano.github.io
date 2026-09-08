@@ -14,6 +14,9 @@ Similarity attacks can be mitigated in the following ways:
 
 IMO most hash visualizers fail at all 3.
 
-[3] is similar to hashing itself, except "visually similar" is substituted for "exactly equal". This is already taken care of by the hashing algorithm if it is slow, e.g. password hashing algorithms.
+[3] is similar to hashing itself, except "visually similar" is substituted for "exactly equal".
+This is already taken care of by the hashing algorithm if it is slow, e.g. password hashing algorithms.
 
-[1,2,3] could be solved with a GAN. Note that the GAN does not have to worry about making similar hashes produce dissimilar outputs, because finding a similar hash is already hard. 
+[1,2,3] could be solved with a GAN.
+Note that the GAN does not have to worry about making similar hashes produce dissimilar outputs,
+because finding a similar hash is already hard. 

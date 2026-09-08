@@ -67,9 +67,16 @@ The examples are simple programs.
 Sometimes there is an impedance mismatch between a language
 and the idea it is being used to express.
 
-In their post "simple is not small", Jynn Nelson compares two programs that print the n most frequently used words in a file. Doug McIlroy's (famous?) six-command shell pipeline and Nelson's implementation in Clojure have the same length. However, they differ when extended to show the output in the original file order. Nelson's remains the same length but the shell pipeline doubles in length and becomes significantly more difficult to understand.
+In their post "simple is not small",
+Jynn Nelson compares two programs that print the n most frequently used words in a file.
+Doug McIlroy's (famous?) six-command shell pipeline 
+and Nelson's implementation in Clojure have the same length.
+However, they differ when extended to show the output in the original file order.
+Nelson's remains the same length but the shell pipeline doubles in length
+and becomes significantly more difficult to understand.
 
-The extended shell pipeline is difficult to understand because the language was not optimized to express stateful programs. 
+The extended shell pipeline is difficult to understand
+because the language was not optimized to express stateful programs. 
 
 ## Hide it: OOP
 
@@ -91,12 +98,17 @@ and rejects ones with memory errors.
 It's undecidable.
 It's also very hard for non-trivial cases.
 So the language/checker/compiler only allows programs to be composed of simple cases.
-Composing a complex program out of a limited set of memory-safe atoms can become unergonomic, to say the least.
+Composing a complex program out of a limited set of memory-safe atoms can become unergonomic,
+to say the least.
 
 Some really smart people are working on allowing the checker to pass more complex cases.
 This makes the language more expressive and improves ergonomics.
-However, I ~~predict~~ originally predicted that one day, the checker will have become so complicated
-that a bug will be found in the checker in the form of a Rust program that compiles but has a memory error. With LLM-augmented automated theorem provers, we may have a fully verified borrow checker in my lifetime. Exciting.
+However, I ~~predict~~ originally predicted that one day,
+the checker will have become so complicated
+that a bug will be found in the checker in the form of a Rust program that compiles
+but has a memory error.
+With LLM-augmented automated theorem provers,
+we may have a fully verified borrow checker in my lifetime. Exciting.
 
 I liked the idea of putting the complexity in one place when I first heard about Rust.
 I didn't consider that the act of centralizing complexity creates additional complexity.
@@ -145,15 +157,8 @@ It can be centralized, distributed, rearranged, or hidden.
 Hiding is the worst. Don't do that.
 You have to decide where your complexity is going to live.
 
-
-
-
 Template:
 
 # Name: Example
 * explanation
 * generalization
-
-
-
-[^emergence]: Except for systems that exhibit emergence, such as Conway's game of life

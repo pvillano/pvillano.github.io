@@ -24,7 +24,8 @@ In this future, most software is developed solely through the specification of p
 and a large language model (LLM) generates the executable code. 
 The LLM and the _verifier_ form a feedback loop that produces code
 that correctly transform the preconditions into the postconditions. 
-This LLM is considered part of the compiler, and the code it generates is stored with the other compiler artifacts.
+This LLM is considered part of the compiler,
+and the code it generates is stored with the other compiler artifacts.
 
 People still write code for performance critical regions, but this is as rare as people writing assembly is in the present.
 
@@ -37,14 +38,16 @@ The process of proof generation runs on cheap GPU instances in the cloud.
 Occasionally someone asks on Reddit why their program never passes or fails, 
 and it's because they put an unsolved problem in their post-conditions.
 
-Speaking of unsolved problems: in this future, multiple millennium problems are "solved" by researchers at cloud service providers. 
+Speaking of unsolved problems: in this future,
+multiple millennium problems are "solved" by researchers at cloud service providers. 
 In this context, "solved" means a formalized proof was found through a LLM-pruned search. 
 Academic responses are mixed, since none of these proofs are remotely human readable. 
 However, these unreadable proofs do inspire new proof techniques, like AlphaGo did for go.
 
 I really think all of these things will happen. 
 There are only a few things that need to happen first. 
-We need a new language, extension of an existing language, or revival of a dead language with first-class specification support. 
+We need a new language, extension of an existing language,
+or revival of a dead language with first-class specification support. 
 We need a way to translate the conditions and operations of that language into Rocq or Lean. 
 We need the DeepMind team to release AlphaProof, the proof-search algorithm. 
 We need to put both the verifier and agent in the compiler. That's about it.
