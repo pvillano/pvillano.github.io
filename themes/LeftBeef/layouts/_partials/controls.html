@@ -1,12 +1,12 @@
-<div class="controls">
-  <div>
-    <label><input type="radio" name="theme" value="auto"> Auto</label>
-    <label><input type="radio" name="theme" value="dark"> Dark</label>
-    <label><input type="radio" name="theme" value="light"> Light</label>
-  </div>
-  <div>
-    <label><input type="checkbox" id="modeToggle"> Poetry&#9166;</label>
-  </div>
+<div style="display: flex; justify-content: space-between">
+  <fieldset>
+    <label><input name="theme" type="radio" value="dark"> Dark</label>
+    <label><input name="theme" type="radio" value="auto"> Auto</label>
+    <label><input name="theme" type="radio" value="light"> Light</label>
+  </fieldset>
+  <fieldset>
+    <label title="Show original line breaks"><input id="modeToggle" type="checkbox"> Poetic</label>
+  </fieldset>
 </div>
 
 <script>
