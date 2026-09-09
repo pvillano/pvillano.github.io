@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-  min-width:  25%;
+  min-width: 25%;
   min-height: 25%;
   width: 400px;
   max-width: 100%;
@@ -82,6 +82,7 @@ a {
 a:visited {
   color: var(--link-visited, revert);
 }
+
 body {
   background-color: var(--bg-color, revert);
   color: var(--text-color, revert);
@@ -112,12 +113,12 @@ nav li {
   display: inline;
 }
 
-.heading-anchor{
+.heading-anchor {
   text-decoration: none;
   color: inherit;
 }
 
-.heading-anchor:visited{
+.heading-anchor:visited {
   color: inherit;
 }
 
