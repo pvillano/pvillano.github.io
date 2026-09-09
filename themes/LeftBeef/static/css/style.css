@@ -75,8 +75,10 @@ body {
   color: var(--text-color, revert);
   display: flex;
   justify-content: center;
-  margin: clamp(2px, 16vw - 28px, 32px);
+  padding: clamp(2px, 16vw - 28px, 32px);
+  margin: 0 auto;
   flex-direction: column;
+  min-height: 100vh;
   max-width: 40rem;
   gap: 2rem;
 }
