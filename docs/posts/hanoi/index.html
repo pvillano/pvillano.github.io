@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://saej.in/posts/hanoi/">
-  <meta property="og:site_name" content="Peter Villano&#39;s Website">
-  <meta property="og:title" content="The Two Billion Towers of Time">
-  <meta property="og:description" content="A clock">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-10-11T21:02:14-05:00">
-    <meta property="article:modified_time" content="2023-10-11T21:02:14-05:00">
-    <meta property="article:tag" content="Clock">
-    <meta property="article:tag" content="Animation">
-    <meta property="article:tag" content="Canvas">
-    <meta property="article:tag" content="Javascript">
+	<meta property="og:site_name" content="Peter Villano&#39;s Website">
+	<meta property="og:title" content="The Two Billion Towers of Time">
+	<meta property="og:description" content="A clock">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2023-10-11T21:02:14-05:00">
+		<meta property="article:modified_time" content="2023-10-11T21:02:14-05:00">
+		<meta property="article:tag" content="Clock">
+		<meta property="article:tag" content="Animation">
+		<meta property="article:tag" content="Canvas">
+		<meta property="article:tag" content="Javascript">
 <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/controls.js"></script>
   
   
   <title>The Two Billion Towers of Time | Peter Villano&#39;s Website</title>
@@ -154,9 +155,7 @@
 <div id="hanoiDiv0" style="width:100%">
     <canvas height="500" id="canvas0" style="width:100%" width="1000"></canvas>
 </div>
-<blockquote>
-  When the final tower is completed, time will overflow.
-</blockquote>
+<blockquote>When the final tower is completed, time will overflow.</blockquote>
 </p>
 <p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
 by displaying the current <a href="#unix-time">Unix time</a>
@@ -165,8 +164,9 @@ as progress in solving a 31 level <a href="#hanoi">Tower of Hanoi</a>.</p>
 <a class="heading-anchor" href="#unix-time">
   Unix Time
 </a>
-</h3>
-<p>Unix time is the number of seconds which have passed since midnight UTC, January 1, 1970, the Unix epoch.
+</h4>
+<p>Unix time is the number of seconds which have passed
+since midnight UTC, January 1, 1970, the Unix epoch.
 Computers use Unix time internally to store when an event occurred as a single number.
 Unlike regular<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> timestamps, Unix timestamps are never repeated or skipped.
 This number can then be converted into the user&rsquo;s calendar, timezone, and language.
@@ -183,32 +183,39 @@ The current Unix time is
 <a class="heading-anchor" href="#epochalypse">
   Epochalypse
 </a>
-</h3>
+</h4>
 <p>Many pieces of software store Unix time in 32-bit signed integers.
-This data type has a limited range, so at some point in the future the current Unix time will exceed the allocated space and cause problems.
-This will occur 2<sup>
-  31
-</sup> seconds after the Unix epoch, at 3:14:08 UTC January 19, 2038.</p>
+This data type has a limited range,
+so at some point in the future the current Unix time
+will exceed the allocated space and cause problems.
+This will occur 2<sup>31</sup>
+ seconds after the Unix epoch,
+at 3:14:08 UTC January 19, 2038.</p>
 <h4 id="hanoi">
 <a class="heading-anchor" href="#hanoi">
   Tower of Hanoi
 </a>
-</h3>
-<p>The Tower of Hanoi is a puzzle about moving a stack of discs from a first position to a third position.
+</h4>
+<p>The Tower of Hanoi is a puzzle about moving a stack of discs
+from a first position to a third position.
 Its difficulty comes from three restrictions.
 First, the player may only move one disc at a time.
 Second, the player may never place a larger disc onto a smaller disc.
-Last, the discs must be placed in one of only three stacks, including the starting and ending positions.</p>
-<p>As the number of discs increases, the number of moves it takes to solve the puzzle grows exponentially.
-For three discs, the puzzle can be solved in seven moves, but for 31 discs, the solution requires over two billion moves.</p>
+Last, the discs must be placed in one of only three stacks,
+including the starting and ending positions.</p>
+<p>As the number of discs increases,
+the number of moves it takes to solve the puzzle grows exponentially.
+For three discs, the puzzle can be solved in seven moves,
+but for 31 discs, the solution requires over two billion moves.</p>
 <h4 id="animation">
 <a class="heading-anchor" href="#animation">
   Animation
 </a>
-</h3>
+</h4>
 <p>There are a few neat things going on here.</p>
 <ul>
-<li>Most algorithms for solving the Tower of Hanoi compute each step in order<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. This one computes the <em>k</em>-th state directly.</li>
+<li>Most algorithms for solving the Tower of Hanoi compute each step in order<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+This one computes the <em>k</em>-th state directly.</li>
 <li>It is possible to recover the exact date and time from the animation!</li>
 <li>The arcing path of the moving piece is optimized to minimize its maximum x and y acceleration.</li>
 <li>This is my first time animating with JavaScript and the canvas API.</li>
@@ -228,5 +235,16 @@ For three discs, the puzzle can be solved in seven moves, but for 31 discs, the 
         </article>
   </div>
 
-        </div></body>
+        </div><div style="margin-top: auto;"><div style="display: flex; justify-content: space-between;">
+  <fieldset>
+    <label><input name="theme" type="radio" value="dark"> Dark</label>
+    <label><input name="theme" type="radio" value="auto"> Auto</label>
+    <label><input name="theme" type="radio" value="light"> Light</label>
+  </fieldset>
+  <fieldset>
+    <label title="Show original line breaks"><input id="modeToggle" type="checkbox"> Poetic</label>
+  </fieldset>
+</div>
+</div>
+</body>
 </html>

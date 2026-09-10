@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://saej.in/posts/openscad-facet-size/">
-  <meta property="og:site_name" content="Peter Villano&#39;s Website">
-  <meta property="og:title" content="Openscad Facet Size">
-  <meta property="og:description" content="I recommend starting with the following settings as a baseline, and increasing $fs if the GUI becomes slow.
+	<meta property="og:site_name" content="Peter Villano&#39;s Website">
+	<meta property="og:title" content="Openscad Facet Size">
+	<meta property="og:description" content="I recommend starting with the following settings as a baseline, and increasing $fs if the GUI becomes slow.
 $fa=.01; $fs=.3; Background Three variables determine the faceted-ness of your model.
 $fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts. This can be used when an exact number of facets is desired. $fn is useful for creating regular n-gons Old Method I used to use different quality levels for preview and render with the code snippet.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-09-26T19:47:49-04:00">
-    <meta property="article:modified_time" content="2022-09-26T19:47:49-04:00">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2022-09-26T19:47:49-04:00">
+		<meta property="article:modified_time" content="2022-09-26T19:47:49-04:00">
 <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/controls.js"></script>
   
   
   <title>Openscad Facet Size | Peter Villano&#39;s Website</title>
@@ -48,7 +49,7 @@ $fs=.3;
 <a class="heading-anchor" href="#background">
   Background
 </a>
-</h1>
+</h2>
 <p>Three variables determine the faceted-ness of your model.</p>
 <ul>
 <li><strong>$fa</strong> is the minimum angle for a fragment.
@@ -66,19 +67,21 @@ This can be used when an exact number of facets is desired.
 <a class="heading-anchor" href="#old-method">
   Old Method
 </a>
-</h1>
+</h2>
 <p>I used to use different quality levels for preview and render with the code snippet.</p>
 <pre><code>$fa=.01;
 $fs=$preview ? 5 : .1;
 </code></pre>
-<p>This allowed me to edit at interactive rates but render at the highest resolution visible on my printer.
+<p>This allowed me to edit at interactive rates
+but render at the highest resolution visible on my printer.
 I no longer recommend this, because it can lead to unexpectedly long render times.
-Depending on the model, halving the minimum facet size can increase the rendering time 16-fold!</p>
+Depending on the model,
+halving the minimum facet size can increase the rendering time 16-fold!</p>
 <h2 id="better-method">
 <a class="heading-anchor" href="#better-method">
   Better Method
 </a>
-</h1>
+</h2>
 <p>I now prefer to set a single facet size of .3mm or 1mm.
 If the <code>$preview</code> variable is not used to modify facet size,
 then preview calculation time more accurately approximates the render calculation time.</p>
@@ -87,5 +90,16 @@ then preview calculation time more accurately approximates the render calculatio
         </article>
   </div>
 
-        </div></body>
+        </div><div style="margin-top: auto;"><div style="display: flex; justify-content: space-between;">
+  <fieldset>
+    <label><input name="theme" type="radio" value="dark"> Dark</label>
+    <label><input name="theme" type="radio" value="auto"> Auto</label>
+    <label><input name="theme" type="radio" value="light"> Light</label>
+  </fieldset>
+  <fieldset>
+    <label title="Show original line breaks"><input id="modeToggle" type="checkbox"> Poetic</label>
+  </fieldset>
+</div>
+</div>
+</body>
 </html>

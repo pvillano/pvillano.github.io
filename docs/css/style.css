@@ -1,6 +1,5 @@
-
 /*
-  Josh's Custom CSS Reset
+  Based on Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
@@ -10,12 +9,6 @@
 
 *:not(dialog) {
   margin: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
 }
 
 body {
@@ -33,17 +26,26 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
-}
-
-p {
-  text-wrap: pretty;
-}
-
-h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
 /* thanks Josh */
+
+:root.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --link-color: oklch(0.7500 0.129923 256.405277);
+  --link-visited: oklch(0.75 0.1595 304.41);
+}
+
+:root.poetry {
+  --whitespace-setting: pre-wrap;
+}
+
+:root.poetry body {
+  --whitespace-setting: pre-wrap;
+  max-width: fit-content;
+}
 
 html {
   font-family: serif;
@@ -53,27 +55,41 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: inherit;
   font-family: sans-serif;
 }
 
 img {
-  min-width:  25%;
+  min-width: 25%;
   min-height: 25%;
   width: 400px;
   max-width: 100%;
   max-height: 100%;
 }
 
+a {
+  color: var(--link-color, revert);
+}
+
+a:visited {
+  color: var(--link-visited, revert);
+}
+
 body {
+  background-color: var(--bg-color, revert);
+  color: var(--text-color, revert);
   display: flex;
   justify-content: center;
-  margin: clamp(2px, 16vw - 28px, 32px);
+  padding: clamp(2px, 16vw - 28px, 32px);
+  margin: 0 auto;
   flex-direction: column;
+  min-height: 100vh;
   max-width: 40rem;
   gap: 2rem;
 }
 
 p {
+  white-space: var(--whitespace-setting, revert);
   margin: 1rem 0;
 }
 
@@ -91,8 +107,12 @@ nav li {
   display: inline;
 }
 
-.heading-anchor{
+.heading-anchor {
   text-decoration: none;
+  color: inherit;
+}
+
+.heading-anchor:visited {
   color: inherit;
 }
 
@@ -120,3 +140,6 @@ blockquote::after {
   content: "”"
 }
 
+fieldset {
+  border: none;
+}
