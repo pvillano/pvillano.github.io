@@ -42,6 +42,11 @@ p, h1, h2, h3, h4, h5, h6 {
   --whitespace-setting: pre-wrap;
 }
 
+:root.poetry body {
+  --whitespace-setting: pre-wrap;
+  max-width: fit-content;
+}
+
 html {
   font-family: serif;
   margin: auto;
