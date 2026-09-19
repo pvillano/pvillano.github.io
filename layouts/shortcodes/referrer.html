@@ -1,0 +1,18 @@
+<span id="referrer-{{ .Ordinal }}">social media</span><script>
+  const ref = document.referrer.toLowerCase();
+  const span = document.getElementById('referrer-{{ .Ordinal }}');
+  if (ref.includes('reddit')) {
+    span.textContent = 'Reddit';
+  } /* else if (ref.includes('facebook')) {
+    span.textContent = 'Facebook';
+  } else if (ref.includes('twitter') || ref.includes('x.com')) {
+    span.textContent = 'Twitter';
+  } */ else if (ref.includes('bsky')) {
+    span.textContent = 'Bluesky';
+  } else if (ref.includes('ycombinator')) {
+    span.textContent = 'Hacker News';
+  } else if (ref.includes('localhost')) {
+    span.textContent = 'dev tools';
+  }
+</script>
+{{- /* chomp trailing newline */ -}}
