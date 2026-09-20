@@ -29,7 +29,8 @@ Try it out here: [followsfollows.saej.in](https://followsfollows.saej.in)
 
 # Words
 
-A collection of word-related tools. Useful for solving crosswords, finding anagrams, and making word puzzles of your own.
+A collection of word-related tools.
+Useful for solving crosswords, finding anagrams, and making word puzzles of your own.
 
 Parallel processing, information theory, string algorithms, and library design.
 
