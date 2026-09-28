@@ -1,0 +1,94 @@
+<svg height="540" width="760" xmlns="http://www.w3.org/2000/svg">
+<title>Your Diagram Title</title>
+<!-- Generated with SankeyMATIC: 9/28/2026, 2:17:31 PM -->
+<g transform="translate(73.65001,18)">
+<g id="sankey_flows">
+<path id="flow3" d="M158.68333 192.56108C220.63767 192.56108 231.41233 185.68592 293.36667 185.68592" fill="none" stroke-width="295.745" stroke="#d95f02" opacity="0.45"><title>Bellhop → Manager: $30</title></path>
+<path id="flow4" d="M305.36667 161.0405C367.321 161.0405 378.09567 142.13379 440.05 142.13379" fill="none" stroke-width="246.45417" stroke="#e7298a" opacity="0.45"><title>Manager → Lockbox: $25</title></path>
+<path id="flow6" d="M452.05 142.13379C514.00433 142.13379 524.779 123.22708 586.73333 123.22708" fill="none" stroke-width="246.45417" stroke="#e6ab02" opacity="0.45"><title>Lockbox → Lockbox_: $25</title></path>
+<path id="flow0" d="M12 49.29083C73.95433 49.29083 84.729 93.97942 146.68333 93.97942" fill="none" stroke-width="98.58167" stroke="#1b9e77" opacity="0.45"><title>Guest 1 → Bellhop: $10</title></path>
+<path id="flow1" d="M12 199.43625C73.95433 199.43625 84.729 192.56108 146.68333 192.56108" fill="none" stroke-width="98.58167" stroke="#1b9e77" opacity="0.45"><title>Guest 2 → Bellhop: $10</title></path>
+<path id="flow2" d="M12 349.58167C73.95433 349.58167 84.729 291.14275 146.68333 291.14275" fill="none" stroke-width="98.58167" stroke="#1b9e77" opacity="0.45"><title>Guest 3 → Bellhop: $10</title></path>
+<path id="flow5" d="M305.36667 308.913C367.321 308.913 378.09567 362.19554 440.05 362.19554" fill="none" stroke-width="49.29083" stroke="#66a61e" opacity="0.45"><title>Manager → Bellhop_: $5</title></path>
+<path id="flow10" d="M452.05 376.98279C514.00433 376.98279 524.779 492.14183 586.73333 492.14183" fill="none" stroke-width="19.71633" stroke="#a6761d" opacity="0.45"><title>Bellhop_ → Bellhop__: $2</title></path>
+<path id="flow7" d="M452.05 342.47921C514.00433 342.47921 524.779 302.947 586.73333 302.947" fill="none" stroke-width="9.85817" stroke="#1b9e77" opacity="0.45"><title>Bellhop_ → Guest 1_: $1</title></path>
+<path id="flow8" d="M452.05 352.33738C514.00433 352.33738 524.779 364.36892 586.73333 364.36892" fill="none" stroke-width="9.85817" stroke="#1b9e77" opacity="0.45"><title>Bellhop_ → Guest 2_: $1</title></path>
+<path id="flow9" d="M452.05 362.19554C514.00433 362.19554 524.779 425.79083 586.73333 425.79083" fill="none" stroke-width="9.85817" stroke="#1b9e77" opacity="0.45"><title>Bellhop_ → Guest 3_: $1</title></path>
+</g>
+<g id="sankey_nodes">
+<g class="node">
+<rect id="r0" class="for_r0" x="0" y="0" height="98.58167" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 1:
+$10</title></rect>
+</g>
+<g class="node">
+<rect id="r1" class="for_r1" x="146.68333" y="44.68858" height="295.745" width="12" fill="#d95f02" fill-opacity="1"><title>Bellhop:
+$30</title></rect>
+</g>
+<g class="node">
+<rect id="r2" class="for_r2" x="0" y="150.14542" height="98.58167" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 2:
+$10</title></rect>
+</g>
+<g class="node">
+<rect id="r3" class="for_r3" x="0" y="300.29083" height="98.58167" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 3:
+$10</title></rect>
+</g>
+<g class="node">
+<rect id="r4" class="for_r4" x="293.36667" y="37.81342" height="295.745" width="12" fill="#7570b3" fill-opacity="1"><title>Manager:
+$30</title></rect>
+</g>
+<g class="node">
+<rect id="r5" class="for_r5" x="440.05" y="18.90671" height="246.45417" width="12" fill="#e7298a" fill-opacity="1"><title>Lockbox:
+$25</title></rect>
+</g>
+<g class="node">
+<rect id="r6" class="for_r6" x="440.05" y="337.55013" height="49.29083" width="12" fill="#66a61e" fill-opacity="1"><title>Bellhop_:
+$5</title></rect>
+</g>
+<g class="node">
+<rect id="r7" class="for_r7" x="586.73333" y="0" height="246.45417" width="12" fill="#e6ab02" fill-opacity="1"><title>Lockbox_:
+$25</title></rect>
+</g>
+<g class="node">
+<rect id="r8" class="for_r8" x="586.73333" y="298.01792" height="9.85817" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 1_:
+$1</title></rect>
+</g>
+<g class="node">
+<rect id="r9" class="for_r9" x="586.73333" y="359.43983" height="9.85817" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 2_:
+$1</title></rect>
+</g>
+<g class="node">
+<rect id="r10" class="for_r10" x="586.73333" y="420.86175" height="9.85817" width="12" fill="#1b9e77" fill-opacity="1"><title>Guest 3_:
+$1</title></rect>
+</g>
+<g class="node">
+<rect id="r11" class="for_r11" x="586.73333" y="482.28367" height="19.71633" width="12" fill="#a6761d" fill-opacity="1"><title>Bellhop__:
+$2</title></rect>
+</g>
+</g>
+<g id="sankey_labels" font-family="sans-serif" font-size="16px" fill="#000000">
+<rect id="label0_bg" class="for_r0" x="-61.65" y="27.39749" width="59.78333" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label0" class="for_r0" text-anchor="end" x="-6.53333" y="49.29083" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 1<tspan x="-6.53333" dy="19.32" font-weight="400" font-size="17.6px">$10</tspan></text>
+<rect id="label1_bg" class="for_r1" x="123.98333" y="170.66773" width="57.4" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label1" class="for_r1" text-anchor="middle" x="152.68333" y="192.56108" font-weight="400" font-size="14.4px" dy="-4.16001">Bellhop<tspan x="152.68333" dy="19.32" font-weight="400" font-size="17.6px">$30</tspan></text>
+<rect id="label2_bg" class="for_r2" x="-61.65" y="177.5429" width="59.78333" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label2" class="for_r2" text-anchor="end" x="-6.53333" y="199.43625" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 2<tspan x="-6.53333" dy="19.32" font-weight="400" font-size="17.6px">$10</tspan></text>
+<rect id="label3_bg" class="for_r3" x="-61.65" y="327.68832" width="59.78333" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label3" class="for_r3" text-anchor="end" x="-6.53333" y="349.58167" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 3<tspan x="-6.53333" dy="19.32" font-weight="400" font-size="17.6px">$10</tspan></text>
+<rect id="label4_bg" class="for_r4" x="266.25832" y="163.79257" width="66.61666" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label4" class="for_r4" text-anchor="middle" x="299.36667" y="185.68592" font-weight="400" font-size="14.4px" dy="-4.16001">Manager<tspan x="299.36667" dy="19.32" font-weight="400" font-size="17.6px">$30</tspan></text>
+<rect id="label5_bg" class="for_r5" x="414.54998" y="120.24044" width="62.99999" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label5" class="for_r5" text-anchor="middle" x="446.05" y="142.13379" font-weight="400" font-size="14.4px" dy="-4.16001">Lockbox<tspan x="446.05" dy="19.32" font-weight="400" font-size="17.6px">$25</tspan></text>
+<rect id="label6_bg" class="for_r6" x="413.34166" y="340.30218" width="65.73333" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label6" class="for_r6" text-anchor="middle" x="446.05" y="362.19554" font-weight="400" font-size="14.4px" dy="-4.16001">Bellhop_<tspan x="446.05" dy="19.32" font-weight="400" font-size="17.6px">$5</tspan></text>
+<rect id="label7_bg" class="for_r7" x="600.6" y="101.33373" width="71.33333" height="43.05334" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label7" class="for_r7" text-anchor="start" x="605.26667" y="123.22708" font-weight="400" font-size="14.4px" dy="-4.16001">Lockbox_<tspan x="605.26667" dy="19.32" font-weight="400" font-size="17.6px">$25</tspan></text>
+<rect id="label8_bg" class="for_r8" x="600.6" y="281.05364" width="68.11666" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label8" class="for_r8" text-anchor="start" x="605.26667" y="302.947" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 1_<tspan x="605.26667" dy="19.32" font-weight="400" font-size="17.6px">$1</tspan></text>
+<rect id="label9_bg" class="for_r9" x="600.6" y="342.47558" width="68.11666" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label9" class="for_r9" text-anchor="start" x="605.26667" y="364.36892" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 2_<tspan x="605.26667" dy="19.32" font-weight="400" font-size="17.6px">$1</tspan></text>
+<rect id="label10_bg" class="for_r10" x="600.6" y="403.89749" width="68.11666" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label10" class="for_r10" text-anchor="start" x="605.26667" y="425.79083" font-weight="400" font-size="14.4px" dy="-4.16001">Guest 3_<tspan x="605.26667" dy="19.32" font-weight="400" font-size="17.6px">$1</tspan></text>
+<rect id="label11_bg" class="for_r11" x="600.6" y="470.24847" width="73.75002" height="43.05335" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label11" class="for_r11" text-anchor="start" x="605.26667" y="492.14183" font-weight="400" font-size="14.4px" dy="-4.16001">Bellhop__<tspan x="605.26667" dy="19.32" font-weight="400" font-size="17.6px">$2</tspan></text>
+</g>
+</g></svg>
