@@ -127,17 +127,10 @@ nav li {
 }
 
 blockquote {
-  width: fit-content;
-  max-width: 95%;
-  margin: 20px auto;
-}
-
-blockquote::before {
-  content: "“"
-}
-
-blockquote::after {
-  content: "”"
+  margin: 1.5em 3em;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 fieldset {
