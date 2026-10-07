@@ -3,6 +3,7 @@ title: "(Screaming) Hello"
 date: 2026-09-19T18:25:02-04:00
 draft: true
 ---
+![screaming.png](screaming.png)
 
 (screaming) is a large-as-possible text display for silent but conspicuous communication.
 The name is a reference to screenplay parentheticals.
