@@ -43,7 +43,7 @@
     
   <div>
         <article id="article">
-           <p><script type="module">
+           <script type="module">
     "use strict"
     const t0 = Date.now()
 
@@ -155,48 +155,41 @@
 <div id="hanoiDiv0" style="width:100%">
     <canvas height="500" id="canvas0" style="width:100%" width="1000"></canvas>
 </div>
-<blockquote>When the final tower is completed, time will overflow.</blockquote>
-</p>
-<p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
+<blockquote><p>When the final tower is completed, time will overflow.</p>
+</blockquote><p>This <a href="#animation">animation</a> counts down to the <a href="#epochalypse">Epochalypse</a>
 by displaying the current <a href="#unix-time">Unix time</a>
 as progress in solving a 31 level <a href="#hanoi">Tower of Hanoi</a>.</p>
 <h4 id="unix-time">
 <a class="heading-anchor" href="#unix-time">
   Unix Time
 </a>
-</h4>
-<p>Unix time is the number of seconds which have passed
+</h4><p>Unix time is the number of seconds which have passed
 since midnight UTC, January 1, 1970, the Unix epoch.
 Computers use Unix time internally to store when an event occurred as a single number.
 Unlike regular<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> timestamps, Unix timestamps are never repeated or skipped.
 This number can then be converted into the user&rsquo;s calendar, timezone, and language.
-The current Unix time is 
-<script>
+The current Unix time is <script>
     function drawUnixTime(){
         document.getElementById("unixTime").textContent = Math.floor(Date.now()/1000)
         window.requestAnimationFrame(drawUnixTime)
     }
     window.requestAnimationFrame(drawUnixTime)
-</script>
-<code id="unixTime">[the current unix time]</code>.</p>
+</script><code id="unixTime">[the current unix time]</code>.</p>
 <h4 id="epochalypse">
 <a class="heading-anchor" href="#epochalypse">
   Epochalypse
 </a>
-</h4>
-<p>Many pieces of software store Unix time in 32-bit signed integers.
+</h4><p>Many pieces of software store Unix time in 32-bit signed integers.
 This data type has a limited range,
 so at some point in the future the current Unix time
 will exceed the allocated space and cause problems.
-This will occur 2<sup>31</sup>
- seconds after the Unix epoch,
+This will occur 2<sup>31</sup> seconds after the Unix epoch,
 at 3:14:08 UTC January 19, 2038.</p>
 <h4 id="hanoi">
 <a class="heading-anchor" href="#hanoi">
   Tower of Hanoi
 </a>
-</h4>
-<p>The Tower of Hanoi is a puzzle about moving a stack of discs
+</h4><p>The Tower of Hanoi is a puzzle about moving a stack of discs
 from a first position to a third position.
 Its difficulty comes from three restrictions.
 First, the player may only move one disc at a time.
@@ -211,8 +204,7 @@ but for 31 discs, the solution requires over two billion moves.</p>
 <a class="heading-anchor" href="#animation">
   Animation
 </a>
-</h4>
-<p>There are a few neat things going on here.</p>
+</h4><p>There are a few neat things going on here.</p>
 <ul>
 <li>Most algorithms for solving the Tower of Hanoi compute each step in order<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
 This one computes the <em>k</em>-th state directly.</li>

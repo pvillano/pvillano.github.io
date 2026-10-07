@@ -1,0 +1,14 @@
+<div>
+  <textarea id="lockInPut-{{ .Ordinal }}" placeholder="Your answer..." style="display: block;"></textarea>
+  <button
+      style="margin-top: 10px"
+      type="button" id="lockInBtn-{{ .Ordinal }}" onclick="
+  document.getElementById('lockedDiv-{{ .Ordinal }}').style.display = 'block';
+  document.getElementById('lockInBtn-{{ .Ordinal }}').disabled = true;
+  document.getElementById('lockInPut-{{ .Ordinal }}').disabled = true;
+">lock in</button>
+  <div id="lockedDiv-{{ .Ordinal }}" style="display: none">
+    {{ .Inner | .Page.RenderString }}
+  </div>
+</div>
+{{- /* chomp trailing newline */ -}}

@@ -1,9 +1,8 @@
-
 <script>
     function drawUnixTime(){
         document.getElementById("unixTime").textContent = Math.floor(Date.now()/1000)
         window.requestAnimationFrame(drawUnixTime)
     }
     window.requestAnimationFrame(drawUnixTime)
-</script>
-<code id="unixTime">[the current unix time]</code>
+</script><code id="unixTime">[the current unix time]</code>
+{{- /* chomp trailing newline */ -}}

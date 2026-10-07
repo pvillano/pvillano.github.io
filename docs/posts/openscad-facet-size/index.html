@@ -7,8 +7,8 @@
 	<meta property="og:site_name" content="Peter Villano&#39;s Website">
 	<meta property="og:title" content="Openscad Facet Size">
 	<meta property="og:description" content="I recommend starting with the following settings as a baseline, and increasing $fs if the GUI becomes slow.
-$fa=.01; $fs=.3; Background Three variables determine the faceted-ness of your model.
-$fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts. This can be used when an exact number of facets is desired. $fn is useful for creating regular n-gons Old Method I used to use different quality levels for preview and render with the code snippet.">
+$fa=.01;$fs=.3;BackgroundThree variables determine the faceted-ness of your model.
+$fa is the minimum angle for a fragment. It creates a size-independent upper bound for number of facets in a circle. This bound is exactly ceil(360/$fa) $fs sets the minimum facet size in millimeters. $fn is a complete override on the number of facts. This can be used when an exact number of facets is desired. $fn is useful for creating regular n-gons Old MethodI used to use different quality levels for preview and render with the code snippet.">
 	<meta property="og:locale" content="en_us">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
@@ -49,8 +49,7 @@ $fs=.3;
 <a class="heading-anchor" href="#background">
   Background
 </a>
-</h2>
-<p>Three variables determine the faceted-ness of your model.</p>
+</h2><p>Three variables determine the faceted-ness of your model.</p>
 <ul>
 <li><strong>$fa</strong> is the minimum angle for a fragment.
 It creates a size-independent upper bound for <em>number of facets</em> in a circle.
@@ -67,8 +66,7 @@ This can be used when an exact number of facets is desired.
 <a class="heading-anchor" href="#old-method">
   Old Method
 </a>
-</h2>
-<p>I used to use different quality levels for preview and render with the code snippet.</p>
+</h2><p>I used to use different quality levels for preview and render with the code snippet.</p>
 <pre><code>$fa=.01;
 $fs=$preview ? 5 : .1;
 </code></pre>
@@ -81,8 +79,7 @@ halving the minimum facet size can increase the rendering time 16-fold!</p>
 <a class="heading-anchor" href="#better-method">
   Better Method
 </a>
-</h2>
-<p>I now prefer to set a single facet size of .3mm or 1mm.
+</h2><p>I now prefer to set a single facet size of .3mm or 1mm.
 If the <code>$preview</code> variable is not used to modify facet size,
 then preview calculation time more accurately approximates the render calculation time.</p>
 <p>More info on facets can be found at <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">the OpenScad Wikibook</a></p>

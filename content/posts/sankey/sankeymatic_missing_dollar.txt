@@ -1,0 +1,71 @@
+// SankeyMATIC diagram inputs - Saved: 9/28/2026, 2:15:04 PM
+// https://sankeymatic.com/build/
+
+// === Nodes and Flows ===
+
+Guest 1 [10] Bellhop
+Guest 2 [10] Bellhop
+Guest 3 [10] Bellhop
+
+Bellhop [30] Manager
+Manager [25] Lockbox
+Manager [5] Bellhop_
+Lockbox [25] Lockbox_
+Bellhop_ [1] Guest 1_
+Bellhop_ [1] Guest 2_
+Bellhop_ [1] Guest 3_
+Bellhop_ [2] Bellhop__
+
+// === Settings ===
+
+size w 760
+  h 540
+margin l 12
+  r 12
+  t 18
+  b 20
+bg color #ffffff
+  transparent Y
+node w 12
+  h 58.5
+  spacing 100
+  border 0
+  theme c
+  color #888888
+  opacity 1
+flow curvature 0.46
+  inheritfrom outside-in
+  color #999999
+  opacity 0.45
+layout order automatic
+  justifyorigins N
+  justifyends N
+  reversegraph N
+  attachincompletesto nearest
+labels color #000000
+  hide N
+  highlight 0.75
+  fontface sans-serif
+  linespacing 0.2
+  relativesize 110
+  magnify 100
+labelname appears Y
+  size 16
+  weight 400
+labelvalue appears Y
+  fullprecision N
+  position below
+  weight 400
+labelposition autoalign 0
+  scheme auto
+  first before
+  breakpoint 6
+value format ',.'
+  prefix '$'
+  suffix ''
+themeoffset a 5
+  b 0
+  c 0
+  d 1
+meta mentionsankeymatic Y
+  listimbalances Y
